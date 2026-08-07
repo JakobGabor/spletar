@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spletar — Izdelava spletnih strani za mala podjetja in obrtnike</title>
+<meta name="description" content="Izdelamo vam sodobno, hitro in mobilno prilagojeno spletno stran. Za obrtnike, s.p. in mala podjetja. Ze od 100 EUR. Brezplacen posvet." />
+<meta name="theme-color" content="#0a0d12" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="sl_SI" />
+<meta property="og:title" content="Spletar - Izdelava spletnih strani" />
+<meta property="og:description" content="Sodobne spletne strani za obrtnike in mala podjetja." />
+<meta property="og:site_name" content="Spletar" />
+<link rel="icon" type="image/svg+xml" href="spletar-icon.svg" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0d12; --bg-2:#0e131b;
+  --card:rgba(255,255,255,.045); --card-2:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.09); --border-2:rgba(255,255,255,.16);
+  --text:#e9edf3; --muted:#8a95a6;
+  --accent:#3d8bff; --accent-2:#2563eb;
+  --accent-soft:rgba(61,139,255,.14); --accent-glow:rgba(61,139,255,.35);
+  --radius:18px; --radius-sm:12px; --radius-lg:26px;
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+  --blur:saturate(140%) blur(16px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);
+  background:radial-gradient(900px 500px at 12% -8%,rgba(61,139,255,.12),transparent 60%),
+             radial-gradient(760px 480px at 110% 0%,rgba(120,90,255,.06),transparent 55%),
+             var(--bg);
+  background-attachment:fixed;-webkit-font-smoothing:antialiased;line-height:1.6;
+}
+h1,h2,h3,.brand-name{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:clamp(56px,8vw,96px) 0}
+.eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.lead{color:var(--muted);font-size:1.02rem;max-width:620px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:14px}
+header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.78);
+  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand svg{width:34px;height:34px}
+.brand-name{font-weight:700;font-size:1.15rem}
+.brand-name small{display:block;color:var(--muted);font-weight:500;font-size:.66rem;letter-spacing:.06em}
+.nav nav{margin-left:auto;display:flex;gap:6px;align-items:center}
+.nav nav a{padding:9px 13px;border-radius:10px;color:var(--muted);font-size:.92rem;font-weight:500;transition:.2s var(--ease)}
+.nav nav a:hover{color:var(--text);background:var(--card)}
+.burger{display:none;margin-left:auto;width:42px;height:42px;border-radius:11px;border:1px solid var(--border);
+  background:var(--card);color:var(--text);font-size:1.15rem;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:12px;
+  font-family:inherit;font-size:.94rem;font-weight:600;cursor:pointer;border:1px solid var(--border-2);
+  background:var(--card-2);color:var(--text);transition:.22s var(--ease);white-space:nowrap}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.1)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border-color:transparent;
+  box-shadow:0 10px 28px var(--accent-glow)}
+.btn.primary:hover{box-shadow:0 14px 36px var(--accent-glow)}
+.btn.sm{padding:10px 16px;font-size:.87rem}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.hero{padding-top:clamp(48px,7vw,84px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.4rem);margin-bottom:18px}
+.hero h1 .grad{background:linear-gradient(120deg,var(--accent),#8ab6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.1rem;margin-bottom:28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.trust{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.87rem}
+.trust span{display:flex;align-items:center;gap:7px}
+.trust svg{width:16px;height:16px;flex:0 0 auto}
+.mock{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);
+  backdrop-filter:var(--blur);box-shadow:var(--shadow);padding:14px;transform:rotate(1.2deg);transition:.4s var(--ease)}
+.mock:hover{transform:rotate(0) translateY(-6px)}
+.mock-bar{display:flex;gap:6px;padding:6px 4px 12px}
+.mock-bar i{width:9px;height:9px;border-radius:50%;background:var(--border-2)}
+.mock-bar i:first-child{background:var(--accent)}
+.mock-body{background:var(--bg-2);border-radius:14px;padding:20px;border:1px solid var(--border)}
+.sk{height:11px;border-radius:6px;background:linear-gradient(90deg,rgba(255,255,255,.1),rgba(255,255,255,.045));margin-bottom:11px}
+.sk.t{height:22px;width:62%;background:linear-gradient(90deg,var(--accent),rgba(61,139,255,.25))}
+.sk.w80{width:80%}.sk.w60{width:60%}.sk.w45{width:45%}
+.sk-row{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:18px}
+.sk-card{height:62px;border-radius:11px;background:rgba(255,255,255,.05);border:1px solid var(--border)}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  backdrop-filter:var(--blur);box-shadow:var(--shadow);padding:26px;transition:.3s var(--ease)}
+.card:hover{transform:translateY(-5px);border-color:var(--border-2)}
+.card h3{font-size:1.13rem;margin-bottom:9px}
+.card p{color:var(--muted);font-size:.93rem}
+.ico{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px;
+  background:var(--accent-soft);border:1px solid rgba(61,139,255,.28);font-size:1.4rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stat{padding:26px;text-align:center;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);backdrop-filter:var(--blur)}
+.stat b{display:block;font-family:'Space Grotesk';font-size:2.3rem;font-weight:700;color:var(--accent);line-height:1}
+.stat span{color:var(--muted);font-size:.9rem;display:block;margin-top:8px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{position:relative;padding:26px 22px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);backdrop-filter:var(--blur)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:22px;
+  width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-weight:700;font-size:.95rem;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 20px var(--accent-glow)}
+.step h3{font-size:1.02rem;margin:14px 0 8px}
+.step p{color:var(--muted);font-size:.89rem}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.plan{position:relative;padding:28px 22px;border-radius:var(--radius);border:1.5px solid var(--border);
+  background:var(--card);backdrop-filter:var(--blur);transition:.3s var(--ease);display:flex;flex-direction:column}
+.plan:hover{transform:translateY(-6px);border-color:var(--border-2)}
+.plan.best{border-color:rgba(61,139,255,.5);background:var(--accent-soft);box-shadow:0 16px 44px var(--accent-glow)}
+.plan-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff;font-size:.64rem;font-weight:700;padding:4px 12px;border-radius:999px;letter-spacing:.05em;white-space:nowrap}
+.plan h3{font-size:1.08rem}
+.price{font-family:'Space Grotesk';font-size:2.1rem;font-weight:700;color:var(--accent);margin:8px 0 4px;line-height:1}
+.plan ul{list-style:none;margin:16px 0 22px;display:flex;flex-direction:column;gap:9px}
+.plan li{color:var(--muted);font-size:.88rem;display:flex;gap:9px;align-items:flex-start}
+.plan li::before{content:"OK";color:var(--accent);font-weight:700;font-size:.7rem;flex:0 0 auto;margin-top:3px}
+.plan .btn{width:100%;margin-top:auto}
+.addons{margin-top:24px;color:var(--muted);font-size:.88rem;text-align:center}
+.faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+details{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);
+  backdrop-filter:var(--blur);overflow:hidden}
+details[open]{border-color:var(--border-2)}
+summary{padding:18px 22px;cursor:pointer;font-weight:600;font-size:.98rem;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.4rem;font-weight:400;flex:0 0 auto;transition:.25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 20px;color:var(--muted);font-size:.93rem}
+.cta-box{background:linear-gradient(135deg,rgba(61,139,255,.14),rgba(37,99,235,.06));
+  border:1px solid rgba(61,139,255,.3);border-radius:var(--radius-lg);padding:clamp(34px,5vw,58px);text-align:center;
+  backdrop-filter:var(--blur);box-shadow:var(--shadow)}
+.cta-box h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:14px}
+.cta-box .hero-cta{justify-content:center;margin-top:26px;margin-bottom:0}
+.contact{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+.contact a{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:12px;
+  border:1px solid var(--border);background:var(--card);font-size:.94rem;font-weight:500;transition:.2s var(--ease)}
+.contact a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+footer{border-top:1px solid var(--border);padding:36px 0;margin-top:20px}
+.foot{display:flex;gap:20px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+.foot nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+.foot nav a:hover{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .g3,.steps,.plans{grid-template-columns:repeat(2,1fr)}
+  .nav nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--bg-2);border-bottom:1px solid var(--border);padding:10px}
+  .nav nav.open{display:flex}
+  .nav nav a{padding:13px}
+  .burger{display:grid;place-items:center}
+}
+@media(max-width:620px){
+  .g3,.steps,.plans,.stats{grid-template-columns:1fr}
+  .hero h1{font-size:2rem}
+  .foot nav{margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Spletar">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+        <g fill="none" stroke="url(#lg)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M27.43 10.48 L48.35 17.28 L52.92 38.80 L36.57 53.52 L15.65 46.72 L11.08 25.20 Z" stroke-width="2.1"/>
+          <path d="M27.43 10.48 L52.92 38.80"/><path d="M27.43 10.48 L36.57 53.52"/>
+          <path d="M27.43 10.48 L15.65 46.72"/><path d="M48.35 17.28 L36.57 53.52"/>
+          <path d="M48.35 17.28 L15.65 46.72"/><path d="M48.35 17.28 L11.08 25.20"/>
+          <path d="M52.92 38.80 L15.65 46.72"/><path d="M52.92 38.80 L11.08 25.20"/>
+          <path d="M36.57 53.52 L11.08 25.20"/>
+        </g>
+      </svg>
+      <span class="brand-name">Spletar<small>IZDELAVA SPLETNIH STRANI</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Meni">&#9776;</button>
+    <nav id="menu">
+      <a href="#storitve">Storitve</a>
+      <a href="#proces">Kako poteka</a>
+      <a href="#paketi">Cenik</a>
+      <a href="#vprasanja">Vprašanja</a>
+      <a href="#kontakt" class="btn primary sm" style="margin-left:6px">Brezplačen posvet</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Za obrtnike, s.p. in mala podjetja</p>
+      <h1>Spletna stran, ki vam <span class="grad">pripelje stranke</span> — ne samo lepo izgleda.</h1>
+      <p class="lead">Izdelamo hitro, pregledno in mobilno prilagojeno spletno stran, na kateri vas stranke najdejo prek Googla in vas takoj lahko pokličejo. Brez mesečnih presenečenj in brez tehničnega žargona.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn primary">Želim brezplačen posvet</a>
+        <a href="#paketi" class="btn">Poglej cenik</a>
+      </div>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#3d8bff" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Že od 100 €</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#3d8bff" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Izdelava v 7–14 dneh</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#3d8bff" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Brez naročnine</span>
+      </div>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-bar"><i></i><i></i><i></i></div>
+      <div class="mock-body">
+        <div class="sk t"></div>
+        <div class="sk w80"></div>
+        <div class="sk w60"></div>
+        <div class="sk-row"><div class="sk-card"></div><div class="sk-card"></div><div class="sk-card"></div></div>
+        <div class="sk w45" style="margin-top:18px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="zakaj">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:38px">
+      <p class="eyebrow">Zakaj sploh potrebujete stran</p>
+      <h2 class="h2">Stranke vas iščejo. Vprašanje je, ali vas najdejo.</h2>
+      <p class="lead">Ko nekdo potrebuje storitev, jo najprej poišče na telefonu. Če vas ni na spletu ali stran ni uporabna, gre k naslednjemu.</p>
+    </div>
+    <div class="grid g3 reveal">
+      <div class="card">
+        <div class="ico">&#128269;</div>
+        <h3>Najdejo vas na Googlu</h3>
+        <p>Stran zastavimo tako, da vas iskalniki razumejo — z jasnimi storitvami, kraji delovanja in kontaktom na vidnem mestu.</p>
+      </div>
+      <div class="card">
+        <div class="ico">&#128241;</div>
+        <h3>Deluje na telefonu</h3>
+        <p>Večina obiskovalcev pride z mobilnika. Stran je prilagojena majhnim zaslonom, z gumbom za klic v enem dotiku.</p>
+      </div>
+      <div class="card">
+        <div class="ico">&#129309;</div>
+        <h3>Zbuja zaupanje</h3>
+        <p>Urejena stran z referencami in fotografijami vašega dela pove več kot katerikoli oglas. Stranka ve, koga kliče.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><b>7–14</b><span>dni do objave vaše strani</span></div>
+      <div class="stat"><b>100 %</b><span>prilagojeno mobilnim napravam</span></div>
+      <div class="stat"><b>0 €</b><span>stroškov posveta in ponudbe</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="storitve">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:38px">
+      <p class="eyebrow">Kaj naredimo za vas</p>
+      <h2 class="h2">Vse, kar spada zraven</h2>
+    </div>
+    <div class="grid g3 reveal">
+      <div class="card"><div class="ico">&#128421;</div><h3>Predstavitvena stran</h3>
+        <p>Klasična stran s predstavitvijo, storitvami, galerijo in kontaktom. Najpogostejša izbira obrtnikov.</p></div>
+      <div class="card"><div class="ico">&#128722;</div><h3>Spletna trgovina</h3>
+        <p>Prodaja izdelkov prek spleta — košarica, plačila, pregled naročil. Za tiste, ki želijo prodajati ves dan.</p></div>
+      <div class="card"><div class="ico">&#128197;</div><h3>Naročanje in rezervacije</h3>
+        <p>Stranke se naročijo same, prek strani. Manj klicev med delom in manj pozabljenih terminov.</p></div>
+      <div class="card"><div class="ico">&#127912;</div><h3>Logotip in oblikovanje</h3>
+        <p>Če logotipa še nimate, ga izdelamo — enostaven, prepoznaven in uporaben na vozilu, računu in strani.</p></div>
+      <div class="card"><div class="ico">&#9997;</div><h3>Besedila in fotografije</h3>
+        <p>Ne veste, kaj napisati? Pomagamo ubesediti, kaj delate, in uredimo fotografije vašega dela.</p></div>
+      <div class="card"><div class="ico">&#128295;</div><h3>Vzdrževanje</h3>
+        <p>Posodobitve, varnostne kopije in manjše spremembe. Vi pokličete, mi uredimo — brez skrbi s tehniko.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="proces">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:44px">
+      <p class="eyebrow">Kako poteka</p>
+      <h2 class="h2">Štirje koraki do vaše strani</h2>
+      <p class="lead">Vaše delo je samo prvi korak. Vse ostalo uredimo mi.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><h3>Pogovor</h3><p>Na kratko se slišiva. Poveste, kaj delate in kaj želite doseči. Brezplačno in brez obveznosti.</p></div>
+      <div class="step"><h3>Vprašalnik</h3><p>Pošljemo vam kratek obrazec, kjer izberete videz, podstrani in vsebino. Traja nekaj minut.</p></div>
+      <div class="step"><h3>Izdelava</h3><p>Postavimo stran in vam pokažemo osnutek. Popravke uskladimo, dokler niste zadovoljni.</p></div>
+      <div class="step"><h3>Objava</h3><p>Uredimo domeno in gostovanje ter stran objavimo. Pokažemo vam, kako jo uporabljate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="paketi">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:44px">
+      <p class="eyebrow">Cenik</p>
+      <h2 class="h2">Jasne cene, brez skritih stroškov</h2>
+      <p class="lead">Cena je enkratna. Povemo jo vnaprej in se je držimo.</p>
+    </div>
+    <div class="plans reveal">
+      <div class="plan">
+        <h3>Vizitka</h3><div class="price">100 €</div>
+        <p style="color:var(--muted);font-size:.88rem">Za začetek — da vas sploh najdejo.</p>
+        <ul><li>Enostranska predstavitev</li><li>Kontakt in lokacija</li><li>Prilagojeno telefonu</li><li>Gumb za klic</li></ul>
+        <a href="#kontakt" class="btn">Izberi</a>
+      </div>
+      <div class="plan best">
+        <span class="plan-badge">NAJPOGOSTEJŠA IZBIRA</span>
+        <h3>Osnovna</h3><div class="price">250 €</div>
+        <p style="color:var(--muted);font-size:.88rem">Za obrtnike in male s.p.</p>
+        <ul><li>Do 5 podstrani</li><li>Galerija vašega dela</li><li>Kontaktni obrazec</li><li>Zemljevid lokacije</li><li>Osnovna optimizacija</li></ul>
+        <a href="#kontakt" class="btn primary">Izberi</a>
+      </div>
+      <div class="plan">
+        <h3>Poslovna</h3><div class="price">od 500 €</div>
+        <p style="color:var(--muted);font-size:.88rem">Za podjetja z več storitvami.</p>
+        <ul><li>Do 8 podstrani</li><li>Novice ali blog</li><li>Reference in mnenja</li><li>Naprednejša optimizacija</li></ul>
+        <a href="#kontakt" class="btn">Izberi</a>
+      </div>
+      <div class="plan">
+        <h3>Trgovina</h3><div class="price">od 600 €</div>
+        <p style="color:var(--muted);font-size:.88rem">Za prodajo prek spleta.</p>
+        <ul><li>Katalog izdelkov</li><li>Košarica in naročila</li><li>Spletna plačila</li><li>Pregled zalog</li></ul>
+        <a href="#kontakt" class="btn">Izberi</a>
+      </div>
+    </div>
+    <p class="addons">Dodatno: izdelava logotipa <b>+49 €</b> · domena in gostovanje <b>~60 €/leto</b> · vzdrževanje <b>15 €/mesec</b> (neobvezno)</p>
+  </div>
+</section>
+
+<section id="vprasanja">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:38px">
+      <p class="eyebrow">Pogosta vprašanja</p>
+      <h2 class="h2">Kar vas najbolj zanima</h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Koliko časa traja izdelava?</summary>
+        <p>Običajno od sedem do štirinajst dni od trenutka, ko prejmemo vaše podatke in fotografije. Če se mudi, se dogovorimo za hitrejšo izdelavo.</p></details>
+      <details><summary>Kaj če nimam logotipa, fotografij ali besedil?</summary>
+        <p>To je zelo pogosto in ni ovira. Logotip lahko izdelamo, besedila napišemo skupaj z vami, za fotografije pa svetujemo, kaj poslikati s telefonom — pogosto je to čisto dovolj.</p></details>
+      <details><summary>Ali moram plačevati vsak mesec?</summary>
+        <p>Ne. Izdelava je enkraten strošek. Redna stroška sta le domena in gostovanje (okoli 60 € na leto), ki ju plačate ponudniku. Vzdrževanje pri nas je neobvezno.</p></details>
+      <details><summary>Kdo je lastnik strani?</summary>
+        <p>Vi. Domena se glasi na vas, stran je vaša last. Če se kdaj odločite za drugega izvajalca, jo lahko preprosto prenesete.</p></details>
+      <details><summary>Ali lahko stran kasneje sam urejam?</summary>
+        <p>Da. Ob predaji vam pokažemo, kako spremenite besedila, cene ali fotografije. Če vam je ljubše, spremembe uredimo mi.</p></details>
+      <details><summary>Kaj pa domena in gostovanje?</summary>
+        <p>Uredimo vse namesto vas — od nakupa domene do postavitve strani v splet. Vi samo poveste, kako naj se domena glasi.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <p class="eyebrow">Naslednji korak</p>
+      <h2>Poglejmo skupaj, kaj potrebujete</h2>
+      <p class="lead center">Izpolnite kratek vprašalnik (nekaj minut) in pripravimo vam ponudbo po meri. Brezplačno in brez obveznosti.</p>
+      <div class="hero-cta">
+        <a href="https://jakobgabor.github.io/CALLDESK-WEB/ponudba.html" class="btn primary">Izpolni vprašalnik</a>
+        <a href="tel:+38631860377" class="btn">Raje pokličem</a>
+      </div>
+      <div class="contact">
+        <a href="tel:+38631860377">&#128222; 031 860 377</a>
+        <a href="mailto:jakob.gabor@gmail.com">&#9993; jakob.gabor@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand" style="gap:9px">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px" aria-hidden="true">
+        <defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+        <g fill="none" stroke="url(#lg2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M27.43 10.48 L48.35 17.28 L52.92 38.80 L36.57 53.52 L15.65 46.72 L11.08 25.20 Z" stroke-width="2.4"/>
+          <path d="M27.43 10.48 L52.92 38.80"/><path d="M27.43 10.48 L36.57 53.52"/>
+          <path d="M27.43 10.48 L15.65 46.72"/><path d="M48.35 17.28 L36.57 53.52"/>
+          <path d="M48.35 17.28 L15.65 46.72"/><path d="M48.35 17.28 L11.08 25.20"/>
+          <path d="M52.92 38.80 L15.65 46.72"/><path d="M52.92 38.80 L11.08 25.20"/>
+          <path d="M36.57 53.52 L11.08 25.20"/>
+        </g>
+      </svg>
+      <span>&copy; <span id="leto">2026</span> Spletar</span>
+    </div>
+    <nav>
+      <a href="#storitve">Storitve</a><a href="#paketi">Cenik</a>
+      <a href="#vprasanja">Vprašanja</a><a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+var burger = document.getElementById('burger');
+var menu = document.getElementById('menu');
+burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
+menu.addEventListener('click', function(e){ if (e.target.tagName === 'A') menu.classList.remove('open'); });
+document.getElementById('leto').textContent = new Date().getFullYear();
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
