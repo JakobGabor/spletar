@@ -146,6 +146,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.78);
 @media(max-width:960px){.foto-box{grid-template-columns:1fr;gap:32px}}
 @media(max-width:620px){.fg1,.fg4{height:118px}.fg2,.fg3{height:92px}}
 
+/* ILUSTRACIJE */
+.hero-art svg,.foto-art svg,.why-art svg{width:100%;height:auto;display:block;overflow:visible}
+.hero-art{animation:float 6s ease-in-out infinite}
+.foto-art{animation:float 7s ease-in-out infinite .5s}
+.why-art{max-width:440px;margin:0 auto 34px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media(prefers-reduced-motion:reduce){.hero-art,.foto-art{animation:none}}
+
 .faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}details{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);
   backdrop-filter:var(--blur);overflow:hidden}
 details[open]{border-color:var(--border-2)}
@@ -237,16 +245,69 @@ footer{border-top:1px solid var(--border);padding:36px 0;margin-top:20px}
         <span><svg viewBox="0 0 24 24" fill="none" stroke="#3d8bff" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Fotografiranje vključeno</span>
       </div>
     </div>
-    <div class="mock" aria-hidden="true">
-      <div class="mock-bar"><i></i><i></i><i></i></div>
-      <div class="mock-body">
-        <div class="sk t"></div>
-        <div class="sk w80"></div>
-        <div class="sk w60"></div>
-        <div class="sk-row"><div class="sk-card"></div><div class="sk-card"></div><div class="sk-card"></div></div>
-        <div class="sk w45" style="margin-top:18px"></div>
-      </div>
-    </div>
+    <div class="hero-art" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" >
+<defs>
+<linearGradient id="i1scr" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#1a2740"/><stop offset="1" stop-color="#131c2e"/></linearGradient>
+<linearGradient id="i1acc" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+</defs>
+<!-- ozadje krogi -->
+<circle cx="70" cy="70" r="46" fill="#3d8bff" opacity=".08"/>
+<circle cx="455" cy="290" r="58" fill="#3d8bff" opacity=".07"/>
+<circle cx="430" cy="60" r="20" fill="none" stroke="#3d8bff" stroke-width="2" opacity=".3"/>
+<circle cx="60" cy="270" r="13" fill="none" stroke="#3d8bff" stroke-width="2" opacity=".3"/>
+<!-- monitor -->
+<rect x="95" y="45" width="330" height="215" rx="14" fill="url(#i1scr)" stroke="#3d8bff" stroke-width="2.5" opacity=".95"/>
+<rect x="110" y="60" width="300" height="185" rx="8" fill="#0e1626"/>
+<!-- brskalniška vrstica -->
+<rect x="110" y="60" width="300" height="22" rx="8" fill="#1b2740"/>
+<circle cx="124" cy="71" r="3.5" fill="#4a94ff"/><circle cx="136" cy="71" r="3.5" fill="#33415c"/><circle cx="148" cy="71" r="3.5" fill="#33415c"/>
+<rect x="165" y="66" width="120" height="10" rx="5" fill="#22304d"/>
+<!-- vsebina -->
+<rect x="126" y="98" width="90" height="12" rx="6" fill="url(#i1acc)"/>
+<rect x="126" y="118" width="130" height="7" rx="3.5" fill="#2b3a57"/>
+<rect x="126" y="132" width="105" height="7" rx="3.5" fill="#2b3a57"/>
+<rect x="126" y="155" width="66" height="20" rx="10" fill="url(#i1acc)"/>
+<!-- kartice -->
+<rect x="272" y="98" width="58" height="46" rx="7" fill="#1a2438" stroke="#2b3a57" stroke-width="1.4"/>
+<rect x="338" y="98" width="58" height="46" rx="7" fill="#1a2438" stroke="#2b3a57" stroke-width="1.4"/>
+<rect x="272" y="152" width="124" height="8" rx="4" fill="#2b3a57"/>
+<rect x="272" y="167" width="90" height="8" rx="4" fill="#2b3a57"/>
+<!-- ikoni v karticah -->
+<path d="M295 112h12M295 118h12M295 124h8" stroke="#4a94ff" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+<circle cx="367" cy="120" r="9" fill="none" stroke="#4a94ff" stroke-width="2" opacity=".8"/>
+<!-- podstavek -->
+<rect x="230" y="260" width="60" height="30" fill="#1a2740"/>
+<rect x="180" y="288" width="160" height="11" rx="5.5" fill="#22304d"/>
+<!-- oseba: telo -->
+<ellipse cx="130" cy="300" rx="34" ry="6" fill="#3d8bff" opacity=".12"/>
+<path d="M116 220c0-9 7-16 16-16s16 7 16 16v42h-32z" fill="#f0b429"/>
+<rect x="118" y="262" width="12" height="42" rx="5" fill="#3f4c6b"/>
+<rect x="134" y="262" width="12" height="42" rx="5" fill="#34405c"/>
+<rect x="112" y="300" width="20" height="7" rx="3.5" fill="#e2e8f0"/>
+<rect x="132" y="300" width="20" height="7" rx="3.5" fill="#e2e8f0"/>
+<!-- glava -->
+<circle cx="132" cy="192" r="15" fill="#ffd9b3"/>
+<path d="M118 188c0-9 6-15 14-15s14 6 14 15c-5-4-9-6-14-6s-10 2-14 6z" fill="#2d3748"/>
+<!-- roke + prenosnik -->
+<path d="M116 226l-14 16" stroke="#f0b429" stroke-width="9" stroke-linecap="round"/>
+<path d="M148 226l14 16" stroke="#f0b429" stroke-width="9" stroke-linecap="round"/>
+<rect x="96" y="238" width="72" height="42" rx="5" fill="#22304d" stroke="#3d8bff" stroke-width="2"/>
+<rect x="102" y="244" width="60" height="30" rx="3" fill="#0e1626"/>
+<rect x="108" y="252" width="30" height="4" rx="2" fill="#4a94ff"/>
+<rect x="108" y="261" width="42" height="4" rx="2" fill="#2b3a57"/>
+<!-- orodja spodaj desno -->
+<rect x="392" y="252" width="52" height="34" rx="6" fill="#22304d" stroke="#3d8bff" stroke-width="2"/>
+<rect x="408" y="245" width="20" height="9" rx="3" fill="#3d8bff"/>
+<path d="M400 268h36" stroke="#3d8bff" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+<!-- izvijač -->
+<path d="M352 300l26-26" stroke="#4a94ff" stroke-width="6" stroke-linecap="round"/>
+<path d="M378 274l9-9" stroke="#f0b429" stroke-width="9" stroke-linecap="round"/>
+<!-- listi -->
+<path d="M60 320c14-6 26-2 32 8-14 5-26 2-32-8z" fill="#3d8bff" opacity=".28"/>
+<path d="M470 322c-14-6-26-2-32 8 14 5 26 2 32-8z" fill="#3d8bff" opacity=".28"/>
+</svg></div>
   </div>
 </section>
 
@@ -257,6 +318,44 @@ footer{border-top:1px solid var(--border);padding:36px 0;margin-top:20px}
       <h2 class="h2">Stranke vas iščejo. Vprašanje je, ali vas najdejo.</h2>
       <p class="lead">Ko nekdo potrebuje storitev, jo najprej poišče na telefonu. Če vas ni na spletu ali stran ni uporabna, gre k naslednjemu.</p>
     </div>
+    <div class="why-art reveal" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" >
+<defs><linearGradient id="i3a" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+<circle cx="60" cy="60" r="38" fill="#3d8bff" opacity=".08"/>
+<circle cx="380" cy="240" r="46" fill="#3d8bff" opacity=".07"/>
+<!-- telefon -->
+<rect x="40" y="70" width="112" height="190" rx="18" fill="#1a2740" stroke="#3d8bff" stroke-width="3"/>
+<rect x="52" y="90" width="88" height="150" rx="8" fill="#0e1626"/>
+<rect x="78" y="78" width="36" height="6" rx="3" fill="#22304d"/>
+<rect x="62" y="102" width="48" height="9" rx="4.5" fill="url(#i3a)"/>
+<rect x="62" y="119" width="68" height="6" rx="3" fill="#2b3a57"/>
+<rect x="62" y="131" width="54" height="6" rx="3" fill="#2b3a57"/>
+<rect x="62" y="149" width="68" height="34" rx="6" fill="#1a2438" stroke="#2b3a57" stroke-width="1.4"/>
+<path d="M68 175l12-11 9 8 7-7 16 13v2H68z" fill="#3d8bff" opacity=".45"/>
+<rect x="62" y="193" width="46" height="16" rx="8" fill="url(#i3a)"/>
+<!-- puščica -->
+<path d="M172 165h58" stroke="#3d8bff" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<path d="M224 158l9 7-9 7" stroke="#3d8bff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<!-- namizni zaslon -->
+<rect x="250" y="66" width="160" height="118" rx="12" fill="#1a2740" stroke="#3d8bff" stroke-width="3"/>
+<rect x="262" y="78" width="136" height="94" rx="6" fill="#0e1626"/>
+<rect x="262" y="78" width="136" height="16" rx="6" fill="#1b2740"/>
+<circle cx="272" cy="86" r="2.8" fill="#4a94ff"/><circle cx="281" cy="86" r="2.8" fill="#33415c"/>
+<rect x="272" y="106" width="52" height="9" rx="4.5" fill="url(#i3a)"/>
+<rect x="272" y="122" width="76" height="6" rx="3" fill="#2b3a57"/>
+<rect x="272" y="134" width="60" height="6" rx="3" fill="#2b3a57"/>
+<rect x="272" y="150" width="40" height="13" rx="6.5" fill="url(#i3a)"/>
+<rect x="330" y="106" width="58" height="42" rx="6" fill="#1a2438" stroke="#2b3a57" stroke-width="1.4"/>
+<path d="M336 140l12-11 9 8 7-6 14 12v1h-42z" fill="#3d8bff" opacity=".45"/>
+<rect x="300" y="184" width="60" height="22" fill="#1a2740"/>
+<rect x="268" y="206" width="124" height="10" rx="5" fill="#22304d"/>
+<!-- kljukice -->
+<circle cx="200" cy="238" r="17" fill="none" stroke="#3d8bff" stroke-width="2.5" opacity=".8"/>
+<path d="M192 238l6 6 11-12" stroke="#4a94ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="248" cy="238" r="17" fill="none" stroke="#3d8bff" stroke-width="2.5" opacity=".45"/>
+<path d="M240 238l6 6 11-12" stroke="#4a94ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".5"/>
+<ellipse cx="330" cy="222" rx="86" ry="7" fill="#3d8bff" opacity=".1"/>
+</svg></div>
     <div class="grid g3 reveal">
       <div class="card">
         <div class="ico">&#128269;</div>
@@ -328,12 +427,46 @@ footer{border-top:1px solid var(--border);padding:36px 0;margin-top:20px}
         <p style="color:var(--muted);font-size:.9rem;margin-top:18px">Slike obdelam in pripravim za spletno stran — pravih velikosti, da se stran hitro naloži.</p>
         <a href="#kontakt" class="btn primary" style="margin-top:22px">Dogovorimo se za termin</a>
       </div>
-      <div class="foto-visual" aria-hidden="true">
-        <div class="fg fg1"></div>
-        <div class="fg fg2"></div>
-        <div class="fg fg3"></div>
-        <div class="fg fg4"></div>
-      </div>
+      <div class="foto-art" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 340" >
+<defs>
+<linearGradient id="i2a" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+</defs>
+<circle cx="70" cy="80" r="44" fill="#3d8bff" opacity=".08"/>
+<circle cx="392" cy="252" r="52" fill="#3d8bff" opacity=".07"/>
+<circle cx="392" cy="72" r="16" fill="none" stroke="#3d8bff" stroke-width="2" opacity=".32"/>
+<!-- stojalo -->
+<path d="M230 236l-34 66M230 236l34 66M230 236v56" stroke="#22304d" stroke-width="7" stroke-linecap="round"/>
+<!-- fotoaparat telo -->
+<rect x="152" y="140" width="156" height="100" rx="16" fill="#1a2740" stroke="#3d8bff" stroke-width="3"/>
+<rect x="196" y="122" width="52" height="22" rx="7" fill="#22304d" stroke="#3d8bff" stroke-width="2.5"/>
+<!-- objektiv -->
+<circle cx="230" cy="190" r="40" fill="#0e1626" stroke="#3d8bff" stroke-width="3"/>
+<circle cx="230" cy="190" r="27" fill="#131c2e" stroke="#2b3a57" stroke-width="2"/>
+<circle cx="230" cy="190" r="15" fill="url(#i2a)" opacity=".85"/>
+<circle cx="222" cy="182" r="5.5" fill="#cfe2ff" opacity=".75"/>
+<!-- bliskavica -->
+<rect x="272" y="158" width="22" height="14" rx="4" fill="#f0b429"/>
+<circle cx="170" cy="160" r="5" fill="#4a94ff"/>
+<!-- bliski -->
+<path d="M330 112l16-16M344 140h22M322 86l6-20" stroke="#f0b429" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+<path d="M130 112l-16-16M116 140H94M138 86l-6-20" stroke="#4a94ff" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+<!-- fotografije okrog -->
+<g transform="rotate(-9 78 232)">
+<rect x="46" y="204" width="64" height="56" rx="6" fill="#1a2438" stroke="#3d8bff" stroke-width="2"/>
+<rect x="52" y="210" width="52" height="34" rx="3" fill="#22304d"/>
+<path d="M52 236l14-12 11 9 9-8 18 15v6H52z" fill="#3d8bff" opacity=".5"/>
+<circle cx="92" cy="219" r="4.5" fill="#f0b429" opacity=".8"/>
+</g>
+<g transform="rotate(10 384 210)">
+<rect x="352" y="182" width="64" height="56" rx="6" fill="#1a2438" stroke="#3d8bff" stroke-width="2"/>
+<rect x="358" y="188" width="52" height="34" rx="3" fill="#22304d"/>
+<path d="M358 214l13-11 12 9 8-7 17 14v3h-50z" fill="#3d8bff" opacity=".5"/>
+<circle cx="398" cy="197" r="4.5" fill="#f0b429" opacity=".8"/>
+</g>
+<!-- tla -->
+<ellipse cx="230" cy="306" rx="106" ry="9" fill="#3d8bff" opacity=".1"/>
+</svg></div>
     </div>
   </div>
 </section>
