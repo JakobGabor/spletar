@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="sl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Studio Vita — frizerski in kozmetični salon</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;color:#2b2320;background:#fdfaf7;line-height:1.7;font-weight:300}
+.w{max-width:1000px;margin:0 auto;padding:0 22px}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,.logo{font-family:'Cormorant Garamond',serif;font-weight:700;letter-spacing:.01em}
+header{padding:22px 0;border-bottom:1px solid #eee3da;position:sticky;top:0;background:rgba(253,250,247,.95);z-index:9}
+.nav{display:flex;align-items:center}
+.logo{font-size:1.5rem}
+.logo span{color:#b08968}
+.nav nav{margin-left:auto;display:flex;gap:24px;font-size:.9rem;letter-spacing:.04em}
+.book{border:1px solid #b08968;color:#b08968;padding:9px 20px;border-radius:2px;margin-left:24px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.hero{padding:90px 0;text-align:center;background:linear-gradient(#fdfaf7,#f6ede4)}
+.hero h1{font-size:3.2rem;line-height:1.1;margin-bottom:16px}
+.hero p{max-width:480px;margin:0 auto 28px;color:#6b5d54}
+.b1{background:#b08968;color:#fff;padding:14px 34px;border-radius:2px;letter-spacing:.09em;text-transform:uppercase;font-size:.82rem;display:inline-block}
+section{padding:64px 0}
+h2{font-size:2.1rem;text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:#8b7a6e;margin-bottom:40px;font-size:.95rem}
+.list{max-width:620px;margin:0 auto}
+.it{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px solid #eee3da;gap:16px}
+.it .n{font-weight:400}
+.it .d{font-size:.84rem;color:#8b7a6e;display:block;font-weight:300}
+.it b{color:#b08968;white-space:nowrap;font-weight:500}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ph{aspect-ratio:3/4;border-radius:2px;background:linear-gradient(135deg,#e8d5c4,#d4b8a0);display:grid;place-items:center;color:#fff;font-size:2rem}
+.ph:nth-child(2){background:linear-gradient(135deg,#d4b8a0,#b08968)}
+.ph:nth-child(3){background:linear-gradient(135deg,#c9b8ab,#a89482)}
+.cream{background:#f6ede4}
+.q{max-width:620px;margin:0 auto;text-align:center}
+.q p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;margin-bottom:12px}
+.q span{font-size:.85rem;color:#8b7a6e;letter-spacing:.06em}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+.info b{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#b08968;margin-bottom:6px}
+footer{padding:28px 0;text-align:center;font-size:.82rem;color:#8b7a6e;border-top:1px solid #eee3da}
+@media(max-width:760px){.hero h1{font-size:2.2rem}.nav nav{display:none}.gal,.info{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="w nav">
+<div class="logo">Studio <span>Vita</span></div>
+<nav><a href="#s">Storitve</a><a href="#g">Galerija</a><a href="#k">Kontakt</a>
+<a href="#k" class="book">Naroči se</a></nav>
+</div></header>
+<div class="hero"><div class="w">
+<h1>Lepota, ki<br>traja</h1>
+<p>Frizerske in kozmetične storitve v srcu Kranja. Vzamemo si čas za vsako stranko — brez hitenja, z občutkom.</p>
+<a href="#k" class="b1">Rezerviraj termin</a>
+</div></div>
+<section id="s"><div class="w">
+<h2>Storitve</h2><p class="sub">Cene veljajo za povprečno dolžino las</p>
+<div class="list">
+<div class="it"><span class="n">Striženje in feniranje<span class="d">Posvet, umivanje, striženje, oblikovanje</span></span><b>32 €</b></div>
+<div class="it"><span class="n">Barvanje las<span class="d">Barva po izbiri, nega, feniranje</span></span><b>od 55 €</b></div>
+<div class="it"><span class="n">Prameni / balayage<span class="d">Naravni prehodi, toniranje</span></span><b>od 75 €</b></div>
+<div class="it"><span class="n">Kozmetični tretma obraza<span class="d">Čiščenje, piling, maska, masaža</span></span><b>45 €</b></div>
+<div class="it"><span class="n">Manikura z lakiranjem<span class="d">Oblikovanje, nega obnohtne kožice</span></span><b>28 €</b></div>
+<div class="it"><span class="n">Poročna pričeska<span class="d">Vključuje predhodno probo</span></span><b>od 90 €</b></div>
+</div></div></section>
+<section id="g" class="cream"><div class="w">
+<h2>Naše delo</h2><p class="sub">Nekaj utrinkov iz salona</p>
+<div class="gal"><div class="ph">✂</div><div class="ph">💇</div><div class="ph">💅</div></div>
+</div></section>
+<section><div class="w q">
+<p>„Končno salon, kjer te poslušajo. Prvič po letih sem res zadovoljna s svojo barvo.“</p>
+<span>— Maja K., redna stranka</span>
+</div></section>
+<section id="k" class="cream"><div class="w">
+<h2>Obiščite nas</h2><p class="sub">Naročanje po telefonu ali sporočilu</p>
+<div class="info">
+<div><b>Naslov</b>Glavni trg 12<br>4000 Kranj</div>
+<div><b>Telefon</b>041 555 123<br>tudi SMS</div>
+<div><b>Odprto</b>Pon–Pet 9–19<br>Sob 8–13</div>
+</div>
+<div style="text-align:center;margin-top:34px"><a href="#" class="b1">Naroči se</a></div>
+</div></section>
+<footer>© 2026 Studio Vita · Vzorčna stran, izdelal Spletar</footer>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Primeri strani | Spletar</title>
+<meta name="description" content="Poglejte vzorčne spletne strani, ki jih izdelamo za obrtnike, salone in mala podjetja." />
+<meta name="theme-color" content="#0a0d12" />
+<link rel="icon" type="image/svg+xml" href="spletar-icon.svg" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0d12;--bg-2:#0e131b;--card:rgba(255,255,255,.045);--card-2:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.09);--border-2:rgba(255,255,255,.16);
+  --text:#e9edf3;--muted:#8a95a6;--accent:#3d8bff;--accent-2:#2563eb;
+  --accent-soft:rgba(61,139,255,.14);--accent-glow:rgba(61,139,255,.35);
+  --radius:18px;--radius-lg:26px;--shadow:0 18px 50px rgba(0,0,0,.45);
+  --blur:saturate(140%) blur(16px);--ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);line-height:1.6;
+  background:radial-gradient(900px 500px at 12% -8%,rgba(61,139,255,.12),transparent 60%),
+             radial-gradient(760px 480px at 110% 0%,rgba(120,90,255,.06),transparent 55%),var(--bg);
+  background-attachment:fixed;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.brand-name{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.02em;line-height:1.15}
+a{color:inherit;text-decoration:none}
+svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.lead{color:var(--muted);font-size:1.02rem;max-width:620px;margin:0 auto}
+header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.78);
+  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand svg{width:34px;height:34px}
+.brand-name{font-weight:700;font-size:1.15rem}
+.brand-name small{display:block;color:var(--muted);font-weight:500;font-size:.66rem;letter-spacing:.06em}
+.nav nav{margin-left:auto;display:flex;gap:6px;align-items:center}
+.nav nav a{padding:9px 13px;border-radius:10px;color:var(--muted);font-size:.92rem;font-weight:500;transition:.2s}
+.nav nav a:hover{color:var(--text);background:var(--card)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:12px;
+  font-family:inherit;font-size:.94rem;font-weight:600;cursor:pointer;border:1px solid var(--border-2);
+  background:var(--card-2);color:var(--text);transition:.22s var(--ease)}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.1)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border-color:transparent;
+  box-shadow:0 10px 28px var(--accent-glow)}
+.btn.sm{padding:10px 16px;font-size:.87rem}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.head{text-align:center;padding:clamp(46px,7vw,76px) 0 34px}
+.head h1{font-size:clamp(1.9rem,4.6vw,2.9rem);margin-bottom:14px}
+.note{max-width:640px;margin:22px auto 0;padding:13px 18px;border-radius:12px;
+  background:rgba(255,200,87,.08);border:1px solid rgba(255,200,87,.28);color:#ffc857;font-size:.88rem}
+/* KARTICE PRIMEROV */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:70px}
+.case{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  backdrop-filter:var(--blur);box-shadow:var(--shadow);overflow:hidden;cursor:pointer;
+  transition:.3s var(--ease);display:flex;flex-direction:column;text-align:left;width:100%;
+  font-family:inherit;color:inherit}
+.case:hover{transform:translateY(-6px);border-color:var(--border-2);box-shadow:0 26px 60px rgba(0,0,0,.55)}
+.thumb{aspect-ratio:16/11;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.thumb .mini{position:absolute;inset:0;padding:12px}
+.tb{height:14px;display:flex;align-items:center;gap:4px;padding:0 6px;border-radius:5px 5px 0 0}
+.tb i{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4)}
+.pv{height:calc(100% - 14px);border-radius:0 0 5px 5px;padding:10px;display:flex;flex-direction:column;gap:5px}
+.l{height:5px;border-radius:3px;opacity:.85}
+.blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:auto}
+.blocks div{height:26px;border-radius:4px;opacity:.55}
+.case .meta{padding:18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.case h3{font-size:1.1rem}
+.case p{color:var(--muted);font-size:.89rem;flex:1}
+.open{color:var(--accent);font-weight:600;font-size:.88rem;display:inline-flex;gap:7px;align-items:center;margin-top:6px}
+.open::after{content:"→";transition:.25s}
+.case:hover .open::after{transform:translateX(4px)}
+/* MODAL S STRANJO */
+.viewer{position:fixed;inset:0;z-index:90;background:rgba(3,6,12,.85);backdrop-filter:blur(6px);
+  display:none;place-items:center;padding:22px}
+.viewer.show{display:grid;animation:fade .22s}
+.frame{width:100%;max-width:1140px;height:88vh;background:var(--bg-2);border:1px solid var(--border-2);
+  border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:var(--shadow);animation:rise .3s var(--ease)}
+.fbar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,.03);flex:0 0 auto}
+.dots{display:flex;gap:6px}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--border-2)}
+.dots i:first-child{background:var(--accent)}
+.url{flex:1;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:8px;
+  padding:6px 14px;font-size:.82rem;color:var(--muted);text-align:center;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.devs{display:flex;gap:5px}
+.dev{width:34px;height:30px;border-radius:8px;border:1px solid var(--border);background:transparent;
+  color:var(--muted);cursor:pointer;font-size:.85rem;transition:.2s}
+.dev:hover{color:var(--text)}
+.dev.on{color:var(--accent);background:var(--accent-soft);border-color:rgba(61,139,255,.3)}
+.close{width:34px;height:30px;border-radius:8px;border:1px solid var(--border);background:transparent;
+  color:var(--muted);cursor:pointer;font-size:.9rem;transition:.2s}
+.close:hover{color:#ff5d6c;border-color:rgba(255,93,108,.4)}
+.stage{flex:1;min-height:0;display:grid;place-items:center;padding:0;background:#0a0d12;overflow:auto}
+.stage iframe{width:100%;height:100%;border:0;background:#fff;transition:width .35s var(--ease)}
+.stage.mob{padding:18px}
+.stage.mob iframe{width:390px;max-width:100%;height:100%;border-radius:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);border:1px solid var(--border-2)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* CTA */
+.cta-box{background:linear-gradient(135deg,rgba(61,139,255,.14),rgba(37,99,235,.06));
+  border:1px solid rgba(61,139,255,.3);border-radius:var(--radius-lg);padding:clamp(32px,5vw,54px);
+  text-align:center;backdrop-filter:var(--blur);box-shadow:var(--shadow);margin-bottom:70px}
+.cta-box h2{font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:12px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:34px 0}
+.foot{display:flex;gap:20px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+.foot nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+.foot nav a:hover{color:var(--accent)}
+@media(max-width:960px){.cases{grid-template-columns:repeat(2,1fr)}.nav nav a:not(.btn){display:none}}
+@media(max-width:620px){.cases{grid-template-columns:1fr}.frame{height:92vh}.devs{display:none}.foot nav{margin-left:0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Spletar">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+        <g fill="none" stroke="url(#lg)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M27.43 10.48 L48.35 17.28 L52.92 38.80 L36.57 53.52 L15.65 46.72 L11.08 25.20 Z" stroke-width="2.1"/>
+          <path d="M27.43 10.48 L52.92 38.80"/><path d="M27.43 10.48 L36.57 53.52"/>
+          <path d="M27.43 10.48 L15.65 46.72"/><path d="M48.35 17.28 L36.57 53.52"/>
+          <path d="M48.35 17.28 L15.65 46.72"/><path d="M48.35 17.28 L11.08 25.20"/>
+          <path d="M52.92 38.80 L15.65 46.72"/><path d="M52.92 38.80 L11.08 25.20"/>
+          <path d="M36.57 53.52 L11.08 25.20"/>
+        </g>
+      </svg>
+      <span class="brand-name">Spletar<small>IZDELAVA SPLETNIH STRANI</small></span>
+    </a>
+    <nav>
+      <a href="index.html#storitve">Storitve</a>
+      <a href="index.html#paketi">Cenik</a>
+      <a href="index.html#kontakt" class="btn primary sm">Brezplačen posvet</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap head">
+  <p class="eyebrow">Primeri</p>
+  <h1>Poglejte, kako izgleda stran, ki jo dobite</h1>
+  <p class="lead">Kliknite na primer in odprla se bo prava, delujoča stran. Preizkusite jo tudi v mobilnem pogledu.</p>
+  <div class="note">ℹ️ To so vzorčne strani, izdelane za predstavitev — podjetja na njih so izmišljena.</div>
+</div>
+
+<div class="wrap">
+  <div class="cases">
+
+    <button class="case" data-src="primer-vodovodar.html" data-title="Vodovodar Novak">
+      <div class="thumb" style="background:#0b3d6b">
+        <div class="mini">
+          <div class="tb" style="background:#08304f"><i></i><i></i><i></i></div>
+          <div class="pv" style="background:#0b3d6b">
+            <div class="l" style="width:52%;background:#ffb020;height:9px"></div>
+            <div class="l" style="width:78%;background:rgba(255,255,255,.35)"></div>
+            <div class="l" style="width:62%;background:rgba(255,255,255,.25)"></div>
+            <div class="l" style="width:30%;background:#ffb020;height:8px;margin-top:3px"></div>
+            <div class="blocks"><div style="background:#fff"></div><div style="background:#fff"></div><div style="background:#fff"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="tag">Obrt · Storitve</span>
+        <h3>Vodovodar Novak</h3>
+        <p>Poudarek na nujnem klicu in hitrem stiku. Jasen cenik, gumb za klic vedno na dosegu.</p>
+        <span class="open">Odpri primer</span>
+      </div>
+    </button>
+
+    <button class="case" data-src="primer-salon.html" data-title="Studio Vita">
+      <div class="thumb" style="background:#f6ede4">
+        <div class="mini">
+          <div class="tb" style="background:#e8d5c4"><i style="background:#b08968"></i><i style="background:#c9b8ab"></i><i style="background:#c9b8ab"></i></div>
+          <div class="pv" style="background:#fdfaf7">
+            <div class="l" style="width:46%;background:#b08968;height:9px;margin:0 auto"></div>
+            <div class="l" style="width:68%;background:#d4c4b5;margin:0 auto"></div>
+            <div class="l" style="width:34%;background:#b08968;height:8px;margin:3px auto"></div>
+            <div class="blocks"><div style="background:#e8d5c4"></div><div style="background:#d4b8a0"></div><div style="background:#c9b8ab"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="tag">Salon · Lepota</span>
+        <h3>Studio Vita</h3>
+        <p>Elegantnejši videz s poudarkom na galeriji, ceniku storitev in naročanju.</p>
+        <span class="open">Odpri primer</span>
+      </div>
+    </button>
+
+    <button class="case" data-src="primer-mizarstvo.html" data-title="Mizarstvo Hrast">
+      <div class="thumb" style="background:#2e2419">
+        <div class="mini">
+          <div class="tb" style="background:#241c14"><i style="background:#c8963e"></i><i></i><i></i></div>
+          <div class="pv" style="background:#2e2419">
+            <div class="l" style="width:58%;background:#c8963e;height:9px"></div>
+            <div class="l" style="width:74%;background:rgba(245,239,231,.3)"></div>
+            <div class="l" style="width:48%;background:rgba(245,239,231,.22)"></div>
+            <div class="blocks"><div style="background:#6b4f2f"></div><div style="background:#8a6a42"></div><div style="background:#6b4f2f"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="tag">Obrt · Izdelki</span>
+        <h3>Mizarstvo Hrast</h3>
+        <p>Predstavitev izdelkov in postopka dela. Topli toni, primerni za les in ročno delo.</p>
+        <span class="open">Odpri primer</span>
+      </div>
+    </button>
+
+  </div>
+
+  <div class="cta-box">
+    <p class="eyebrow">Vaša stran</p>
+    <h2>Takšno stran lahko imate tudi vi</h2>
+    <p class="lead">Povejte, kaj delate, in pripravimo predlog po meri. Posvet je brezplačen.</p>
+    <div class="cta-btns">
+      <a href="https://jakobgabor.github.io/CALLDESK-WEB/ponudba.html" class="btn primary">Izpolni vprašalnik</a>
+      <a href="tel:+38631860377" class="btn">📞 031 860 377</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- PREGLEDOVALNIK -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Predogled strani">
+  <div class="frame">
+    <div class="fbar">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="url" id="vUrl">primer.si</div>
+      <div class="devs">
+        <button class="dev on" id="dDesk" title="Namizni pogled">🖥</button>
+        <button class="dev" id="dMob" title="Mobilni pogled">📱</button>
+      </div>
+      <button class="close" id="vClose" title="Zapri">✕</button>
+    </div>
+    <div class="stage" id="stage"><iframe id="vFrame" title="Predogled vzorčne strani" loading="lazy"></iframe></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="leto">2026</span> Spletar</span>
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="index.html#storitve">Storitve</a>
+      <a href="index.html#paketi">Cenik</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+var viewer=document.getElementById('viewer'),frame=document.getElementById('vFrame'),
+    vUrl=document.getElementById('vUrl'),stage=document.getElementById('stage'),
+    dDesk=document.getElementById('dDesk'),dMob=document.getElementById('dMob');
+
+function openCase(src,title){
+  frame.src=src;
+  vUrl.textContent='www.'+title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.si';
+  setDesk();
+  viewer.classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeCase(){
+  viewer.classList.remove('show');
+  frame.src='';
+  document.body.style.overflow='';
+}
+function setDesk(){stage.classList.remove('mob');dDesk.classList.add('on');dMob.classList.remove('on');}
+function setMob(){stage.classList.add('mob');dMob.classList.add('on');dDesk.classList.remove('on');}
+
+document.querySelectorAll('.case').forEach(function(c){
+  c.addEventListener('click',function(){openCase(c.dataset.src,c.dataset.title);});
+});
+document.getElementById('vClose').addEventListener('click',closeCase);
+viewer.addEventListener('click',function(e){if(e.target===viewer)closeCase();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&viewer.classList.contains('show'))closeCase();});
+dDesk.addEventListener('click',setDesk);
+dMob.addEventListener('click',setMob);
+document.getElementById('leto').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
