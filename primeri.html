@@ -107,6 +107,32 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.78);
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 /* CTA */
+/* PAKETI */
+.sec-head{text-align:center;padding:56px 0 30px;border-top:1px solid var(--border);margin-top:20px}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:12px}
+.packs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:60px}
+.pack{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  backdrop-filter:var(--blur);box-shadow:var(--shadow);overflow:hidden;cursor:pointer;text-align:left;
+  transition:.3s var(--ease);display:flex;flex-direction:column;width:100%;font-family:inherit;color:inherit;position:relative}
+.pack:hover{transform:translateY(-6px);border-color:var(--border-2);box-shadow:0 26px 60px rgba(0,0,0,.55)}
+.pack.best{border-color:rgba(61,139,255,.45)}
+.pack .pbadge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff;font-size:.62rem;font-weight:700;padding:4px 10px;border-radius:99px;letter-spacing:.06em;z-index:2}
+.pack .ph{aspect-ratio:16/10;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.pack .ph .mini{position:absolute;inset:0;padding:11px}
+.pack .meta{padding:18px;display:flex;flex-direction:column;gap:5px;flex:1}
+.pack .pname{font-family:'Space Grotesk',sans-serif;font-size:1.06rem;font-weight:700}
+.pack .pprice{color:var(--accent);font-weight:700;font-size:1.2rem;font-family:'Space Grotesk',sans-serif}
+.pack .pdesc{color:var(--muted);font-size:.85rem;flex:1;line-height:1.5}
+.pack .pfeat{list-style:none;margin:8px 0 0;display:flex;flex-direction:column;gap:4px}
+.pack .pfeat li{color:var(--muted);font-size:.79rem;display:flex;gap:7px;align-items:flex-start}
+.pack .pfeat li::before{content:"✓";color:var(--accent);font-weight:700;flex:0 0 auto}
+.pack .popen{color:var(--accent);font-weight:600;font-size:.85rem;margin-top:10px;display:inline-flex;gap:6px;align-items:center}
+.pack .popen::after{content:"→";transition:.25s}
+.pack:hover .popen::after{transform:translateX(4px)}
+@media(max-width:960px){.packs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.packs{grid-template-columns:1fr}}
+
 .cta-box{background:linear-gradient(135deg,rgba(61,139,255,.14),rgba(37,99,235,.06));
   border:1px solid rgba(61,139,255,.3);border-radius:var(--radius-lg);padding:clamp(32px,5vw,54px);
   text-align:center;backdrop-filter:var(--blur);box-shadow:var(--shadow);margin-bottom:70px}
@@ -281,6 +307,97 @@ footer{border-top:1px solid var(--border);padding:34px 0}
 
   </div>
 
+  <div class="sec-head">
+    <p class="eyebrow">Po paketih</p>
+    <h2>Kaj dobite pri posameznem paketu</h2>
+    <p class="lead">Iste panoge, različen obseg. Kliknite in primerjajte, kaj vključuje vsak paket.</p>
+  </div>
+
+  <div class="packs">
+
+    <button class="pack" data-src="paket-vizitka.html" data-title="Slikopleskarstvo Kos">
+      <div class="ph" style="background:#1d4ed8">
+        <div class="mini">
+          <div class="tb" style="background:#1e40af"><i></i><i></i><i></i></div>
+          <div class="pv" style="background:#1d4ed8;align-items:center">
+            <div class="l" style="width:40%;background:rgba(255,255,255,.75);height:8px;margin:6px auto 4px"></div>
+            <div class="l" style="width:56%;background:rgba(255,255,255,.35);margin:0 auto"></div>
+            <div class="l" style="width:30%;background:#fff;height:9px;margin:6px auto 0;border-radius:5px"></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="pname">Vizitka</span>
+        <span class="pprice">100 €</span>
+        <p class="pdesc">Ena stran, na kateri je vse bistveno. Da vas stranke sploh najdejo.</p>
+        <ul class="pfeat"><li>Enostranska predstavitev</li><li>Kontakt in delovni čas</li><li>Gumb za klic</li></ul>
+        <span class="popen">Odpri primer</span>
+      </div>
+    </button>
+
+    <button class="pack best" data-src="paket-osnovna.html" data-title="Vrtnarstvo Zelen">
+      <span class="pbadge">NAJPOGOSTEJŠA</span>
+      <div class="ph" style="background:#e8f4e6">
+        <div class="mini">
+          <div class="tb" style="background:#d5ead2"><i style="background:#2f7d32"></i><i style="background:#a8cfa4"></i><i style="background:#a8cfa4"></i></div>
+          <div class="pv" style="background:#fff">
+            <div class="l" style="width:48%;background:#2f7d32;height:8px"></div>
+            <div class="l" style="width:70%;background:#cfe3cd"></div>
+            <div class="blocks"><div style="background:#7cb342"></div><div style="background:#8bc34a"></div><div style="background:#4f9c48"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="pname">Osnovna</span>
+        <span class="pprice">250 €</span>
+        <p class="pdesc">Prava stran z več razdelki, galerijo in obrazcem — za večino obrtnikov.</p>
+        <ul class="pfeat"><li>Do 5 podstrani</li><li>Galerija in cenik</li><li>Obrazec in zemljevid</li></ul>
+        <span class="popen">Odpri primer</span>
+      </div>
+    </button>
+
+    <button class="pack" data-src="paket-poslovna.html" data-title="Gradbeništvo Merkur">
+      <div class="ph" style="background:#16233a">
+        <div class="mini">
+          <div class="tb" style="background:#1f3050"><i style="background:#f2a13c"></i><i></i><i></i></div>
+          <div class="pv" style="background:#16233a">
+            <div class="l" style="width:54%;background:#f2a13c;height:8px"></div>
+            <div class="l" style="width:72%;background:#2b3d5c"></div>
+            <div class="blocks"><div style="background:#2b3d5c"></div><div style="background:#1f3050"></div><div style="background:#2b3d5c"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="pname">Poslovna</span>
+        <span class="pprice">od 500 €</span>
+        <p class="pdesc">Za podjetja z več storitvami — z referencami, nasveti in mnenji strank.</p>
+        <ul class="pfeat"><li>Do 8 podstrani</li><li>Reference in blog</li><li>Mnenja in števci</li></ul>
+        <span class="popen">Odpri primer</span>
+      </div>
+    </button>
+
+    <button class="pack" data-src="paket-trgovina.html" data-title="Čebelarstvo Medved">
+      <div class="ph" style="background:#fdf3e0">
+        <div class="mini">
+          <div class="tb" style="background:#f7e8cf"><i style="background:#c8860d"></i><i style="background:#e0c89a"></i><i style="background:#e0c89a"></i></div>
+          <div class="pv" style="background:#fffaf0">
+            <div class="l" style="width:46%;background:#c8860d;height:8px"></div>
+            <div class="blocks" style="margin-top:6px"><div style="background:#e8a72a"></div><div style="background:#8a5f1a"></div><div style="background:#d9c47a"></div></div>
+            <div class="blocks"><div style="background:#f0d9a0"></div><div style="background:#d99f2e"></div><div style="background:#e8d5a8"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="pname">Spletna trgovina</span>
+        <span class="pprice">od 600 €</span>
+        <p class="pdesc">Prodaja prek spleta z delujočo košarico in pregledom naročila.</p>
+        <ul class="pfeat"><li>Katalog izdelkov</li><li>Košarica in dostava</li><li>Filtri in kategorije</li></ul>
+        <span class="popen">Odpri primer</span>
+      </div>
+    </button>
+
+  </div>
+
   <div class="cta-box">
     <p class="eyebrow">Vaša stran</p>
     <h2>Takšno stran lahko imate tudi vi</h2>
@@ -341,7 +458,7 @@ function closeCase(){
 function setDesk(){stage.classList.remove('mob');dDesk.classList.add('on');dMob.classList.remove('on');}
 function setMob(){stage.classList.add('mob');dMob.classList.add('on');dDesk.classList.remove('on');}
 
-document.querySelectorAll('.case').forEach(function(c){
+document.querySelectorAll('.case,.pack').forEach(function(c){
   c.addEventListener('click',function(){openCase(c.dataset.src,c.dataset.title);});
 });
 document.getElementById('vClose').addEventListener('click',closeCase);

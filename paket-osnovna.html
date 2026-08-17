@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="sl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vrtnarstvo Zelen — urejanje vrtov in okolice</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--g1:#2f7d32;--g2:#1b5e20;--lime:#8bc34a;--ink:#1a2b1c;--gr:#5f7361;--l:#f2f8f1}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:#fff;line-height:1.7}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,.lg{font-family:Outfit,sans-serif;font-weight:700;line-height:1.15;letter-spacing:-.02em}
+header{background:#fff;border-bottom:1px solid #e3ece2;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;gap:18px;height:70px}
+.lg{font-size:1.24rem;display:flex;align-items:center;gap:9px}
+.lg i{font-style:normal}.lg span{color:var(--g1)}
+.nav nav{margin-left:auto;display:flex;gap:22px;font-size:.93rem;color:var(--gr)}
+.nav nav a:hover{color:var(--g1)}
+.bk{background:var(--g1);color:#fff;padding:11px 22px;border-radius:10px;font-weight:600;font-size:.9rem;transition:.24s}
+.bk:hover{background:var(--g2);transform:translateY(-2px)}
+.hero{background:linear-gradient(160deg,#e8f4e6,#fff);padding:72px 0}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.1rem);margin-bottom:14px}
+.hero h1 em{color:var(--g1);font-style:normal}
+.hero p{color:var(--gr);max-width:420px;margin-bottom:24px}
+.b1{background:var(--g1);color:#fff;padding:14px 28px;border-radius:11px;font-weight:600;display:inline-flex;gap:9px;align-items:center;transition:.24s}
+.b1:hover{background:var(--g2);transform:translateY(-3px);box-shadow:0 14px 30px rgba(47,125,50,.28)}
+.b2{border:1.5px solid #cfe3cd;padding:13px 26px;border-radius:11px;font-weight:600;transition:.24s;display:inline-block}
+.b2:hover{border-color:var(--g1);color:var(--g1)}
+.hero-art svg{width:100%;height:auto}
+.grow{transform-origin:bottom center;animation:grow 5s ease-in-out infinite}
+@keyframes grow{0%,100%{transform:scaleY(1) rotate(0)}50%{transform:scaleY(1.04) rotate(1.5deg)}}
+section{padding:64px 0}
+.eyb{color:var(--g1);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin-bottom:10px}
+.sub{color:var(--gr);max-width:520px;margin-bottom:36px}
+.center{text-align:center}.center .sub{margin:0 auto 36px}
+.lbg{background:var(--l)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.c{background:#fff;border:1px solid #e3ece2;border-radius:14px;padding:24px;transition:.28s}
+.c:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(26,43,28,.1);border-color:#c8e0c6}
+.c i{font-style:normal;font-size:1.7rem;display:block;margin-bottom:11px}
+.c h3{font-size:1.08rem;margin-bottom:6px}
+.c p{color:var(--gr);font-size:.9rem}
+/* galerija */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ph{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:4/3;transition:.35s}
+.ph svg{width:100%;height:100%;display:block}
+.ph::after{content:attr(data-l);position:absolute;left:0;right:0;bottom:0;padding:12px;font-size:.82rem;color:#fff;
+  background:linear-gradient(transparent,rgba(26,43,28,.8));opacity:0;transition:.3s}
+.ph:hover{transform:scale(1.03);box-shadow:0 16px 34px rgba(26,43,28,.2)}
+.ph:hover::after{opacity:1}
+/* cenik */
+.pl{max-width:600px;margin:0 auto}
+.pr{display:flex;justify-content:space-between;gap:14px;padding:15px 18px;border-bottom:1px solid #e3ece2;transition:.22s}
+.pr:hover{background:var(--l);padding-left:24px}
+.pr small{display:block;color:var(--gr);font-size:.84rem}
+.pr b{color:var(--g1);white-space:nowrap}
+/* obrazec */
+.form{max-width:560px;margin:0 auto;background:#fff;border:1px solid #e3ece2;border-radius:18px;padding:32px}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label{font-size:.85rem;font-weight:600}
+.f input,.f textarea,.f select{padding:12px 14px;border:1px solid #d8e6d6;border-radius:10px;font-family:inherit;font-size:.93rem;transition:.2s}
+.f input:focus,.f textarea:focus,.f select:focus{outline:0;border-color:var(--g1);box-shadow:0 0 0 3px rgba(47,125,50,.1)}
+.f textarea{resize:vertical;min-height:90px}
+.sbm{width:100%;background:var(--g1);color:#fff;border:0;padding:14px;border-radius:11px;font-family:inherit;
+  font-weight:600;font-size:.98rem;cursor:pointer;transition:.24s;margin-top:6px}
+.sbm:hover{background:var(--g2);transform:translateY(-2px)}
+.ok{display:none;background:#e8f4e6;border:1px solid #b6dcb3;color:var(--g2);padding:14px;border-radius:11px;
+  margin-top:14px;font-size:.92rem;text-align:center}
+.ok.on{display:block}
+/* mapa */
+.map{border-radius:16px;overflow:hidden;border:1px solid #e3ece2;height:250px;position:relative;background:#eef4ed}
+.map svg{width:100%;height:100%}
+.pin{animation:pin 2.2s ease-in-out infinite}
+@keyframes pin{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+footer{background:var(--ink);color:#9ab19c;padding:28px 0;font-size:.86rem}
+.fw{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(20px);transition:.7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.hg,.g3,.gal,.fl{grid-template-columns:1fr}.nav nav a:not(.bk){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+
+<header><div class="w nav">
+<div class="lg"><i>🌿</i>Vrtnarstvo <span>Zelen</span></div>
+<nav><a href="#s">Storitve</a><a href="#g">Galerija</a><a href="#c">Cenik</a><a href="#k">Kontakt</a></nav>
+<a href="#k" class="bk">Povpraševanje</a>
+</div></header>
+
+<div class="hero"><div class="w hg">
+<div>
+<h1>Vrt, ki bo <em>lep vse leto</em></h1>
+<p>Urejanje in vzdrževanje vrtov, zasaditve, košnja in obrezovanje. Za hiše, stanovanjske bloke in podjetja.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#k" class="b1">Brezplačen ogled</a><a href="#g" class="b2">Poglej galerijo</a>
+</div>
+</div>
+<div class="hero-art">
+<svg viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+<circle cx="190" cy="150" r="120" fill="#dbeed8"/>
+<ellipse cx="190" cy="252" rx="140" ry="16" fill="#c3e0bf"/>
+<g class="grow">
+<path d="M190 252V128" stroke="#5d8f4e" stroke-width="7" stroke-linecap="round"/>
+<path d="M190 176c-30-4-46-24-48-48 26 2 44 20 48 48z" fill="#4f9c48"/>
+<path d="M190 152c30-4 46-24 48-48-26 2-44 20-48 48z" fill="#69b55f"/>
+<path d="M190 210c-24-3-38-20-40-40 22 2 36 17 40 40z" fill="#5aa851"/>
+<circle cx="190" cy="112" r="22" fill="#8bc34a"/>
+<circle cx="190" cy="112" r="10" fill="#ffca28"/>
+</g>
+<g fill="#7cb342" opacity=".85">
+<path d="M92 252c0-22 10-36 22-36s22 14 22 36z"/>
+<path d="M244 252c0-18 8-30 18-30s18 12 18 30z"/>
+</g>
+<g fill="#e57373"><circle cx="112" cy="228" r="6"/><circle cx="262" cy="234" r="5"/></g>
+</svg>
+</div>
+</div></div>
+
+<section id="s"><div class="w center">
+<p class="eyb rv">Storitve</p><h2 class="rv">Kaj urejamo</h2>
+<p class="sub rv">Enkratna ureditev ali redno vzdrževanje skozi vso sezono.</p>
+<div class="g3">
+<div class="c rv"><i>🌱</i><h3>Zasaditve</h3><p>Načrt zasaditve, izbira rastlin in sama izvedba.</p></div>
+<div class="c rv"><i>✂️</i><h3>Obrezovanje</h3><p>Sadno drevje, žive meje in okrasno grmičevje.</p></div>
+<div class="c rv"><i>🌾</i><h3>Košnja in nega trate</h3><p>Redna košnja, gnojenje, prezračevanje in dosejevanje.</p></div>
+<div class="c rv"><i>🪨</i><h3>Tlakovanje</h3><p>Poti, terase in robniki iz naravnega ali betonskega kamna.</p></div>
+<div class="c rv"><i>💦</i><h3>Namakalni sistemi</h3><p>Montaža avtomatskega namakanja s krmilnikom.</p></div>
+<div class="c rv"><i>🍂</i><h3>Jesensko čiščenje</h3><p>Odvoz listja, priprava vrta na zimo, zaščita rastlin.</p></div>
+</div></div></section>
+
+<section id="g" class="lbg"><div class="w center">
+<p class="eyb rv">Galerija</p><h2 class="rv">Naše delo</h2>
+<p class="sub rv">Nekaj vrtov, ki smo jih uredili v zadnji sezoni.</p>
+<div class="gal rv">
+<div class="ph" data-l="Zasaditev pred hišo · Medvode"><svg viewBox="0 0 200 150" preserveAspectRatio="none">
+<rect width="200" height="150" fill="#b9dcb2"/><rect y="96" width="200" height="54" fill="#7cb342"/>
+<circle cx="52" cy="80" r="26" fill="#4f9c48"/><rect x="49" y="96" width="6" height="18" fill="#5d8f4e"/>
+<circle cx="132" cy="88" r="20" fill="#69b55f"/><rect x="129" y="100" width="5" height="14" fill="#5d8f4e"/>
+<circle cx="90" cy="118" r="6" fill="#e57373"/><circle cx="164" cy="122" r="5" fill="#ffca28"/></svg></div>
+<div class="ph" data-l="Tlakovana pot · Škofljica"><svg viewBox="0 0 200 150" preserveAspectRatio="none">
+<rect width="200" height="150" fill="#8bc34a"/>
+<path d="M60 150l30-120h24l30 120z" fill="#d7ccc0"/>
+<path d="M74 118h56M80 92h44M86 66h32M92 44h20" stroke="#b0a396" stroke-width="3"/>
+<circle cx="30" cy="60" r="16" fill="#4f9c48"/><circle cx="172" cy="72" r="18" fill="#69b55f"/></svg></div>
+<div class="ph" data-l="Urejena trata · Vrhnika"><svg viewBox="0 0 200 150" preserveAspectRatio="none">
+<rect width="200" height="150" fill="#7cb342"/>
+<path d="M0 40h200M0 62h200M0 84h200M0 106h200M0 128h200" stroke="#8bc34a" stroke-width="8"/>
+<circle cx="152" cy="42" r="22" fill="#4f9c48"/><rect x="149" y="60" width="6" height="16" fill="#5d8f4e"/>
+<rect x="20" y="96" width="46" height="26" rx="5" fill="#a1887f"/></svg></div>
+</div></div></section>
+
+<section id="c"><div class="w center">
+<p class="eyb rv">Cenik</p><h2 class="rv">Okvirne cene</h2>
+<p class="sub rv">Točno ponudbo pripravimo po ogledu — brezplačno in brez obveznosti.</p>
+<div class="pl" style="text-align:left">
+<div class="pr rv"><span>Ogled in ponudba<small>Kjerkoli v Ljubljani z okolico</small></span><b>Brezplačno</b></div>
+<div class="pr rv"><span>Košnja trave<small>Do 500 m², z odvozom</small></span><b>od 45 €</b></div>
+<div class="pr rv"><span>Obrezovanje žive meje<small>Na tekoči meter</small></span><b>od 4 €/m</b></div>
+<div class="pr rv"><span>Zasaditev<small>Odvisno od površine in rastlin</small></span><b>po dogovoru</b></div>
+<div class="pr rv"><span>Redno vzdrževanje<small>Mesečni paket, 2 obiska</small></span><b>od 120 €</b></div>
+</div></div></section>
+
+<section id="k" class="lbg"><div class="w center">
+<p class="eyb rv">Kontakt</p><h2 class="rv">Pošljite povpraševanje</h2>
+<p class="sub rv">Odgovorimo v enem delovnem dnevu.</p>
+<div class="form rv" style="text-align:left">
+<div class="fl">
+<div class="f"><label>Ime in priimek</label><input type="text" placeholder="Janez Novak" id="n1"></div>
+<div class="f"><label>Telefon</label><input type="tel" placeholder="041 000 000" id="n2"></div>
+</div>
+<div class="f" style="margin-bottom:14px"><label>Kaj potrebujete?</label>
+<select><option>Ureditev vrta</option><option>Redna košnja</option><option>Obrezovanje</option><option>Tlakovanje</option><option>Drugo</option></select></div>
+<div class="f" style="margin-bottom:6px"><label>Sporočilo</label><textarea placeholder="Na kratko opišite, kaj želite…"></textarea></div>
+<button class="sbm" id="sb">Pošlji povpraševanje</button>
+<div class="ok" id="okm">✅ Hvala! Vaše povpraševanje smo prejeli in se oglasimo v enem dnevu.</div>
+</div>
+<div style="margin-top:34px" class="rv">
+<div class="map"><svg viewBox="0 0 800 250" preserveAspectRatio="none">
+<rect width="800" height="250" fill="#eef4ed"/>
+<path d="M0 90h800M0 170h800M180 0v250M420 0v250M620 0v250" stroke="#d9e6d7" stroke-width="10"/>
+<path d="M0 130h800" stroke="#c8dcc6" stroke-width="16"/>
+<rect x="230" y="30" width="120" height="46" rx="6" fill="#dfeade"/>
+<rect x="470" y="180" width="140" height="50" rx="6" fill="#dfeade"/>
+<g class="pin" transform="translate(400 96)">
+<path d="M0 0c-13 0-24 11-24 24 0 18 24 42 24 42s24-24 24-42C24 11 13 0 0 0z" fill="#2f7d32"/>
+<circle cy="24" r="9" fill="#fff"/></g>
+</svg></div>
+<p style="color:var(--gr);font-size:.9rem;margin-top:12px">📍 Cesta v Gorice 18, 1000 Ljubljana · 📞 040 555 777</p>
+</div>
+</div></section>
+
+<footer><div class="w fw">
+<span>© 2026 Vrtnarstvo Zelen s.p.</span>
+<span>Vzorčna stran — <b style="color:#8bc34a">paket Osnovna</b></span>
+</div></footer>
+
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+document.getElementById('sb').addEventListener('click',function(){
+  document.getElementById('okm').classList.add('on');
+  document.getElementById('n1').value='';document.getElementById('n2').value='';
+});
+</script>
+</body></html>

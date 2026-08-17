@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="sl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Čebelarstvo Medved — med, izdelki iz čebeljih pridelkov</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--h:#c8860d;--h2:#a06d08;--d:#3b2c14;--ink:#2c2415;--g:#7a6c55;--cr:#fffaf0;--l:#fdf3e0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:var(--cr);line-height:1.7}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,.lg{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.14}
+header{background:var(--cr);border-bottom:1px solid #f0e2c8;position:sticky;top:0;z-index:30}
+.nav{display:flex;align-items:center;gap:18px;height:74px}
+.lg{font-size:1.3rem;display:flex;align-items:center;gap:9px}
+.lg i{font-style:normal}.lg span{color:var(--h)}
+.nav nav{margin-left:auto;display:flex;gap:22px;font-size:.93rem;color:var(--g)}
+.nav nav a:hover{color:var(--h)}
+.cart{position:relative;background:var(--h);color:#fff;padding:11px 20px;border-radius:99px;font-weight:600;
+  font-size:.9rem;cursor:pointer;border:0;font-family:inherit;transition:.24s}
+.cart:hover{background:var(--h2)}
+.cart .cnt{position:absolute;top:-6px;right:-6px;background:var(--d);color:#fff;width:22px;height:22px;
+  border-radius:50%;display:grid;place-items:center;font-size:.74rem;font-weight:700}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--l),var(--cr));padding:70px 0 76px;position:relative;overflow:hidden}
+.hex{position:absolute;opacity:.14}
+.hg{display:grid;grid-template-columns:1.04fr .96fr;gap:44px;align-items:center;position:relative;z-index:2}
+.tg{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #f0dcb0;color:var(--h);
+  font-size:.79rem;font-weight:600;padding:7px 16px;border-radius:99px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.3rem);margin-bottom:14px}
+.hero h1 em{color:var(--h);font-style:italic}
+.hero p{color:var(--g);max-width:430px;margin-bottom:26px}
+.b1{background:var(--h);color:#fff;padding:14px 30px;border-radius:99px;font-weight:600;display:inline-flex;gap:9px;align-items:center;transition:.24s}
+.b1:hover{background:var(--h2);transform:translateY(-3px);box-shadow:0 14px 32px rgba(200,134,13,.3)}
+.feat{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;font-size:.87rem;color:var(--g)}
+.hero-art svg{width:100%;height:auto}
+.bee{animation:fly 6s ease-in-out infinite}
+@keyframes fly{0%,100%{transform:translate(0,0)}25%{transform:translate(18px,-14px)}50%{transform:translate(-10px,-22px)}75%{transform:translate(14px,-6px)}}
+.wing{animation:wg .18s ease-in-out infinite alternate;transform-origin:right center}
+@keyframes wg{from{transform:scaleY(1)}to{transform:scaleY(.55)}}
+/* izdelki */
+section{padding:66px 0}
+.eyb{color:var(--h);font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:11px}
+h2{font-size:clamp(1.8rem,3.8vw,2.5rem);margin-bottom:11px}
+.sub{color:var(--g);max-width:520px;margin-bottom:36px}
+.center{text-align:center}.center .sub{margin:0 auto 36px}
+.fil{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.fb2{padding:9px 20px;border-radius:99px;border:1.5px solid #f0dcb0;background:transparent;cursor:pointer;
+  font-family:inherit;font-size:.89rem;font-weight:600;color:var(--g);transition:.22s}
+.fb2:hover{border-color:var(--h);color:var(--h)}
+.fb2.on{background:var(--h);border-color:var(--h);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pr{background:#fff;border:1px solid #f0e2c8;border-radius:16px;overflow:hidden;transition:.3s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column}
+.pr:hover{transform:translateY(-7px);box-shadow:0 22px 46px rgba(59,44,20,.13)}
+.pr .im{aspect-ratio:1;background:var(--l);position:relative;overflow:hidden}
+.pr .im svg{width:100%;height:100%;transition:.45s}
+.pr:hover .im svg{transform:scale(1.07)}
+.bdg{position:absolute;top:12px;left:12px;background:var(--h);color:#fff;font-size:.7rem;font-weight:700;
+  padding:4px 11px;border-radius:99px;letter-spacing:.04em}
+.pr .tx{padding:18px;display:flex;flex-direction:column;flex:1}
+.pr h3{font-size:1.02rem;margin-bottom:4px}
+.pr .ds{color:var(--g);font-size:.84rem;margin-bottom:12px;flex:1}
+.pr .bt{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pr .pc{font-family:Fraunces;font-size:1.28rem;color:var(--h);font-weight:700}
+.add{background:var(--d);color:#fff;border:0;padding:9px 16px;border-radius:9px;font-family:inherit;
+  font-size:.85rem;font-weight:600;cursor:pointer;transition:.22s}
+.add:hover{background:var(--h)}
+.add.done{background:#4a7c3f}
+/* košarica */
+.drw{position:fixed;top:0;right:0;bottom:0;width:360px;max-width:88vw;background:#fff;z-index:60;
+  transform:translateX(100%);transition:.36s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;
+  box-shadow:-16px 0 50px rgba(59,44,20,.2)}
+.drw.on{transform:none}
+.drw .hd{padding:22px;border-bottom:1px solid #f0e2c8;display:flex;justify-content:space-between;align-items:center}
+.drw .hd h3{font-size:1.15rem}
+.cl{background:none;border:0;font-size:1.2rem;cursor:pointer;color:var(--g)}
+.items{flex:1;overflow:auto;padding:16px 22px}
+.ci{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #f7ecd8;font-size:.9rem}
+.ci .th{width:46px;height:46px;border-radius:9px;background:var(--l);display:grid;place-items:center;font-size:1.2rem}
+.ci .nm{flex:1}.ci .nm b{display:block;font-size:.92rem}
+.ci .nm span{color:var(--g);font-size:.82rem}
+.ci .pz{color:var(--h);font-weight:700;white-space:nowrap}
+.empty{text-align:center;color:var(--g);padding:40px 0;font-size:.92rem}
+.tot{padding:20px 22px;border-top:1px solid #f0e2c8}
+.tr{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.9rem;color:var(--g)}
+.tr.big{font-family:Fraunces;font-size:1.2rem;color:var(--ink);font-weight:700;margin:10px 0 16px}
+.chk{width:100%;background:var(--h);color:#fff;border:0;padding:14px;border-radius:11px;font-family:inherit;
+  font-weight:600;font-size:.96rem;cursor:pointer;transition:.24s}
+.chk:hover{background:var(--h2)}
+.scrim{position:fixed;inset:0;background:rgba(59,44,20,.42);z-index:55;opacity:0;pointer-events:none;transition:.3s}
+.scrim.on{opacity:1;pointer-events:auto}
+/* prednosti */
+.lbg{background:var(--l)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c{background:#fff;border:1px solid #f0e2c8;border-radius:14px;padding:26px;text-align:center;transition:.26s}
+.c:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(59,44,20,.1)}
+.c i{font-style:normal;font-size:1.8rem;display:block;margin-bottom:11px}
+.c h3{font-size:1.06rem;margin-bottom:6px}
+.c p{color:var(--g);font-size:.89rem}
+footer{background:var(--d);color:#b9a888;padding:36px 0 24px;font-size:.87rem}
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-bottom:24px}
+.fg h4{color:#fff;font-size:.86rem;margin-bottom:9px;font-family:Fraunces}
+.fb3{border-top:1px solid #52402224;padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(20px);transition:.72s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.hg,.g3,.fg{grid-template-columns:1fr}.nav nav{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+
+<header><div class="w nav">
+<div class="lg"><i>🍯</i>Čebelarstvo <span>Medved</span></div>
+<nav><a href="#i">Izdelki</a><a href="#z">Zakaj mi</a><a href="#k">Kontakt</a></nav>
+<button class="cart" id="cb">🛒 Košarica <span class="cnt" id="cn">0</span></button>
+</div></header>
+
+<div class="hero"><div class="w hg">
+<div>
+<span class="tg">🐝 Domači med iz Prekmurja</span>
+<h1>Med, ki ga <em>poznate po imenu</em></h1>
+<p>Naše čebele pasemo na cvetočih travnikih ob Muri. Vsak kozarec ima na etiketi letnik in pašo — brez mešanja, brez uvoza.</p>
+<a href="#i" class="b1">🛒 Poglej izdelke</a>
+<div class="feat"><span>✓ Dostava v 2 dneh</span><span>✓ Brezplačno nad 40 €</span><span>✓ Osebni prevzem</span></div>
+</div>
+<div class="hero-art">
+<svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="hn" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#f0b73a"/><stop offset="1" stop-color="#c8860d"/></linearGradient></defs>
+<!-- satovje ozadje -->
+<g fill="none" stroke="#e0b04a" stroke-width="2" opacity=".35">
+<path d="M40 60l16-9 16 9v18l-16 9-16-9z"/><path d="M72 78l16-9 16 9v18l-16 9-16-9z"/>
+<path d="M300 42l16-9 16 9v18l-16 9-16-9z"/><path d="M332 60l16-9 16 9v18l-16 9-16-9z"/>
+<path d="M312 240l16-9 16 9v18l-16 9-16-9z"/>
+</g>
+<!-- kozarec -->
+<rect x="128" y="112" width="124" height="150" rx="16" fill="url(#hn)"/>
+<rect x="128" y="112" width="124" height="150" rx="16" fill="#fff" opacity=".14"/>
+<rect x="136" y="90" width="108" height="30" rx="9" fill="#8a5f1a"/>
+<rect x="142" y="82" width="96" height="14" rx="6" fill="#a06d08"/>
+<rect x="146" y="156" width="88" height="58" rx="7" fill="#fffaf0"/>
+<text x="190" y="182" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#8a5f1a">MEDVED</text>
+<text x="190" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#a08a5f">CVETLIČNI · 2026</text>
+<ellipse cx="190" cy="270" rx="72" ry="10" fill="#c8860d" opacity=".22"/>
+<!-- kapljica -->
+<path d="M262 128c8 12 14 20 14 27a14 14 0 1 1-28 0c0-7 6-15 14-27z" fill="#f0b73a"/>
+<!-- čebela -->
+<g class="bee" transform="translate(70 176)">
+<ellipse cx="0" cy="0" rx="20" ry="14" fill="#f2c14e"/>
+<path d="M-8-13c0 9 0 18 0 26M2-14c0 9 0 19 0 28" stroke="#3b2c14" stroke-width="5"/>
+<circle cx="17" cy="-3" r="8" fill="#3b2c14"/>
+<path d="M22-9l6-7M25-4l8-2" stroke="#3b2c14" stroke-width="2" stroke-linecap="round"/>
+<ellipse class="wing" cx="-4" cy="-16" rx="14" ry="8" fill="#fff" opacity=".65"/>
+</g>
+</svg>
+</div>
+</div></div>
+
+<section id="i"><div class="w center">
+<p class="eyb rv">Trgovina</p><h2 class="rv">Naši izdelki</h2>
+<p class="sub rv">Vse pridelano v našem čebelarstvu. Zaloge so sezonske in omejene.</p>
+<div class="fil rv">
+<button class="fb2 on" data-f="all">Vse</button>
+<button class="fb2" data-f="med">Med</button>
+<button class="fb2" data-f="ost">Ostali izdelki</button>
+</div>
+<div class="grid" id="pg">
+<div class="pr rv" data-c="med"><div class="im"><span class="bdg">Najbolj prodajan</span>
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#fdf3e0"/>
+<rect x="66" y="60" width="68" height="92" rx="12" fill="#e8a72a"/><rect x="70" y="46" width="60" height="20" rx="7" fill="#8a5f1a"/>
+<rect x="76" y="92" width="48" height="30" rx="5" fill="#fffaf0"/></svg></div>
+<div class="tx"><h3>Cvetlični med</h3><p class="ds">900 g · pomladanska paša</p>
+<div class="bt"><span class="pc">12,90 €</span><button class="add" data-n="Cvetlični med" data-p="12.90">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="med"><div class="im">
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#f7e8cf"/>
+<rect x="66" y="60" width="68" height="92" rx="12" fill="#8a5f1a"/><rect x="70" y="46" width="60" height="20" rx="7" fill="#5c3d0e"/>
+<rect x="76" y="92" width="48" height="30" rx="5" fill="#fffaf0"/></svg></div>
+<div class="tx"><h3>Gozdni med</h3><p class="ds">900 g · temen, izrazit okus</p>
+<div class="bt"><span class="pc">14,50 €</span><button class="add" data-n="Gozdni med" data-p="14.50">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="med"><div class="im">
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#fdf3e0"/>
+<rect x="66" y="60" width="68" height="92" rx="12" fill="#d9c47a"/><rect x="70" y="46" width="60" height="20" rx="7" fill="#8a5f1a"/>
+<rect x="76" y="92" width="48" height="30" rx="5" fill="#fffaf0"/></svg></div>
+<div class="tx"><h3>Akacijev med</h3><p class="ds">900 g · svetel, ne kristalizira</p>
+<div class="bt"><span class="pc">15,90 €</span><button class="add" data-n="Akacijev med" data-p="15.90">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="ost"><div class="im"><span class="bdg">Novo</span>
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#f7e8cf"/>
+<rect x="78" y="66" width="44" height="80" rx="10" fill="#e8d5a8"/><rect x="82" y="54" width="36" height="16" rx="6" fill="#8a5f1a"/>
+<circle cx="100" cy="106" r="14" fill="#c8860d" opacity=".5"/></svg></div>
+<div class="tx"><h3>Propolisove kapljice</h3><p class="ds">30 ml · naravni izvleček</p>
+<div class="bt"><span class="pc">9,90 €</span><button class="add" data-n="Propolisove kapljice" data-p="9.90">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="ost"><div class="im">
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#fdf3e0"/>
+<rect x="62" y="86" width="76" height="46" rx="8" fill="#f0d9a0"/>
+<path d="M70 86l16-16 16 16M102 86l16-16 16 16" fill="#e8c876"/>
+<circle cx="100" cy="110" r="9" fill="#c8860d" opacity=".4"/></svg></div>
+<div class="tx"><h3>Čebelji vosek</h3><p class="ds">100 g · za sveče in kreme</p>
+<div class="bt"><span class="pc">7,50 €</span><button class="add" data-n="Čebelji vosek" data-p="7.50">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="ost"><div class="im">
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#f7e8cf"/>
+<rect x="56" y="72" width="88" height="66" rx="10" fill="#d99f2e"/>
+<path d="M56 100h88M56 118h88M84 72v66M112 72v66" stroke="#b8801d" stroke-width="3"/></svg></div>
+<div class="tx"><h3>Medeni lecti</h3><p class="ds">6 kosov · po domačem receptu</p>
+<div class="bt"><span class="pc">8,90 €</span><button class="add" data-n="Medeni lecti" data-p="8.90">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="ost"><div class="im"><span class="bdg">Darilo</span>
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#fdf3e0"/>
+<rect x="52" y="74" width="96" height="66" rx="8" fill="#c8860d"/>
+<path d="M100 74v66M52 100h96" stroke="#fff" stroke-width="6" opacity=".65"/>
+<path d="M100 74c-14-14-30-2-14 8M100 74c14-14 30-2 14 8" fill="#e8a72a"/></svg></div>
+<div class="tx"><h3>Darilni paket</h3><p class="ds">3 vrste medu + vosek</p>
+<div class="bt"><span class="pc">34,90 €</span><button class="add" data-n="Darilni paket" data-p="34.90">Dodaj</button></div></div></div>
+
+<div class="pr rv" data-c="med"><div class="im">
+<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#f7e8cf"/>
+<rect x="66" y="60" width="68" height="92" rx="12" fill="#f0b73a"/><rect x="70" y="46" width="60" height="20" rx="7" fill="#8a5f1a"/>
+<rect x="76" y="92" width="48" height="30" rx="5" fill="#fffaf0"/>
+<circle cx="150" cy="60" r="12" fill="#c8860d" opacity=".35"/></svg></div>
+<div class="tx"><h3>Med z lešniki</h3><p class="ds">450 g · namaz za zajtrk</p>
+<div class="bt"><span class="pc">11,50 €</span><button class="add" data-n="Med z lešniki" data-p="11.50">Dodaj</button></div></div></div>
+</div></div></section>
+
+<section id="z" class="lbg"><div class="w center">
+<p class="eyb rv">Zakaj pri nas</p><h2 class="rv">Kar nas loči</h2>
+<p class="sub rv">Majhno čebelarstvo, ki ve, od kod je vsak kozarec.</p>
+<div class="g3">
+<div class="c rv"><i>🌼</i><h3>Znana paša</h3><p>Na etiketi piše, kje in kdaj je bil med pridelan. Nič mešanja.</p></div>
+<div class="c rv"><i>🚚</i><h3>Hitra dostava</h3><p>Naročila do 12h pošljemo isti dan. Nad 40 € dostava brezplačna.</p></div>
+<div class="c rv"><i>🏅</i><h3>Nagrajen med</h3><p>Zlato priznanje na Državnem ocenjevanju medu 2025.</p></div>
+</div></div></section>
+
+<footer id="k"><div class="w">
+<div class="fg">
+<div><h4>Čebelarstvo Medved</h4><p>Vaška pot 7<br>9000 Murska Sobota</p></div>
+<div><h4>Naročila</h4><p>📞 041 888 222<br>✉ med@medved-cebele.si<br>Pon–Pet 8:00–17:00</p></div>
+<div><h4>Dostava</h4><p>Pošta Slovenije, 1–2 dni<br>Osebni prevzem po dogovoru<br>Plačilo po povzetju ali predračunu</p></div>
+</div>
+<div class="fb3"><span>© 2026 Čebelarstvo Medved</span>
+<span>Vzorčna stran — <b style="color:#f0b73a">paket Spletna trgovina</b></span></div>
+</div></footer>
+
+<div class="scrim" id="sc"></div>
+<div class="drw" id="dw">
+<div class="hd"><h3>Vaša košarica</h3><button class="cl" id="cx">✕</button></div>
+<div class="items" id="it"><div class="empty">Košarica je prazna.<br>Dodajte izdelke iz trgovine.</div></div>
+<div class="tot">
+<div class="tr"><span>Vmesni seštevek</span><span id="sm">0,00 €</span></div>
+<div class="tr"><span>Dostava</span><span id="dl">3,90 €</span></div>
+<div class="tr big"><span>Skupaj</span><span id="tt">0,00 €</span></div>
+<button class="chk">Na blagajno →</button>
+</div>
+</div>
+
+<script>
+var cart=[],cn=document.getElementById('cn'),it=document.getElementById('it');
+function eur(n){return n.toFixed(2).replace('.',',')+' €'}
+function draw(){
+  cn.textContent=cart.length;
+  if(!cart.length){it.innerHTML='<div class="empty">Košarica je prazna.<br>Dodajte izdelke iz trgovine.</div>'}
+  else{it.innerHTML=cart.map(function(c){return '<div class="ci"><div class="th">🍯</div><div class="nm"><b>'+c.n+'</b><span>1 kos</span></div><div class="pz">'+eur(c.p)+'</div></div>'}).join('')}
+  var s=cart.reduce(function(a,c){return a+c.p},0);
+  var d=(s>=40||s===0)?0:3.9;
+  document.getElementById('sm').textContent=eur(s);
+  document.getElementById('dl').textContent=d===0?'Brezplačno':eur(d);
+  document.getElementById('tt').textContent=eur(s+d);
+}
+document.querySelectorAll('.add').forEach(function(b){
+  b.addEventListener('click',function(){
+    cart.push({n:b.dataset.n,p:parseFloat(b.dataset.p)});draw();
+    b.textContent='✓ Dodano';b.classList.add('done');
+    setTimeout(function(){b.textContent='Dodaj';b.classList.remove('done')},1300);
+  });
+});
+function open_(){document.getElementById('dw').classList.add('on');document.getElementById('sc').classList.add('on')}
+function close_(){document.getElementById('dw').classList.remove('on');document.getElementById('sc').classList.remove('on')}
+document.getElementById('cb').addEventListener('click',open_);
+document.getElementById('cx').addEventListener('click',close_);
+document.getElementById('sc').addEventListener('click',close_);
+document.querySelectorAll('.fb2').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.fb2').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    document.querySelectorAll('.pr').forEach(function(p){
+      p.style.display=(b.dataset.f==='all'||p.dataset.c===b.dataset.f)?'flex':'none';
+    });
+  });
+});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+draw();
+</script>
+</body></html>

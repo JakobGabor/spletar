@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="sl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gradbeništvo Merkur — novogradnje, adaptacije, fasade</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--n:#16233a;--n2:#1f3050;--acc:#f2a13c;--ink:#16233a;--g:#64748b;--l:#f5f7fa}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:#fff;line-height:1.7}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,.lg{font-family:Sora,sans-serif;font-weight:700;line-height:1.14;letter-spacing:-.025em}
+/* top bar */
+.top{background:var(--n);color:rgba(255,255,255,.7);font-size:.82rem;padding:8px 0}
+.tw{display:flex;gap:22px;flex-wrap:wrap}
+.tw .r{margin-left:auto;display:flex;gap:18px}
+header{background:#fff;border-bottom:1px solid #e6ebf1;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;gap:18px;height:74px}
+.lg{font-size:1.26rem;display:flex;align-items:center;gap:10px}
+.lg i{width:34px;height:34px;background:var(--acc);border-radius:8px;display:grid;place-items:center;font-style:normal;font-size:.95rem}
+.nav nav{margin-left:auto;display:flex;gap:6px;font-size:.93rem}
+.nav nav a{padding:9px 14px;border-radius:8px;color:var(--g);transition:.2s}
+.nav nav a:hover,.nav nav a.on{color:var(--n);background:var(--l)}
+.bk{background:var(--n);color:#fff;padding:12px 22px;border-radius:9px;font-weight:600;font-size:.9rem;transition:.24s}
+.bk:hover{background:var(--n2);transform:translateY(-2px)}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--n),var(--n2));color:#fff;padding:78px 0 84px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.09;
+  background:repeating-linear-gradient(45deg,transparent,transparent 26px,#fff 26px,#fff 27px)}
+.hg{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.2rem,5vw,3.3rem);margin-bottom:16px}
+.hero h1 em{color:var(--acc);font-style:normal}
+.hero p{opacity:.8;max-width:440px;margin-bottom:26px}
+.b1{background:var(--acc);color:var(--n);padding:14px 28px;border-radius:9px;font-weight:700;display:inline-flex;gap:9px;align-items:center;transition:.24s}
+.b1:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(242,161,60,.35)}
+.b2{border:1px solid rgba(255,255,255,.3);padding:13px 26px;border-radius:9px;font-weight:500;transition:.24s;display:inline-block}
+.b2:hover{background:rgba(255,255,255,.1)}
+.crane svg{width:100%;height:auto}
+.hook{animation:hook 4.4s ease-in-out infinite}
+@keyframes hook{0%,100%{transform:translateY(0)}50%{transform:translateY(24px)}}
+.blink{animation:bl 2s ease-in-out infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.25}}
+/* števci */
+.kpi{background:var(--l);border-top:1px solid #e6ebf1;border-bottom:1px solid #e6ebf1}
+.kw{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.k{padding:30px 20px;text-align:center;border-right:1px solid #e6ebf1}
+.k:last-child{border:0}
+.k b{font-family:Sora;font-size:2.1rem;color:var(--n);display:block;line-height:1}
+.k span{font-size:.86rem;color:var(--g)}
+section{padding:74px 0}
+.eyb{color:var(--acc);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:11px}
+h2{font-size:clamp(1.8rem,3.8vw,2.5rem);margin-bottom:11px}
+.sub{color:var(--g);max-width:540px;margin-bottom:40px}
+.center{text-align:center}.center .sub{margin:0 auto 40px}
+.lbg{background:var(--l)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c{background:#fff;border:1px solid #e6ebf1;border-radius:14px;padding:26px;transition:.3s;position:relative;overflow:hidden}
+.c:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(22,35,58,.12)}
+.c::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:.3s}
+.c:hover::before{transform:scaleX(1)}
+.c i{font-style:normal;font-size:1.7rem;display:block;margin-bottom:12px}
+.c h3{font-size:1.1rem;margin-bottom:6px}
+.c p{color:var(--g);font-size:.9rem}
+/* reference */
+.ref{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rf{border-radius:14px;overflow:hidden;border:1px solid #e6ebf1;background:#fff;transition:.32s}
+.rf:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(22,35,58,.14)}
+.rf .im{aspect-ratio:16/10;overflow:hidden}
+.rf .im svg{width:100%;height:100%;display:block;transition:.5s}
+.rf:hover .im svg{transform:scale(1.06)}
+.rf .tx{padding:18px 20px}
+.rf .lb{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:6px}
+.rf h3{font-size:1.04rem;margin-bottom:4px}
+.rf p{color:var(--g);font-size:.87rem}
+/* blog */
+.bl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bp{background:#fff;border:1px solid #e6ebf1;border-radius:14px;padding:24px;transition:.28s;display:flex;flex-direction:column}
+.bp:hover{border-color:var(--acc);transform:translateY(-4px)}
+.bp .dt{font-size:.79rem;color:var(--g);margin-bottom:8px}
+.bp h3{font-size:1.05rem;margin-bottom:8px}
+.bp p{color:var(--g);font-size:.89rem;flex:1;margin-bottom:12px}
+.bp .rd{color:var(--acc);font-weight:600;font-size:.87rem}
+/* mnenja */
+.qs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.q{background:#fff;border:1px solid #e6ebf1;border-radius:14px;padding:26px}
+.q .st{color:var(--acc);letter-spacing:2px;margin-bottom:10px}
+.q p{font-size:.94rem;margin-bottom:12px}
+.q .who{display:flex;gap:11px;align-items:center}
+.q .av{width:38px;height:38px;border-radius:50%;background:var(--n);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.q .who b{display:block;font-size:.9rem}
+.q .who span{font-size:.82rem;color:var(--g)}
+.cta{background:var(--n);color:#fff;text-align:center;padding:70px 0}
+.cta h2{margin-bottom:10px}.cta p{opacity:.8;margin-bottom:24px}
+.ba{background:var(--acc);color:var(--n);padding:15px 32px;border-radius:10px;font-weight:700;display:inline-block;transition:.24s}
+.ba:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(242,161,60,.35)}
+footer{background:#0f1a2c;color:#7f8ea3;padding:40px 0 26px;font-size:.87rem}
+.fg{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-bottom:26px}
+.fg h4{color:#fff;font-size:.86rem;margin-bottom:10px;font-family:Sora}
+.fg a{display:block;padding:3px 0;transition:.2s}.fg a:hover{color:var(--acc)}
+.fb{border-top:1px solid #1c2b42;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(20px);transition:.75s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hg,.g3,.ref,.bl,.qs{grid-template-columns:1fr}.kw{grid-template-columns:repeat(2,1fr)}
+  .k{border-bottom:1px solid #e6ebf1}.fg{grid-template-columns:repeat(2,1fr)}.nav nav a:not(.bk){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+
+<div class="top"><div class="w tw">
+<span>📞 05 123 45 67</span><span>✉ info@merkur-gradnje.si</span>
+<span class="r"><span>Pon–Pet 7:00–16:00</span></span>
+</div></div>
+
+<header><div class="w nav">
+<div class="lg"><i>🏗</i>Gradbeništvo Merkur</div>
+<nav><a href="#s" class="on">Storitve</a><a href="#r">Reference</a><a href="#b">Nasveti</a><a href="#m">Mnenja</a></nav>
+<a href="#k" class="bk">Zahtevaj ponudbo</a>
+</div></header>
+
+<div class="hero"><div class="w hg">
+<div>
+<h1>Gradimo <em>zanesljivo</em>, od temeljev do ključa</h1>
+<p>Novogradnje, adaptacije, fasade in zunanje ureditve. Vodimo celoten projekt — z enim izvajalcem, enim rokom in eno odgovornostjo.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#k" class="b1">Zahtevaj ponudbo</a><a href="#r" class="b2">Poglej reference</a>
+</div>
+</div>
+<div class="crane">
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+<!-- žerjav -->
+<rect x="176" y="70" width="16" height="200" fill="#f2a13c"/>
+<path d="M176 90h-118M176 82h-118M58 82v8" stroke="#f2a13c" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M192 90h108M192 82h108M300 82v8" stroke="#f2a13c" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M184 70v-24M184 46l-90 36M184 46l100 36" stroke="#f2a13c" stroke-width="4" fill="none"/>
+<path d="M176 110l16 24M192 110l-16 24M176 150l16 24M192 150l-16 24M176 190l16 24M192 190l-16 24M176 230l16 24M192 230l-16 24"
+  stroke="#f2a13c" stroke-width="3" opacity=".8"/>
+<circle cx="184" cy="42" r="5" fill="#ff5252" class="blink"/>
+<!-- tovor -->
+<g class="hook">
+<path d="M110 90v56" stroke="#cbd5e1" stroke-width="2.5"/>
+<rect x="82" y="146" width="56" height="40" rx="4" fill="#e2b07a"/>
+<path d="M82 158h56M82 172h56M96 146v40M124 146v40" stroke="#c08d54" stroke-width="2"/>
+</g>
+<!-- stavba -->
+<rect x="240" y="176" width="120" height="112" fill="#2b3d5c"/>
+<g fill="#f2a13c" opacity=".55">
+<rect x="256" y="192" width="22" height="22"/><rect x="290" y="192" width="22" height="22"/><rect x="324" y="192" width="22" height="22"/>
+<rect x="256" y="228" width="22" height="22"/><rect x="290" y="228" width="22" height="22"/><rect x="324" y="228" width="22" height="22"/>
+</g>
+<rect x="286" y="262" width="30" height="26" fill="#16233a"/>
+<!-- tla -->
+<rect x="20" y="288" width="360" height="8" rx="4" fill="rgba(255,255,255,.18)"/>
+<rect x="164" y="268" width="40" height="20" fill="#c9822c"/>
+</svg>
+</div>
+</div></div>
+
+<div class="kpi"><div class="w kw">
+<div class="k"><b>28</b><span>let na trgu</span></div>
+<div class="k"><b>340+</b><span>zaključenih projektov</span></div>
+<div class="k"><b>42</b><span>zaposlenih</span></div>
+<div class="k"><b>10 let</b><span>garancije na gradnjo</span></div>
+</div></div>
+
+<section id="s"><div class="w center">
+<p class="eyb rv">Storitve</p><h2 class="rv">Kaj izvajamo</h2>
+<p class="sub rv">Prevzamemo celoten projekt ali posamezno fazo — kakor vam bolj ustreza.</p>
+<div class="g3">
+<div class="c rv"><i>🏠</i><h3>Novogradnje</h3><p>Od izkopa do ključa. Vodenje projekta, koordinacija podizvajalcev, dokumentacija.</p></div>
+<div class="c rv"><i>🔨</i><h3>Adaptacije</h3><p>Prenove stanovanj in hiš, rušitve, nove predelne stene, inštalacije.</p></div>
+<div class="c rv"><i>🧱</i><h3>Fasade</h3><p>Toplotne izolacije, zaključni ometi, obnove starih fasad.</p></div>
+<div class="c rv"><i>🪟</i><h3>Strehe in kritine</h3><p>Nove strehe, menjava kritine, izolacija podstrešja.</p></div>
+<div class="c rv"><i>🛣</i><h3>Zunanje ureditve</h3><p>Dvorišča, oporni zidovi, tlakovanje, odvodnjavanje.</p></div>
+<div class="c rv"><i>📐</i><h3>Svetovanje</h3><p>Ocena stanja objekta, popis del in realna ocena stroškov.</p></div>
+</div></div></section>
+
+<section id="r" class="lbg"><div class="w">
+<p class="eyb rv">Reference</p><h2 class="rv">Izbrani projekti</h2>
+<p class="sub rv">Nekaj zadnjih zaključenih del. Celoten seznam pošljemo na zahtevo.</p>
+<div class="ref">
+<div class="rf rv"><div class="im"><svg viewBox="0 0 200 125" preserveAspectRatio="none">
+<rect width="200" height="125" fill="#dce6f0"/><path d="M0 96h200v29H0z" fill="#b9c9d9"/>
+<path d="M46 96V44l54-30 54 30v52z" fill="#2b3d5c"/><path d="M40 46L100 12l60 34" stroke="#f2a13c" stroke-width="6" fill="none"/>
+<rect x="70" y="60" width="22" height="22" fill="#f2a13c" opacity=".6"/><rect x="108" y="60" width="22" height="22" fill="#f2a13c" opacity=".6"/>
+<rect x="88" y="94" width="24" height="24" fill="#16233a"/></svg></div>
+<div class="tx"><div class="lb">Novogradnja · 2025</div><h3>Enodružinska hiša, Vrhnika</h3><p>180 m², od temeljev do ključa v 11 mesecih.</p></div></div>
+
+<div class="rf rv"><div class="im"><svg viewBox="0 0 200 125" preserveAspectRatio="none">
+<rect width="200" height="125" fill="#e8eef4"/>
+<rect x="30" y="24" width="140" height="90" fill="#c7d6e4"/>
+<rect x="30" y="24" width="70" height="90" fill="#f2a13c" opacity=".35"/>
+<g fill="#8fa5bb"><rect x="44" y="40" width="18" height="18"/><rect x="72" y="40" width="18" height="18"/>
+<rect x="112" y="40" width="18" height="18"/><rect x="140" y="40" width="18" height="18"/>
+<rect x="44" y="72" width="18" height="18"/><rect x="72" y="72" width="18" height="18"/>
+<rect x="112" y="72" width="18" height="18"/><rect x="140" y="72" width="18" height="18"/></g></svg></div>
+<div class="tx"><div class="lb">Fasada · 2025</div><h3>Blok, Ljubljana Bežigrad</h3><p>Energetska sanacija 1400 m² fasade.</p></div></div>
+
+<div class="rf rv"><div class="im"><svg viewBox="0 0 200 125" preserveAspectRatio="none">
+<rect width="200" height="125" fill="#dfe8f0"/>
+<path d="M24 100h152v25H24z" fill="#b0c2d3"/>
+<path d="M40 100V52h120v48z" fill="#e6ecf2"/><path d="M30 54l70-32 70 32" stroke="#8a5a3b" stroke-width="10" fill="none"/>
+<rect x="60" y="66" width="26" height="20" fill="#2b3d5c"/><rect x="114" y="66" width="26" height="20" fill="#2b3d5c"/>
+<circle cx="100" cy="40" r="6" fill="#f2a13c"/></svg></div>
+<div class="tx"><div class="lb">Adaptacija · 2024</div><h3>Obnova stanovanja, Kranj</h3><p>Celovita prenova 72 m² v 8 tednih.</p></div></div>
+</div></div></section>
+
+<section id="b"><div class="w">
+<p class="eyb rv">Nasveti</p><h2 class="rv">Iz naše prakse</h2>
+<p class="sub rv">Kratki zapisi o tem, kar investitorje najpogosteje zanima.</p>
+<div class="bl">
+<div class="bp rv"><div class="dt">12. marec 2026 · 4 min branja</div>
+<h3>Koliko res stane gradnja hiše v letu 2026?</h3>
+<p>Razčlenimo strošek po fazah — od zemljišča do vselitve — in pokažemo, kje se največkrat zalomi proračun.</p>
+<span class="rd">Preberi več →</span></div>
+<div class="bp rv"><div class="dt">28. februar 2026 · 3 min branja</div>
+<h3>Kdaj se splača obnoviti fasado?</h3>
+<p>Znaki, da fasada ne opravlja več svoje naloge, in kako oceniti prihranek pri ogrevanju.</p>
+<span class="rd">Preberi več →</span></div>
+<div class="bp rv"><div class="dt">15. januar 2026 · 5 min branja</div>
+<h3>Gradbeno dovoljenje: kaj potrebujete</h3>
+<p>Pregled dokumentov, rokov in najpogostejših napak pri vlogi.</p>
+<span class="rd">Preberi več →</span></div>
+</div></div></section>
+
+<section id="m" class="lbg"><div class="w center">
+<p class="eyb rv">Mnenja</p><h2 class="rv">Kaj pravijo investitorji</h2>
+<p class="sub rv">Večina naših poslov pride prek priporočil.</p>
+<div class="qs" style="text-align:left">
+<div class="q rv"><div class="st">★★★★★</div>
+<p>„Hiša je bila končana teden dni pred rokom. Vsak teden smo dobili poročilo o napredku — nič ugibanja.“</p>
+<div class="who"><div class="av">MT</div><div><b>Matej T.</b><span>Novogradnja, Vrhnika</span></div></div></div>
+<div class="q rv"><div class="st">★★★★★</div>
+<p>„Ponudba je bila podrobno razčlenjena, končni račun pa se je od nje razlikoval za manj kot dva odstotka.“</p>
+<div class="who"><div class="av">SB</div><div><b>Sandra B.</b><span>Upravnica, Ljubljana</span></div></div></div>
+</div></div></section>
+
+<div class="cta" id="k"><div class="w">
+<h2>Načrtujete gradnjo ali prenovo?</h2>
+<p>Pošljite nam projekt ali samo opis — pripravimo brezplačno oceno stroškov.</p>
+<a href="#" class="ba">📞 05 123 45 67</a>
+</div></div>
+
+<footer><div class="w">
+<div class="fg">
+<div><h4>Gradbeništvo Merkur</h4><p>Industrijska cesta 12<br>5000 Nova Gorica</p></div>
+<div><h4>Storitve</h4><a href="#s">Novogradnje</a><a href="#s">Adaptacije</a><a href="#s">Fasade</a><a href="#s">Strehe</a></div>
+<div><h4>Podjetje</h4><a href="#r">Reference</a><a href="#b">Nasveti</a><a href="#m">Mnenja</a><a href="#k">Kontakt</a></div>
+<div><h4>Kontakt</h4><a href="#">05 123 45 67</a><a href="#">info@merkur-gradnje.si</a><p style="margin-top:6px">Pon–Pet 7:00–16:00</p></div>
+</div>
+<div class="fb"><span>© 2026 Gradbeništvo Merkur d.o.o.</span>
+<span>Vzorčna stran — <b style="color:#f2a13c">paket Poslovna</b></span></div>
+</div></footer>
+
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+</script>
+</body></html>
