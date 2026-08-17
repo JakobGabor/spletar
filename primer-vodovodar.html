@@ -1,77 +1,221 @@
 <!DOCTYPE html><html lang="sl"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vodovodar Novak — 24/7 nujna popravila</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<title>Vodovodar Novak — nujna popravila 24/7</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,sans-serif;color:#132033;background:#fff;line-height:1.6}
-.w{max-width:1000px;margin:0 auto;padding:0 20px}
+:root{--n:#0a2f52;--n2:#0e4272;--y:#ffb020;--ink:#12212f;--g:#5b6b80}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+.w{max-width:1080px;margin:0 auto;padding:0 22px}
 a{text-decoration:none;color:inherit}
-header{background:#0b3d6b;color:#fff;position:sticky;top:0;z-index:9}
-.nav{display:flex;align-items:center;gap:18px;height:64px}
-.logo{font-weight:800;font-size:1.2rem;display:flex;align-items:center;gap:9px}
-.logo i{width:32px;height:32px;border-radius:8px;background:#ffb020;display:grid;place-items:center;font-style:normal;color:#0b3d6b}
-.nav nav{margin-left:auto;display:flex;gap:18px;font-size:.92rem}
-.call{background:#ffb020;color:#0b3d6b;padding:9px 16px;border-radius:8px;font-weight:700}
-.hero{background:linear-gradient(rgba(11,61,107,.86),rgba(11,61,107,.92));color:#fff;padding:70px 0}
-.hero h1{font-size:2.5rem;line-height:1.15;margin-bottom:14px}
-.hero p{opacity:.9;max-width:520px;margin-bottom:24px}
-.badge{display:inline-block;background:#ffb020;color:#0b3d6b;font-weight:700;font-size:.78rem;padding:5px 12px;border-radius:99px;margin-bottom:16px}
+h1,h2,h3,.lg,.big{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+/* nav */
+header{background:var(--n);color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 20px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;gap:20px;height:70px}
+.lg{font-size:1.5rem;display:flex;align-items:center;gap:10px}
+.lg i{width:38px;height:38px;border-radius:9px;background:var(--y);display:grid;place-items:center;font-style:normal;font-size:1.1rem}
+.lg b{color:var(--y);font-weight:700}
+.nav nav{margin-left:auto;display:flex;gap:22px;font-size:.93rem;font-weight:500}
+.nav nav a{opacity:.85;transition:.2s}.nav nav a:hover{opacity:1;color:var(--y)}
+.tel{background:var(--y);color:var(--n);padding:11px 20px;border-radius:8px;font-weight:700;
+  animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,176,32,.5)}50%{box-shadow:0 0 0 12px rgba(255,176,32,0)}}
+/* hero */
+.hero{background:linear-gradient(140deg,var(--n) 0%,var(--n2) 100%);color:#fff;padding:76px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:60px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 60V22c150 24 300 24 450 4S750-6 900 8s300 30 300 30v22z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center/cover}
+.hg{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;position:relative;z-index:2}
+.tagb{display:inline-flex;align-items:center;gap:8px;background:rgba(255,176,32,.15);border:1px solid rgba(255,176,32,.5);
+  color:var(--y);font-weight:700;font-size:.78rem;padding:7px 15px;border-radius:99px;margin-bottom:18px;letter-spacing:.04em}
+.tagb .dot{width:8px;height:8px;border-radius:50%;background:var(--y);animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4rem);margin-bottom:16px}
+.hero h1 em{color:var(--y);font-style:normal}
+.hero p{opacity:.88;max-width:480px;margin-bottom:26px;font-size:1.05rem}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.b1{background:#ffb020;color:#0b3d6b;padding:13px 24px;border-radius:9px;font-weight:700}
-.b2{border:2px solid rgba(255,255,255,.5);padding:11px 22px;border-radius:9px;font-weight:600}
-section{padding:56px 0}
-h2{font-size:1.8rem;margin-bottom:8px}
-.sub{color:#5b6b80;margin-bottom:30px}
+.b1{background:var(--y);color:var(--n);padding:15px 28px;border-radius:9px;font-weight:700;transition:.22s;display:inline-flex;gap:9px;align-items:center}
+.b1:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(255,176,32,.35)}
+.b2{border:2px solid rgba(255,255,255,.35);padding:13px 26px;border-radius:9px;font-weight:600;transition:.22s}
+.b2:hover{background:rgba(255,255,255,.1);border-color:#fff}
+/* stat trak */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px;padding-top:30px;border-top:1px solid rgba(255,255,255,.16)}
+.stat .big{font-size:2.2rem;color:var(--y)}
+.stat span{font-size:.83rem;opacity:.75;display:block}
+/* art */
+.art{position:relative}
+.art svg{width:100%;height:auto;filter:drop-shadow(0 24px 50px rgba(0,0,0,.35))}
+.drop{animation:fall 2.6s ease-in infinite}
+.drop2{animation:fall 2.6s ease-in .9s infinite}
+.drop3{animation:fall 2.6s ease-in 1.7s infinite}
+@keyframes fall{0%{opacity:0;transform:translateY(-6px) scale(.6)}20%{opacity:1}
+  75%{opacity:1;transform:translateY(46px) scale(1)}100%{opacity:0;transform:translateY(56px) scale(.4)}}
+.spin{transform-origin:236px 122px;animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* sekcije */
+section{padding:70px 0}
+.eyb{color:var(--y);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:10px}
+.sub{color:var(--g);margin-bottom:36px;max-width:560px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.c{border:1px solid #e2e8f0;border-radius:12px;padding:24px;transition:.2s}
-.c:hover{box-shadow:0 10px 30px rgba(11,61,107,.1);transform:translateY(-3px)}
-.c i{font-style:normal;font-size:1.6rem;display:block;margin-bottom:10px}
-.c h3{font-size:1.05rem;margin-bottom:6px}
-.c p{color:#5b6b80;font-size:.9rem}
-.grey{background:#f4f7fb}
-.pr{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #e2e8f0}
-.pr b{color:#0b3d6b}
-.cta{background:#0b3d6b;color:#fff;text-align:center;padding:56px 0}
-.cta h2{margin-bottom:10px}
-.cta p{opacity:.85;margin-bottom:22px}
-footer{background:#08304f;color:#a8bed4;padding:26px 0;font-size:.86rem;text-align:center}
-@media(max-width:760px){.g3{grid-template-columns:1fr}.hero h1{font-size:1.8rem}.nav nav{display:none}}
+.c{border:1px solid #e3e9f0;border-radius:14px;padding:26px;transition:.28s;background:#fff;position:relative;overflow:hidden}
+.c::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--y);transform:scaleY(0);transform-origin:top;transition:.3s}
+.c:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(10,47,82,.13);border-color:#cfe0f0}
+.c:hover::before{transform:scaleY(1)}
+.c i{font-style:normal;font-size:1.9rem;display:block;margin-bottom:12px}
+.c h3{font-size:1.2rem;margin-bottom:7px}
+.c p{color:var(--g);font-size:.92rem}
+.grey{background:#f3f7fb}
+/* koraki */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:k}
+.sp{position:relative;padding-left:0}
+.sp::before{counter-increment:k;content:counter(k);width:44px;height:44px;border-radius:12px;background:var(--n);color:var(--y);
+  display:grid;place-items:center;font-family:'Barlow Condensed';font-size:1.4rem;font-weight:700;margin-bottom:14px}
+.sp h3{font-size:1.1rem;margin-bottom:6px}
+.sp p{color:var(--g);font-size:.9rem}
+/* cenik */
+.pl{max-width:660px;margin:0 auto}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:17px 20px;border-radius:10px;transition:.2s;gap:14px}
+.pr:nth-child(odd){background:#fff}
+.pr:hover{background:var(--n);color:#fff;transform:translateX(6px)}
+.pr:hover b{color:var(--y)}
+.pr b{color:var(--n);font-size:1.05rem;white-space:nowrap;transition:.2s}
+.pr small{display:block;color:var(--g);font-size:.83rem}
+.pr:hover small{color:rgba(255,255,255,.7)}
+/* mnenja */
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.q{background:#fff;border:1px solid #e3e9f0;border-radius:14px;padding:24px;transition:.25s}
+.q:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(10,47,82,.1)}
+.q .st{color:var(--y);margin-bottom:10px;letter-spacing:2px}
+.q p{font-size:.93rem;margin-bottom:14px}
+.q span{font-size:.85rem;color:var(--g);font-weight:600}
+/* cta */
+.cta{background:linear-gradient(140deg,var(--n),var(--n2));color:#fff;text-align:center;padding:74px 0}
+.cta h2{margin-bottom:12px}
+.cta p{opacity:.85;margin-bottom:26px}
+footer{background:#071f38;color:#8fa8c0;padding:30px 0;font-size:.87rem}
+.fw{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.hg,.g3,.steps,.qs{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.nav nav{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style></head><body>
+
 <header><div class="w nav">
-<div class="logo"><i>🔧</i> Vodovodar Novak</div>
-<nav><a href="#s">Storitve</a><a href="#c">Cenik</a><a href="#k">Kontakt</a></nav>
-<a href="#k" class="call">031 234 567</a>
+<div class="lg"><i>💧</i>Vodovodar <b>Novak</b></div>
+<nav><a href="#s">Storitve</a><a href="#p">Postopek</a><a href="#c">Cenik</a><a href="#m">Mnenja</a></nav>
+<a href="#k" class="tel">📞 031 234 567</a>
 </div></header>
-<div class="hero"><div class="w">
-<span class="badge">⚡ NUJNI PRIHOD V 60 MINUTAH</span>
-<h1>Pušča? Zamašeno?<br>Pridemo še danes.</h1>
-<p>Vodovodne inštalacije in nujna popravila v Ljubljani z okolico. Že 18 let. Brezplačen ogled, jasna cena pred začetkom dela.</p>
+
+<div class="hero"><div class="w hg">
+<div>
+<span class="tagb"><span class="dot"></span> NUJNI PRIHOD V 60 MINUTAH</span>
+<h1>Pušča?<br>Pridemo <em>še danes</em>.</h1>
+<p>Vodovodne inštalacije in nujna popravila v Ljubljani z okolico. 18 let izkušenj, brezplačen ogled in jasna cena, preden začnemo.</p>
 <div class="btns"><a href="#k" class="b1">📞 Pokliči zdaj</a><a href="#c" class="b2">Poglej cenik</a></div>
+<div class="stats">
+<div class="stat"><div class="big">18</div><span>let izkušenj</span></div>
+<div class="stat"><div class="big">2400+</div><span>opravljenih posegov</span></div>
+<div class="stat"><div class="big">60</div><span>minut do vas</span></div>
+<div class="stat"><div class="big">24/7</div><span>za nujne primere</span></div>
+</div>
+</div>
+<div class="art">
+<svg viewBox="0 0 420 330" xmlns="http://www.w3.org/2000/svg">
+<circle cx="330" cy="66" r="52" fill="#fff" opacity=".05"/>
+<circle cx="70" cy="250" r="40" fill="#fff" opacity=".05"/>
+<!-- stena -->
+<rect x="58" y="46" width="304" height="200" rx="14" fill="#0a2740" opacity=".55"/>
+<!-- cevi -->
+<path d="M96 210h74v-62h84v-46h74" fill="none" stroke="#7ea8cf" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+<path d="M96 210h74v-62h84v-46h74" fill="none" stroke="#b9d4ea" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- ventil -->
+<circle cx="254" cy="148" r="17" fill="#0a2f52" stroke="#ffb020" stroke-width="4"/>
+<g class="spin" transform="translate(18 26)">
+<path d="M236 122h0" />
+<circle cx="236" cy="122" r="0" fill="none"/>
+</g>
+<circle cx="254" cy="148" r="6" fill="#ffb020"/>
+<!-- pipa -->
+<rect x="164" y="196" width="14" height="34" rx="6" fill="#dbe9f5"/>
+<rect x="150" y="188" width="42" height="14" rx="7" fill="#eef6fc"/>
+<rect x="176" y="176" width="12" height="16" rx="5" fill="#ffb020"/>
+<!-- kapljice -->
+<g fill="#6fc3ff">
+<circle class="drop" cx="171" cy="234" r="6"/>
+<circle class="drop2" cx="171" cy="234" r="5"/>
+<circle class="drop3" cx="171" cy="234" r="4"/>
+</g>
+<!-- luža -->
+<ellipse cx="171" cy="288" rx="42" ry="8" fill="#6fc3ff" opacity=".3"/>
+<ellipse cx="171" cy="288" rx="24" ry="5" fill="#6fc3ff" opacity=".45"/>
+<!-- ključ -->
+<g transform="rotate(-28 320 232)">
+<rect x="296" y="226" width="76" height="13" rx="6" fill="#ffb020"/>
+<path d="M296 232a15 15 0 1 1 0-1z" fill="#ffb020"/>
+<circle cx="292" cy="232" r="7" fill="#0a2f52"/>
+</g>
+</svg>
+</div>
 </div></div>
+
 <section id="s"><div class="w">
-<h2>Kaj popravimo</h2><p class="sub">Od kapljajoče pipe do celotne obnove kopalnice.</p>
+<p class="eyb rv">Storitve</p><h2 class="rv">Kaj popravimo</h2>
+<p class="sub rv">Od kapljajoče pipe do celotne obnove kopalnice — vse na enem mestu.</p>
 <div class="g3">
-<div class="c"><i>💧</i><h3>Puščanje in okvare</h3><p>Odkrivanje in popravilo puščanja cevi, tudi skritega v zidu.</p></div>
-<div class="c"><i>🚿</i><h3>Menjava pip in armatur</h3><p>Zamenjava pip, ventilov, sifonov in sanitarne opreme.</p></div>
-<div class="c"><i>🌀</i><h3>Odmašitev odtokov</h3><p>Strojno čiščenje odtokov, kanalizacije in WC školjk.</p></div>
-<div class="c"><i>🛁</i><h3>Obnova kopalnice</h3><p>Celotna prenova z inštalacijami, od načrta do zadnje ploščice.</p></div>
-<div class="c"><i>🔥</i><h3>Bojlerji in ogrevanje</h3><p>Montaža, servis in odstranjevanje vodnega kamna.</p></div>
-<div class="c"><i>🏠</i><h3>Novogradnje</h3><p>Celotne vodovodne inštalacije za nove objekte.</p></div>
+<div class="c rv"><i>💧</i><h3>Puščanje cevi</h3><p>Odkrivanje in popravilo puščanja, tudi skritega v zidu ali pod tlakom.</p></div>
+<div class="c rv"><i>🚿</i><h3>Pipe in armature</h3><p>Menjava pip, ventilov, sifonov in celotne sanitarne opreme.</p></div>
+<div class="c rv"><i>🌀</i><h3>Odmašitev odtokov</h3><p>Strojno čiščenje odtokov, kanalizacije in WC školjk.</p></div>
+<div class="c rv"><i>🛁</i><h3>Obnova kopalnice</h3><p>Celotna prenova z inštalacijami — od načrta do zadnje ploščice.</p></div>
+<div class="c rv"><i>🔥</i><h3>Bojlerji in ogrevanje</h3><p>Montaža, servis in odstranjevanje vodnega kamna.</p></div>
+<div class="c rv"><i>🏠</i><h3>Novogradnje</h3><p>Celotne vodovodne inštalacije za nove objekte in prizidke.</p></div>
 </div></div></section>
-<section id="c" class="grey"><div class="w" style="max-width:700px">
-<h2>Okvirni cenik</h2><p class="sub">Točno ceno poveste pred začetkom dela. Brez presenečenj.</p>
-<div class="pr"><span>Ogled in ocena</span><b>Brezplačno</b></div>
-<div class="pr"><span>Urna postavka</span><b>35 €</b></div>
-<div class="pr"><span>Menjava pipe</span><b>od 45 €</b></div>
-<div class="pr"><span>Odmašitev odtoka</span><b>od 60 €</b></div>
-<div class="pr"><span>Nujni prihod (vikend, ponoči)</span><b>+30 €</b></div>
-</div></section>
+
+<section id="p" class="grey"><div class="w">
+<p class="eyb rv">Postopek</p><h2 class="rv">Kako poteka</h2>
+<p class="sub rv">Brez zapletov. Pokličete zjutraj, večino okvar rešimo isti dan.</p>
+<div class="steps">
+<div class="sp rv"><h3>Pokličete</h3><p>Opišete težavo, ocenimo nujnost in se dogovorimo za uro.</p></div>
+<div class="sp rv"><h3>Pridemo</h3><p>Ogled je brezplačen. Povemo, kaj je narobe in koliko bo stalo.</p></div>
+<div class="sp rv"><h3>Popravimo</h3><p>Delo opravimo takoj, če imamo potrebne dele s sabo.</p></div>
+<div class="sp rv"><h3>Počistimo</h3><p>Za sabo pospravimo. Na delo dajemo 2-letno garancijo.</p></div>
+</div></div></section>
+
+<section id="c"><div class="w">
+<div style="text-align:center"><p class="eyb rv">Cenik</p><h2 class="rv">Okvirne cene</h2>
+<p class="sub rv" style="margin:0 auto 36px">Točno ceno poveste pred začetkom. Brez presenečenj na računu.</p></div>
+<div class="pl">
+<div class="pr rv"><span>Ogled in ocena stanja<small>Kadarkoli, brez obveznosti</small></span><b>Brezplačno</b></div>
+<div class="pr rv"><span>Urna postavka<small>Redni delovni čas</small></span><b>35 €</b></div>
+<div class="pr rv"><span>Menjava pipe<small>Vključno z materialom</small></span><b>od 45 €</b></div>
+<div class="pr rv"><span>Odmašitev odtoka<small>Strojno čiščenje</small></span><b>od 60 €</b></div>
+<div class="pr rv"><span>Nujni prihod<small>Vikend, prazniki, ponoči</small></span><b>+30 €</b></div>
+</div></div></section>
+
+<section id="m" class="grey"><div class="w">
+<div style="text-align:center"><p class="eyb rv">Mnenja</p><h2 class="rv">Kaj pravijo stranke</h2>
+<p class="sub rv" style="margin:0 auto 36px">Večina naših strank pride prek priporočil.</p></div>
+<div class="qs">
+<div class="q rv"><div class="st">★★★★★</div><p>„Poklical sem v nedeljo zvečer, ker mi je počila cev. Prišel je v 40 minutah in rešil zadevo. Priporočam.“</p><span>Marko P., Ljubljana</span></div>
+<div class="q rv"><div class="st">★★★★★</div><p>„Obnova kopalnice od začetka do konca. Vse v roku, brez umazanije, cena točno taka kot dogovorjena.“</p><span>Tina S., Domžale</span></div>
+<div class="q rv"><div class="st">★★★★★</div><p>„Končno mojster, ki pove ceno vnaprej in se je drži. Zamenjal je bojler v dveh urah.“</p><span>Janez K., Vrhnika</span></div>
+</div></div></section>
+
 <div class="cta" id="k"><div class="w">
 <h2>Rabite vodovodarja?</h2>
-<p>Pokličite — večino okvar rešimo isti dan.</p>
+<p>Pokličite in povejte, kaj se dogaja — takoj vam povemo, kdaj lahko pridemo.</p>
 <a href="#" class="b1">📞 031 234 567</a>
-<p style="margin-top:20px;font-size:.9rem">Pon–Sob 7:00–20:00 · Nujni primeri 24/7 · Ljubljana in okolica</p>
+<p style="margin-top:22px;font-size:.9rem">Pon–Sob 7:00–20:00 · Nujni primeri 24/7 · Ljubljana z okolico</p>
 </div></div>
-<footer>© 2026 Vodovodar Novak s.p. · Vzorčna stran, izdelal Spletar</footer>
+
+<footer><div class="w fw">
+<span>© 2026 Vodovodar Novak s.p. · Trubarjeva 14, Ljubljana</span>
+<span>Vzorčna stran — izdelal <b style="color:#ffb020">Spletar</b></span>
+</div></footer>
+
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+</script>
 </body></html>
