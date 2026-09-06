@@ -10,8 +10,8 @@ document.documentElement.setAttribute('data-t',t)})();
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Primeri spletnih strani | Spletar</title>
-<meta name="description" content="Poglejte vzorčne spletne strani za obrtnike, salone, gostinstvo in trgovine. Primeri po panogah in po paketih — od vizitke do spletne trgovine.">
+<title>Primeri spletnih strani po paketih | Spletar</title>
+<meta name="description" content="Poglejte vzorčne spletne strani po paketih — vizitka, osnovna, poslovna in spletna trgovina. Prave, delujoče strani za predogled.">
 <link rel="canonical" href="https://spletar.com/primeri.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#faf9f7">
@@ -21,7 +21,7 @@ document.documentElement.setAttribute('data-t',t)})();
 <meta property="og:site_name" content="Spletar">
 <meta property="og:url" content="https://spletar.com/primeri.html">
 <meta property="og:title" content="Primeri spletnih strani | Spletar">
-<meta property="og:description" content="Vzorčne spletne strani za obrtnike in mala podjetja — po panogah in po paketih.">
+<meta property="og:description" content="Vzorčne spletne strani po paketih — od vizitke do spletne trgovine.">
 <meta property="og:image" content="https://spletar.com/spletar-post-1.png">
 
 <link rel="icon" type="image/svg+xml" href="spletar-icon.svg">
@@ -74,13 +74,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,249,247,.88);
 .note{margin-top:26px;padding:14px 18px;border-left:2px solid var(--acc);background:var(--acc-s);
   font-size:.9rem;color:var(--ink2);max-width:56ch}
 
-/* mreža primerov */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
-  border:1px solid var(--line);margin-bottom:14px}
-.card{background:var(--bg);border:0;cursor:pointer;text-align:left;width:100%;font-family:inherit;
-  color:inherit;padding:0;display:flex;flex-direction:column;transition:background .25s}
-.card:hover{background:#fff}
-.thumb{aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+/* predogled v kartici */
 .mini{position:absolute;inset:0;padding:14px}
 .tb{height:13px;display:flex;align-items:center;gap:4px;padding:0 6px;border-radius:3px 3px 0 0}
 .tb i{width:4px;height:4px;border-radius:50%;opacity:.55}
@@ -88,16 +82,12 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,249,247,.88);
 .l{height:5px;border-radius:2px}
 .blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:auto}
 .blocks div{height:24px;border-radius:3px;opacity:.6}
-.meta{padding:22px 24px 26px;display:flex;flex-direction:column;gap:7px;flex:1}
-.tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.card h3{font-size:1.16rem}
-.card p{color:var(--mut);font-size:.9rem;flex:1}
 .open{font-size:.88rem;color:var(--acc);border-bottom:1px solid var(--line2);
   padding-bottom:2px;align-self:flex-start;margin-top:8px;transition:border-color .2s}
-.card:hover .open{border-color:var(--acc)}
+.pk:hover .open{border-color:var(--acc)}
 
 /* razdelek paketov */
-.sec{padding:clamp(56px,8vw,92px) 0 0;border-top:1px solid var(--line);margin-top:64px}
+.sec{padding:0}
 .sec .lbl{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
 .sec h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:16px;max-width:20ch}
 .sec > .w > p{color:var(--ink2);max-width:54ch;margin-bottom:48px}
@@ -263,108 +253,13 @@ html[data-t="dark"] .tt .moon{display:block}
 <main>
 <div class="w head">
   <p class="lbl">Primeri</p>
-  <h1>Poglejte, kako izgleda stran, ki jo dobite</h1>
-  <p>Kliknite na primer in odprla se bo prava, delujoča stran. Preizkusite jo tudi v mobilnem pogledu.</p>
+  <h1>Kaj dobite pri posameznem paketu</h1>
+  <p>Kliknite na paket in odprla se bo prava, delujoča stran. Preizkusite jo tudi v mobilnem pogledu.</p>
   <p class="note">To so vzorčne strani, izdelane za predstavitev. Podjetja na njih so izmišljena.</p>
-</div>
-
-<div class="w">
-  <div class="grid rv">
-
-    <button class="card" data-src="primer-vodovodar.html" data-title="Vodovodar Novak">
-      <div class="thumb" style="background:#0b3d6b">
-        <div class="mini"><div class="tb" style="background:#08304f"><i style="background:#fff"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
-        <div class="pv" style="background:#0b3d6b">
-          <div class="l" style="width:52%;background:#ffb020;height:8px"></div>
-          <div class="l" style="width:76%;background:rgba(255,255,255,.32)"></div>
-          <div class="l" style="width:58%;background:rgba(255,255,255,.2)"></div>
-          <div class="blocks"><div style="background:#fff"></div><div style="background:#fff"></div><div style="background:#fff"></div></div>
-        </div></div>
-      </div>
-      <div class="meta"><span class="tag">Obrt · Storitve</span><h3>Vodovodar</h3>
-        <p>Poudarek na nujnem klicu. Števci izkušenj, jasen cenik, mnenja strank.</p>
-        <span class="open">Odpri primer</span></div>
-    </button>
-
-    <button class="card" data-src="primer-salon.html" data-title="Studio Vita">
-      <div class="thumb" style="background:#f6ede4">
-        <div class="mini"><div class="tb" style="background:#e8d5c4"><i style="background:#b08968"></i><i style="background:#c9b8ab"></i><i style="background:#c9b8ab"></i></div>
-        <div class="pv" style="background:#fdfaf7">
-          <div class="l" style="width:44%;background:#b08968;height:8px;margin:0 auto"></div>
-          <div class="l" style="width:66%;background:#d4c4b5;margin:0 auto"></div>
-          <div class="blocks"><div style="background:#e8d5c4"></div><div style="background:#d4b8a0"></div><div style="background:#c9b8ab"></div></div>
-        </div></div>
-      </div>
-      <div class="meta"><span class="tag">Salon · Lepota</span><h3>Frizerski salon</h3>
-        <p>Eleganten in umirjen. Serifna pisava, galerija, cenik storitev.</p>
-        <span class="open">Odpri primer</span></div>
-    </button>
-
-    <button class="card" data-src="primer-mizarstvo.html" data-title="Mizarstvo Hrast">
-      <div class="thumb" style="background:#2e2419">
-        <div class="mini"><div class="tb" style="background:#241c14"><i style="background:#c8963e"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
-        <div class="pv" style="background:#2e2419">
-          <div class="l" style="width:56%;background:#c8963e;height:8px"></div>
-          <div class="l" style="width:72%;background:rgba(245,239,231,.28)"></div>
-          <div class="blocks"><div style="background:#6b4f2f"></div><div style="background:#8a6a42"></div><div style="background:#6b4f2f"></div></div>
-        </div></div>
-      </div>
-      <div class="meta"><span class="tag">Obrt · Izdelki</span><h3>Mizarstvo</h3>
-        <p>Temna paleta z zlatimi poudarki. Časovnica postopka, tabela materialov.</p>
-        <span class="open">Odpri primer</span></div>
-    </button>
-
-    <button class="card" data-src="primer-avtoservis.html" data-title="Avtoservis Zupan">
-      <div class="thumb" style="background:#0d1117">
-        <div class="mini"><div class="tb" style="background:#161c26"><i style="background:#c6f24e"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
-        <div class="pv" style="background:#0d1117">
-          <div class="l" style="width:54%;background:#c6f24e;height:8px"></div>
-          <div class="l" style="width:74%;background:#2b3542"></div>
-          <div class="blocks"><div style="background:#1b2330"></div><div style="background:#222a36"></div><div style="background:#1b2330"></div></div>
-        </div></div>
-      </div>
-      <div class="meta"><span class="tag">Avto · Servis</span><h3>Avtoservis</h3>
-        <p>Tehničen in oster. Rezervacija termina, oštevilčene storitve, cenik.</p>
-        <span class="open">Odpri primer</span></div>
-    </button>
-
-    <button class="card" data-src="primer-picerija.html" data-title="Picerija Ognjišče">
-      <div class="thumb" style="background:#2a1410">
-        <div class="mini"><div class="tb" style="background:#3d1e16"><i style="background:#e8622a"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
-        <div class="pv" style="background:#2a1410">
-          <div class="l" style="width:50%;background:#e8622a;height:8px"></div>
-          <div class="l" style="width:70%;background:#5a3226"></div>
-          <div class="blocks"><div style="background:#e0a95c"></div><div style="background:#d94f2a"></div><div style="background:#4a7c3f"></div></div>
-        </div></div>
-      </div>
-      <div class="meta"><span class="tag">Gostinstvo · Dostava</span><h3>Picerija</h3>
-        <p>Topel in vabljiv. Jedilnik z zavihki, podatki o dostavi.</p>
-        <span class="open">Odpri primer</span></div>
-    </button>
-
-    <button class="card" data-src="primer-fizio.html" data-title="Fizioterapija Korak">
-      <div class="thumb" style="background:#e6f5f3">
-        <div class="mini"><div class="tb" style="background:#d5eeeb"><i style="background:#0f766e"></i><i style="background:#b9dcd7"></i><i style="background:#b9dcd7"></i></div>
-        <div class="pv" style="background:#fbfdfc">
-          <div class="l" style="width:52%;background:#0f766e;height:8px"></div>
-          <div class="l" style="width:72%;background:#cfe6e3"></div>
-          <div class="blocks"><div style="background:#d5eeeb"></div><div style="background:#b9dcd7"></div><div style="background:#d5eeeb"></div></div>
-        </div></div>
-      </div>
-      <div class="meta"><span class="tag">Zdravje · Terapija</span><h3>Fizioterapija</h3>
-        <p>Miren in zaupanja vreden. Potek obravnave, cenik, pogosta vprašanja.</p>
-        <span class="open">Odpri primer</span></div>
-    </button>
-
-  </div>
 </div>
 
 <div class="sec">
   <div class="w">
-    <p class="lbl">Po paketih</p>
-    <h2>Kaj dobite pri posameznem paketu</h2>
-    <p>Iste panoge, različen obseg. Kliknite in primerjajte, kaj vključuje vsak paket.</p>
-
     <div class="packs rv">
 
       <button class="pk" data-src="paket-vizitka.html" data-title="Slikopleskarstvo Kos">
@@ -496,7 +391,7 @@ function openC(src,title){
   desk();vw.classList.add('show');document.body.style.overflow='hidden';
 }
 function closeC(){vw.classList.remove('show');vf.src='';document.body.style.overflow=''}
-document.querySelectorAll('.card,.pk').forEach(function(c){
+document.querySelectorAll('.pk').forEach(function(c){
   c.addEventListener('click',function(){openC(c.dataset.src,c.dataset.title)})});
 document.getElementById('vc').addEventListener('click',closeC);
 vw.addEventListener('click',function(e){if(e.target===vw)closeC()});
