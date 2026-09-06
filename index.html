@@ -200,10 +200,25 @@ details[open] summary .pm::after{transform:scaleY(0)}
 details p{padding:0 0 24px;color:var(--mut);font-size:.95rem;max-width:64ch}
 
 /* kontakt */
+/* velik gumb za vprašalnik */
+.bigbtn{display:inline-flex;align-items:center;justify-content:center;gap:14px;
+  background:var(--acc);color:var(--bg);padding:22px 52px;font-size:1.12rem;font-weight:500;
+  transition:background .22s,transform .22s,border-color .22s;border:1px solid var(--acc)}
+.bigbtn:hover{background:var(--ink);border-color:var(--ink);transform:translateY(-2px)}
+.bigbtn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;transition:transform .22s}
+.bigbtn:hover svg{transform:translateX(4px)}
+html[data-t="dark"] .bigbtn{color:#12120f}
+html[data-t="dark"] .bigbtn:hover{background:var(--ink);color:#12120f;border-color:var(--ink)}
+.alt{margin-top:26px;font-size:.92rem;color:var(--mut)}
+.alt a{border-bottom:1px solid var(--line2);padding-bottom:1px;transition:border-color .2s}
+.alt a:hover{border-color:var(--ink)}
+@media(max-width:600px){.bigbtn{width:100%;padding:20px 24px;font-size:1.02rem}}
+
 .contact{border-top:1px solid var(--line);padding:clamp(64px,9vw,104px) 0}
-.cw{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
-.contact h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:16px}
-.contact p{color:var(--ink2);max-width:42ch}
+.cw{text-align:center;max-width:660px;margin:0 auto}
+.contact h2{font-size:clamp(2rem,5vw,3.1rem);margin-bottom:18px}
+.contact p{color:var(--ink2);max-width:46ch;margin:0 auto;font-size:1.06rem}
 .cl{display:flex;flex-direction:column;gap:2px}
 .cl a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1.02rem;display:flex;
   justify-content:space-between;gap:20px;transition:padding-left .25s}
@@ -481,14 +496,14 @@ html[data-t="dark"] .tt .moon{display:block}
 <div class="contact" id="kontakt">
   <div class="w cw">
     <div class="rv">
-      <p class="lbl" style="font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:18px">Kontakt</p>
+      <p class="lbl" style="font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:20px">Kontakt</p>
       <h2>Poglejva, kaj potrebujete</h2>
-      <p>Izpolnite kratek vprašalnik ali pokličite. Posvet in ponudba sta brezplačna.</p>
-    </div>
-    <div class="cl rv">
-      <a href="https://jakobgabor.github.io/CALLDESK-WEB/ponudba.html">Izpolni vprašalnik <span>nekaj minut</span></a>
-      <a href="tel:+38631860377">031 860 377 <span>telefon</span></a>
-      <a href="mailto:jakob.gabor@gmail.com">jakob.gabor@gmail.com <span>e-pošta</span></a>
+      <p style="margin-bottom:40px">Izpolnite kratek vprašalnik — v nekaj minutah izberete videz, podstrani in vsebino. Na podlagi tega pripravim ponudbo po meri. Brezplačno in brez obveznosti.</p>
+      <a href="https://jakobgabor.github.io/CALLDESK-WEB/ponudba.html" class="bigbtn">
+        <span>Izpolni vprašalnik</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="alt">ali pokličite <a href="tel:+38631860377">031 860 377</a> · <a href="mailto:jakob.gabor@gmail.com">jakob.gabor@gmail.com</a></p>
     </div>
   </div>
 </div>
