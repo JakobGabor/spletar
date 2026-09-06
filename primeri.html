@@ -1,472 +1,450 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Primeri strani | Spletar</title>
-<meta name="description" content="Poglejte vzorčne spletne strani, ki jih izdelamo za obrtnike, salone in mala podjetja." />
-<meta name="theme-color" content="#0a0d12" />
-<link rel="icon" type="image/svg+xml" href="spletar-icon.svg" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Primeri spletnih strani | Spletar</title>
+<meta name="description" content="Poglejte vzorčne spletne strani za obrtnike, salone, gostinstvo in trgovine. Primeri po panogah in po paketih — od vizitke do spletne trgovine.">
+<link rel="canonical" href="https://spletar.com/primeri.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#faf9f7">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sl_SI">
+<meta property="og:site_name" content="Spletar">
+<meta property="og:url" content="https://spletar.com/primeri.html">
+<meta property="og:title" content="Primeri spletnih strani | Spletar">
+<meta property="og:description" content="Vzorčne spletne strani za obrtnike in mala podjetja — po panogah in po paketih.">
+<meta property="og:image" content="https://spletar.com/spletar-post-1.png">
+
+<link rel="icon" type="image/svg+xml" href="spletar-icon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Domov","item":"https://spletar.com/"},
+{"@type":"ListItem","position":2,"name":"Primeri","item":"https://spletar.com/primeri.html"}]}
+</script>
+
 <style>
 :root{
-  --bg:#0a0d12;--bg-2:#0e131b;--card:rgba(255,255,255,.045);--card-2:rgba(255,255,255,.07);
-  --border:rgba(255,255,255,.09);--border-2:rgba(255,255,255,.16);
-  --text:#e9edf3;--muted:#8a95a6;--accent:#3d8bff;--accent-2:#2563eb;
-  --accent-soft:rgba(61,139,255,.14);--accent-glow:rgba(61,139,255,.35);
-  --radius:18px;--radius-lg:26px;--shadow:0 18px 50px rgba(0,0,0,.45);
-  --blur:saturate(140%) blur(16px);--ease:cubic-bezier(.22,1,.36,1);
+  --bg:#faf9f7; --ink:#141310; --ink2:#3d3a34; --mut:#78736a;
+  --line:#e2ded6; --line2:#cfc9be;
+  --acc:#3d5a45; --acc-s:#eef2ee;
+  --max:1080px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--text);line-height:1.6;
-  background:radial-gradient(900px 500px at 12% -8%,rgba(61,139,255,.12),transparent 60%),
-             radial-gradient(760px 480px at 110% 0%,rgba(120,90,255,.06),transparent 55%),var(--bg);
-  background-attachment:fixed;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.brand-name{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.02em;line-height:1.15}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;line-height:1.14;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
-svg{display:block;max-width:100%}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-.eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
-.lead{color:var(--muted);font-size:1.02rem;max-width:620px;margin:0 auto}
-header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.78);
-  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;gap:16px;height:68px}
-.brand{display:flex;align-items:center;gap:11px}
-.brand svg{width:34px;height:34px}
-.brand-name{font-weight:700;font-size:1.15rem}
-.brand-name small{display:block;color:var(--muted);font-weight:500;font-size:.66rem;letter-spacing:.06em}
-.nav nav{margin-left:auto;display:flex;gap:6px;align-items:center}
-.nav nav a{padding:9px 13px;border-radius:10px;color:var(--muted);font-size:.92rem;font-weight:500;transition:.2s}
-.nav nav a:hover{color:var(--text);background:var(--card)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:12px;
-  font-family:inherit;font-size:.94rem;font-weight:600;cursor:pointer;border:1px solid var(--border-2);
-  background:var(--card-2);color:var(--text);transition:.22s var(--ease)}
-.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.1)}
-.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border-color:transparent;
-  box-shadow:0 10px 28px var(--accent-glow)}
-.btn.sm{padding:10px 16px;font-size:.87rem}
-.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.head{text-align:center;padding:clamp(46px,7vw,76px) 0 34px}
-.head h1{font-size:clamp(1.9rem,4.6vw,2.9rem);margin-bottom:14px}
-.note{max-width:640px;margin:22px auto 0;padding:13px 18px;border-radius:12px;
-  background:rgba(255,200,87,.08);border:1px solid rgba(255,200,87,.28);color:#ffc857;font-size:.88rem}
-/* KARTICE PRIMEROV */
-.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:70px}
-.case{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  backdrop-filter:var(--blur);box-shadow:var(--shadow);overflow:hidden;cursor:pointer;
-  transition:.3s var(--ease);display:flex;flex-direction:column;text-align:left;width:100%;
-  font-family:inherit;color:inherit}
-.case:hover{transform:translateY(-6px);border-color:var(--border-2);box-shadow:0 26px 60px rgba(0,0,0,.55)}
-.thumb{aspect-ratio:16/11;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-.thumb .mini{position:absolute;inset:0;padding:12px}
-.tb{height:14px;display:flex;align-items:center;gap:4px;padding:0 6px;border-radius:5px 5px 0 0}
-.tb i{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4)}
-.pv{height:calc(100% - 14px);border-radius:0 0 5px 5px;padding:10px;display:flex;flex-direction:column;gap:5px}
-.l{height:5px;border-radius:3px;opacity:.85}
-.blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:auto}
-.blocks div{height:26px;border-radius:4px;opacity:.55}
-.case .meta{padding:18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
-.tag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
-.case h3{font-size:1.1rem}
-.case p{color:var(--muted);font-size:.89rem;flex:1}
-.open{color:var(--accent);font-weight:600;font-size:.88rem;display:inline-flex;gap:7px;align-items:center;margin-top:6px}
-.open::after{content:"→";transition:.25s}
-.case:hover .open::after{transform:translateX(4px)}
-/* MODAL S STRANJO */
-.viewer{position:fixed;inset:0;z-index:90;background:rgba(3,6,12,.85);backdrop-filter:blur(6px);
-  display:none;place-items:center;padding:22px}
-.viewer.show{display:grid;animation:fade .22s}
-.frame{width:100%;max-width:1140px;height:88vh;background:var(--bg-2);border:1px solid var(--border-2);
-  border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;
-  box-shadow:var(--shadow);animation:rise .3s var(--ease)}
-.fbar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);
-  background:rgba(255,255,255,.03);flex:0 0 auto}
-.dots{display:flex;gap:6px}
-.dots i{width:10px;height:10px;border-radius:50%;background:var(--border-2)}
-.dots i:first-child{background:var(--accent)}
-.url{flex:1;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:8px;
-  padding:6px 14px;font-size:.82rem;color:var(--muted);text-align:center;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.devs{display:flex;gap:5px}
-.dev{width:34px;height:30px;border-radius:8px;border:1px solid var(--border);background:transparent;
-  color:var(--muted);cursor:pointer;font-size:.85rem;transition:.2s}
-.dev:hover{color:var(--text)}
-.dev.on{color:var(--accent);background:var(--accent-soft);border-color:rgba(61,139,255,.3)}
-.close{width:34px;height:30px;border-radius:8px;border:1px solid var(--border);background:transparent;
-  color:var(--muted);cursor:pointer;font-size:.9rem;transition:.2s}
-.close:hover{color:#ff5d6c;border-color:rgba(255,93,108,.4)}
-.stage{flex:1;min-height:0;display:grid;place-items:center;padding:0;background:#0a0d12;overflow:auto}
-.stage iframe{width:100%;height:100%;border:0;background:#fff;transition:width .35s var(--ease)}
-.stage.mob{padding:18px}
-.stage.mob iframe{width:390px;max-width:100%;height:100%;border-radius:16px;
-  box-shadow:0 20px 60px rgba(0,0,0,.6);border:1px solid var(--border-2)}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-/* CTA */
-/* PAKETI */
-.sec-head{text-align:center;padding:56px 0 30px;border-top:1px solid var(--border);margin-top:20px}
-.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:12px}
-.packs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:60px}
-.pack{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  backdrop-filter:var(--blur);box-shadow:var(--shadow);overflow:hidden;cursor:pointer;text-align:left;
-  transition:.3s var(--ease);display:flex;flex-direction:column;width:100%;font-family:inherit;color:inherit;position:relative}
-.pack:hover{transform:translateY(-6px);border-color:var(--border-2);box-shadow:0 26px 60px rgba(0,0,0,.55)}
-.pack.best{border-color:rgba(61,139,255,.45)}
-.pack .pbadge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  color:#fff;font-size:.62rem;font-weight:700;padding:4px 10px;border-radius:99px;letter-spacing:.06em;z-index:2}
-.pack .ph{aspect-ratio:16/10;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
-.pack .ph .mini{position:absolute;inset:0;padding:11px}
-.pack .meta{padding:18px;display:flex;flex-direction:column;gap:5px;flex:1}
-.pack .pname{font-family:'Space Grotesk',sans-serif;font-size:1.06rem;font-weight:700}
-.pack .pprice{color:var(--accent);font-weight:700;font-size:1.2rem;font-family:'Space Grotesk',sans-serif}
-.pack .pdesc{color:var(--muted);font-size:.85rem;flex:1;line-height:1.5}
-.pack .pfeat{list-style:none;margin:8px 0 0;display:flex;flex-direction:column;gap:4px}
-.pack .pfeat li{color:var(--muted);font-size:.79rem;display:flex;gap:7px;align-items:flex-start}
-.pack .pfeat li::before{content:"✓";color:var(--accent);font-weight:700;flex:0 0 auto}
-.pack .popen{color:var(--accent);font-weight:600;font-size:.85rem;margin-top:10px;display:inline-flex;gap:6px;align-items:center}
-.pack .popen::after{content:"→";transition:.25s}
-.pack:hover .popen::after{transform:translateX(4px)}
-@media(max-width:960px){.packs{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.packs{grid-template-columns:1fr}}
+img,svg{display:block;max-width:100%}
+.w{max-width:var(--max);margin:0 auto;padding:0 28px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 
-.cta-box{background:linear-gradient(135deg,rgba(61,139,255,.14),rgba(37,99,235,.06));
-  border:1px solid rgba(61,139,255,.3);border-radius:var(--radius-lg);padding:clamp(32px,5vw,54px);
-  text-align:center;backdrop-filter:var(--blur);box-shadow:var(--shadow);margin-bottom:70px}
-.cta-box h2{font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:12px}
-.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-footer{border-top:1px solid var(--border);padding:34px 0}
-.foot{display:flex;gap:20px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
-.foot nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
-.foot nav a:hover{color:var(--accent)}
-@media(max-width:960px){.cases{grid-template-columns:repeat(2,1fr)}.nav nav a:not(.btn){display:none}}
-@media(max-width:620px){.cases{grid-template-columns:1fr}.frame{height:92vh}.devs{display:none}.foot nav{margin-left:0}}
+header{position:sticky;top:0;z-index:40;background:rgba(250,249,247,.88);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-size:1.06rem;font-weight:500;letter-spacing:-.01em}
+.brand svg{width:26px;height:26px}
+.nav nav{margin-left:auto;display:flex;gap:26px;font-size:.92rem;color:var(--mut)}
+.nav nav a{transition:color .2s}
+.nav nav a:hover,.nav nav a.on{color:var(--ink)}
+.nav .cta{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px}
+.burger{display:none;margin-left:auto;width:38px;height:38px;border:1px solid var(--line2);
+  background:none;cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:1px;background:var(--ink)}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){bottom:14px}
+
+.head{padding:clamp(60px,9vw,104px) 0 46px;max-width:60ch}
+.head .lbl{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:20px}
+.head h1{font-size:clamp(2.2rem,5.6vw,3.6rem);margin-bottom:20px}
+.head p{color:var(--ink2);font-size:1.06rem}
+.note{margin-top:26px;padding:14px 18px;border-left:2px solid var(--acc);background:var(--acc-s);
+  font-size:.9rem;color:var(--ink2);max-width:56ch}
+
+/* mreža primerov */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-bottom:14px}
+.card{background:var(--bg);border:0;cursor:pointer;text-align:left;width:100%;font-family:inherit;
+  color:inherit;padding:0;display:flex;flex-direction:column;transition:background .25s}
+.card:hover{background:#fff}
+.thumb{aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.mini{position:absolute;inset:0;padding:14px}
+.tb{height:13px;display:flex;align-items:center;gap:4px;padding:0 6px;border-radius:3px 3px 0 0}
+.tb i{width:4px;height:4px;border-radius:50%;opacity:.55}
+.pv{height:calc(100% - 13px);border-radius:0 0 3px 3px;padding:11px;display:flex;flex-direction:column;gap:5px}
+.l{height:5px;border-radius:2px}
+.blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:auto}
+.blocks div{height:24px;border-radius:3px;opacity:.6}
+.meta{padding:22px 24px 26px;display:flex;flex-direction:column;gap:7px;flex:1}
+.tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.card h3{font-size:1.16rem}
+.card p{color:var(--mut);font-size:.9rem;flex:1}
+.open{font-size:.88rem;color:var(--acc);border-bottom:1px solid var(--line2);
+  padding-bottom:2px;align-self:flex-start;margin-top:8px;transition:border-color .2s}
+.card:hover .open{border-color:var(--acc)}
+
+/* razdelek paketov */
+.sec{padding:clamp(56px,8vw,92px) 0 0;border-top:1px solid var(--line);margin-top:64px}
+.sec .lbl{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
+.sec h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin-bottom:16px;max-width:20ch}
+.sec > .w > p{color:var(--ink2);max-width:54ch;margin-bottom:48px}
+.packs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.pk{background:var(--bg);border:0;cursor:pointer;text-align:left;width:100%;font-family:inherit;color:inherit;
+  padding:0;display:flex;flex-direction:column;transition:background .25s;position:relative}
+.pk:hover{background:#fff}
+.pk.on{background:var(--acc-s)}
+.pk .ph{aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.pk .pm{padding:22px 22px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pk .nm{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.pk .pr{font-family:'Instrument Serif',serif;font-size:2rem;line-height:1;margin-bottom:2px}
+.pk .pr small{font-size:.8rem;color:var(--mut);font-family:Inter}
+.pk .ds{color:var(--mut);font-size:.86rem;flex:1}
+.pk ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin:10px 0 0}
+.pk li{font-size:.83rem;color:var(--ink2);padding-left:14px;position:relative}
+.pk li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--acc)}
+.pk .open{margin-top:14px}
+
+/* pregledovalnik */
+.viewer{position:fixed;inset:0;z-index:90;background:rgba(20,19,16,.5);backdrop-filter:blur(4px);
+  display:none;place-items:center;padding:22px}
+.viewer.show{display:grid;animation:fade .2s}
+.frame{width:100%;max-width:1160px;height:88vh;background:#fff;border:1px solid var(--line2);
+  overflow:hidden;display:flex;flex-direction:column;animation:rise .3s cubic-bezier(.22,1,.36,1)}
+.fbar{display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);
+  flex:0 0 auto;background:var(--bg)}
+.dots{display:flex;gap:6px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line2)}
+.url{flex:1;border:1px solid var(--line);padding:6px 14px;font-size:.82rem;color:var(--mut);
+  text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#fff}
+.devs{display:flex;gap:4px}
+.dev,.close{width:34px;height:30px;border:1px solid var(--line);background:none;color:var(--mut);
+  cursor:pointer;transition:.2s;display:grid;place-items:center}
+.dev svg,.close svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round}
+.dev:hover,.close:hover{color:var(--ink);border-color:var(--line2)}
+.dev.on{color:var(--acc);background:var(--acc-s);border-color:var(--acc)}
+.stage{flex:1;min-height:0;display:grid;place-items:center;background:var(--bg);overflow:auto}
+.stage iframe{width:100%;height:100%;border:0;background:#fff;transition:width .35s cubic-bezier(.22,1,.36,1)}
+.stage.mob{padding:18px}
+.stage.mob iframe{width:390px;max-width:100%;border:1px solid var(--line2)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.cta{border-top:1px solid var(--line);margin-top:72px;padding:clamp(60px,8vw,96px) 0}
+.cw{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
+.cta h2{font-size:clamp(1.9rem,4.4vw,2.8rem);margin-bottom:16px}
+.cta p{color:var(--ink2);max-width:40ch}
+.cl{display:flex;flex-direction:column;gap:2px}
+.cl a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1.02rem;display:flex;
+  justify-content:space-between;gap:20px;transition:padding-left .25s}
+.cl a:hover{padding-left:10px}
+.cl a span{color:var(--mut);font-size:.85rem;align-self:center}
+
+footer{border-top:1px solid var(--line);padding:34px 0}
+.fw{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.87rem;color:var(--mut)}
+.fw nav{display:flex;gap:22px}
+.fw a:hover{color:var(--ink)}
+
+.rv{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .nav nav{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--bg);border-bottom:1px solid var(--line);padding:8px 28px 16px}
+  .nav nav.open{display:flex}
+  .nav nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .grid,.packs{grid-template-columns:repeat(2,1fr)}
+  .cw{grid-template-columns:1fr;gap:34px}
+}
+@media(max-width:620px){
+  .grid,.packs{grid-template-columns:1fr}
+  .w{padding:0 20px}
+  .devs{display:none}
+  .frame{height:92vh}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Spletar">
-      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#4a94ff"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
-        <g fill="none" stroke="url(#lg)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M27.43 10.48 L48.35 17.28 L52.92 38.80 L36.57 53.52 L15.65 46.72 L11.08 25.20 Z" stroke-width="2.1"/>
-          <path d="M27.43 10.48 L52.92 38.80"/><path d="M27.43 10.48 L36.57 53.52"/>
-          <path d="M27.43 10.48 L15.65 46.72"/><path d="M48.35 17.28 L36.57 53.52"/>
-          <path d="M48.35 17.28 L15.65 46.72"/><path d="M48.35 17.28 L11.08 25.20"/>
-          <path d="M52.92 38.80 L15.65 46.72"/><path d="M52.92 38.80 L11.08 25.20"/>
-          <path d="M36.57 53.52 L11.08 25.20"/>
-        </g>
+  <div class="w nav">
+    <a class="brand" href="index.html" aria-label="Spletar — domov">
+      <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#3d5a45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M27.43 10.48 L48.35 17.28 L52.92 38.80 L36.57 53.52 L15.65 46.72 L11.08 25.20 Z" stroke-width="2.4"/>
+        <path d="M27.43 10.48 L52.92 38.80"/><path d="M27.43 10.48 L36.57 53.52"/>
+        <path d="M27.43 10.48 L15.65 46.72"/><path d="M48.35 17.28 L36.57 53.52"/>
+        <path d="M48.35 17.28 L15.65 46.72"/><path d="M48.35 17.28 L11.08 25.20"/>
+        <path d="M52.92 38.80 L15.65 46.72"/><path d="M52.92 38.80 L11.08 25.20"/>
+        <path d="M36.57 53.52 L11.08 25.20"/>
       </svg>
-      <span class="brand-name">Spletar<small>IZDELAVA SPLETNIH STRANI</small></span>
+      Spletar
     </a>
-    <nav>
+    <button class="burger" id="bg" aria-label="Meni" aria-expanded="false"><span></span><span></span></button>
+    <nav id="mn">
       <a href="index.html#storitve">Storitve</a>
-      <a href="index.html#paketi">Cenik</a>
-      <a href="index.html#kontakt" class="btn primary sm">Brezplačen posvet</a>
+      <a href="primeri.html" class="on">Primeri</a>
+      <a href="index.html#cenik">Cenik</a>
+      <a href="index.html#kontakt" class="cta">Kontakt</a>
     </nav>
   </div>
 </header>
 
 <main>
-<div class="wrap head">
-  <p class="eyebrow">Primeri</p>
+<div class="w head">
+  <p class="lbl">Primeri</p>
   <h1>Poglejte, kako izgleda stran, ki jo dobite</h1>
-  <p class="lead">Kliknite na primer in odprla se bo prava, delujoča stran. Preizkusite jo tudi v mobilnem pogledu.</p>
-  <div class="note">ℹ️ To so vzorčne strani, izdelane za predstavitev — podjetja na njih so izmišljena.</div>
+  <p>Kliknite na primer in odprla se bo prava, delujoča stran. Preizkusite jo tudi v mobilnem pogledu.</p>
+  <p class="note">To so vzorčne strani, izdelane za predstavitev. Podjetja na njih so izmišljena.</p>
 </div>
 
-<div class="wrap">
-  <div class="cases">
+<div class="w">
+  <div class="grid rv">
 
-    <button class="case" data-src="primer-vodovodar.html" data-title="Vodovodar Novak">
+    <button class="card" data-src="primer-vodovodar.html" data-title="Vodovodar Novak">
       <div class="thumb" style="background:#0b3d6b">
-        <div class="mini">
-          <div class="tb" style="background:#08304f"><i></i><i></i><i></i></div>
-          <div class="pv" style="background:#0b3d6b">
-            <div class="l" style="width:52%;background:#ffb020;height:9px"></div>
-            <div class="l" style="width:78%;background:rgba(255,255,255,.35)"></div>
-            <div class="l" style="width:62%;background:rgba(255,255,255,.25)"></div>
-            <div class="l" style="width:30%;background:#ffb020;height:8px;margin-top:3px"></div>
-            <div class="blocks"><div style="background:#fff"></div><div style="background:#fff"></div><div style="background:#fff"></div></div>
-          </div>
-        </div>
+        <div class="mini"><div class="tb" style="background:#08304f"><i style="background:#fff"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
+        <div class="pv" style="background:#0b3d6b">
+          <div class="l" style="width:52%;background:#ffb020;height:8px"></div>
+          <div class="l" style="width:76%;background:rgba(255,255,255,.32)"></div>
+          <div class="l" style="width:58%;background:rgba(255,255,255,.2)"></div>
+          <div class="blocks"><div style="background:#fff"></div><div style="background:#fff"></div><div style="background:#fff"></div></div>
+        </div></div>
       </div>
-      <div class="meta">
-        <span class="tag">Obrt · Storitve</span>
-        <h3>Vodovodar Novak</h3>
-        <p>Energičen, z animiranimi kapljicami in utripajočim gumbom za klic. Števci izkušenj, cenik in mnenja strank.</p>
-        <span class="open">Odpri primer</span>
-      </div>
+      <div class="meta"><span class="tag">Obrt · Storitve</span><h3>Vodovodar</h3>
+        <p>Poudarek na nujnem klicu. Števci izkušenj, jasen cenik, mnenja strank.</p>
+        <span class="open">Odpri primer</span></div>
     </button>
 
-    <button class="case" data-src="primer-salon.html" data-title="Studio Vita">
+    <button class="card" data-src="primer-salon.html" data-title="Studio Vita">
       <div class="thumb" style="background:#f6ede4">
-        <div class="mini">
-          <div class="tb" style="background:#e8d5c4"><i style="background:#b08968"></i><i style="background:#c9b8ab"></i><i style="background:#c9b8ab"></i></div>
-          <div class="pv" style="background:#fdfaf7">
-            <div class="l" style="width:46%;background:#b08968;height:9px;margin:0 auto"></div>
-            <div class="l" style="width:68%;background:#d4c4b5;margin:0 auto"></div>
-            <div class="l" style="width:34%;background:#b08968;height:8px;margin:3px auto"></div>
-            <div class="blocks"><div style="background:#e8d5c4"></div><div style="background:#d4b8a0"></div><div style="background:#c9b8ab"></div></div>
-          </div>
-        </div>
+        <div class="mini"><div class="tb" style="background:#e8d5c4"><i style="background:#b08968"></i><i style="background:#c9b8ab"></i><i style="background:#c9b8ab"></i></div>
+        <div class="pv" style="background:#fdfaf7">
+          <div class="l" style="width:44%;background:#b08968;height:8px;margin:0 auto"></div>
+          <div class="l" style="width:66%;background:#d4c4b5;margin:0 auto"></div>
+          <div class="blocks"><div style="background:#e8d5c4"></div><div style="background:#d4b8a0"></div><div style="background:#c9b8ab"></div></div>
+        </div></div>
       </div>
-      <div class="meta">
-        <span class="tag">Salon · Lepota</span>
-        <h3>Studio Vita</h3>
-        <p>Eleganten in umirjen. Serifna pisava, plavajoče ozadje, galerija z odzivnimi ploščicami.</p>
-        <span class="open">Odpri primer</span>
-      </div>
+      <div class="meta"><span class="tag">Salon · Lepota</span><h3>Frizerski salon</h3>
+        <p>Eleganten in umirjen. Serifna pisava, galerija, cenik storitev.</p>
+        <span class="open">Odpri primer</span></div>
     </button>
 
-    <button class="case" data-src="primer-mizarstvo.html" data-title="Mizarstvo Hrast">
+    <button class="card" data-src="primer-mizarstvo.html" data-title="Mizarstvo Hrast">
       <div class="thumb" style="background:#2e2419">
-        <div class="mini">
-          <div class="tb" style="background:#241c14"><i style="background:#c8963e"></i><i></i><i></i></div>
-          <div class="pv" style="background:#2e2419">
-            <div class="l" style="width:58%;background:#c8963e;height:9px"></div>
-            <div class="l" style="width:74%;background:rgba(245,239,231,.3)"></div>
-            <div class="l" style="width:48%;background:rgba(245,239,231,.22)"></div>
-            <div class="blocks"><div style="background:#6b4f2f"></div><div style="background:#8a6a42"></div><div style="background:#6b4f2f"></div></div>
-          </div>
-        </div>
+        <div class="mini"><div class="tb" style="background:#241c14"><i style="background:#c8963e"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
+        <div class="pv" style="background:#2e2419">
+          <div class="l" style="width:56%;background:#c8963e;height:8px"></div>
+          <div class="l" style="width:72%;background:rgba(245,239,231,.28)"></div>
+          <div class="blocks"><div style="background:#6b4f2f"></div><div style="background:#8a6a42"></div><div style="background:#6b4f2f"></div></div>
+        </div></div>
       </div>
-      <div class="meta">
-        <span class="tag">Obrt · Izdelki</span>
-        <h3>Mizarstvo Hrast</h3>
-        <p>Temna paleta z zlatimi poudarki. Animirana žaga, časovnica postopka in tabela materialov.</p>
-        <span class="open">Odpri primer</span>
-      </div>
+      <div class="meta"><span class="tag">Obrt · Izdelki</span><h3>Mizarstvo</h3>
+        <p>Temna paleta z zlatimi poudarki. Časovnica postopka, tabela materialov.</p>
+        <span class="open">Odpri primer</span></div>
     </button>
 
-    <button class="case" data-src="primer-avtoservis.html" data-title="Avtoservis Zupan">
+    <button class="card" data-src="primer-avtoservis.html" data-title="Avtoservis Zupan">
       <div class="thumb" style="background:#0d1117">
-        <div class="mini">
-          <div class="tb" style="background:#161c26"><i style="background:#c6f24e"></i><i></i><i></i></div>
-          <div class="pv" style="background:#0d1117">
-            <div class="l" style="width:56%;background:#c6f24e;height:9px"></div>
-            <div class="l" style="width:76%;background:#2b3542"></div>
-            <div class="l" style="width:44%;background:#222a36"></div>
-            <div class="blocks"><div style="background:#1b2330"></div><div style="background:#222a36"></div><div style="background:#1b2330"></div></div>
-          </div>
-        </div>
+        <div class="mini"><div class="tb" style="background:#161c26"><i style="background:#c6f24e"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
+        <div class="pv" style="background:#0d1117">
+          <div class="l" style="width:54%;background:#c6f24e;height:8px"></div>
+          <div class="l" style="width:74%;background:#2b3542"></div>
+          <div class="blocks"><div style="background:#1b2330"></div><div style="background:#222a36"></div><div style="background:#1b2330"></div></div>
+        </div></div>
       </div>
-      <div class="meta">
-        <span class="tag">Avto · Servis</span>
-        <h3>Avtoservis Zupan</h3>
-        <p>Tehničen in oster. Avto na dvigalu z vrtečimi kolesi, poševni gumbi, oštevilčene storitve.</p>
-        <span class="open">Odpri primer</span>
-      </div>
+      <div class="meta"><span class="tag">Avto · Servis</span><h3>Avtoservis</h3>
+        <p>Tehničen in oster. Rezervacija termina, oštevilčene storitve, cenik.</p>
+        <span class="open">Odpri primer</span></div>
     </button>
 
-    <button class="case" data-src="primer-picerija.html" data-title="Picerija Ognjišče">
+    <button class="card" data-src="primer-picerija.html" data-title="Picerija Ognjišče">
       <div class="thumb" style="background:#2a1410">
-        <div class="mini">
-          <div class="tb" style="background:#3d1e16"><i style="background:#e8622a"></i><i></i><i></i></div>
-          <div class="pv" style="background:#2a1410">
-            <div class="l" style="width:52%;background:#e8622a;height:9px"></div>
-            <div class="l" style="width:72%;background:#5a3226"></div>
-            <div class="l" style="width:38%;background:#4a2a20"></div>
-            <div class="blocks"><div style="background:#e0a95c"></div><div style="background:#d94f2a"></div><div style="background:#4a7c3f"></div></div>
-          </div>
-        </div>
+        <div class="mini"><div class="tb" style="background:#3d1e16"><i style="background:#e8622a"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
+        <div class="pv" style="background:#2a1410">
+          <div class="l" style="width:50%;background:#e8622a;height:8px"></div>
+          <div class="l" style="width:70%;background:#5a3226"></div>
+          <div class="blocks"><div style="background:#e0a95c"></div><div style="background:#d94f2a"></div><div style="background:#4a7c3f"></div></div>
+        </div></div>
       </div>
-      <div class="meta">
-        <span class="tag">Gostinstvo · Dostava</span>
-        <h3>Picerija Ognjišče</h3>
-        <p>Topel in vabljiv. Vrteča se pica s paro, jedilnik z zavihki, valovit rob med sekcijami.</p>
-        <span class="open">Odpri primer</span>
-      </div>
+      <div class="meta"><span class="tag">Gostinstvo · Dostava</span><h3>Picerija</h3>
+        <p>Topel in vabljiv. Jedilnik z zavihki, podatki o dostavi.</p>
+        <span class="open">Odpri primer</span></div>
     </button>
 
-    <button class="case" data-src="primer-fizio.html" data-title="Fizioterapija Korak">
+    <button class="card" data-src="primer-fizio.html" data-title="Fizioterapija Korak">
       <div class="thumb" style="background:#e6f5f3">
-        <div class="mini">
-          <div class="tb" style="background:#d5eeeb"><i style="background:#0f766e"></i><i style="background:#b9dcd7"></i><i style="background:#b9dcd7"></i></div>
-          <div class="pv" style="background:#fbfdfc">
-            <div class="l" style="width:54%;background:#0f766e;height:9px"></div>
-            <div class="l" style="width:74%;background:#cfe6e3"></div>
-            <div class="l" style="width:42%;background:#dcece9"></div>
-            <div class="blocks"><div style="background:#d5eeeb"></div><div style="background:#b9dcd7"></div><div style="background:#d5eeeb"></div></div>
-          </div>
-        </div>
+        <div class="mini"><div class="tb" style="background:#d5eeeb"><i style="background:#0f766e"></i><i style="background:#b9dcd7"></i><i style="background:#b9dcd7"></i></div>
+        <div class="pv" style="background:#fbfdfc">
+          <div class="l" style="width:52%;background:#0f766e;height:8px"></div>
+          <div class="l" style="width:72%;background:#cfe6e3"></div>
+          <div class="blocks"><div style="background:#d5eeeb"></div><div style="background:#b9dcd7"></div><div style="background:#d5eeeb"></div></div>
+        </div></div>
       </div>
-      <div class="meta">
-        <span class="tag">Zdravje · Terapija</span>
-        <h3>Fizioterapija Korak</h3>
-        <p>Miren in zaupanja vreden. Dihajoča ilustracija, valovi ob naslovu, pogosta vprašanja.</p>
-        <span class="open">Odpri primer</span>
-      </div>
+      <div class="meta"><span class="tag">Zdravje · Terapija</span><h3>Fizioterapija</h3>
+        <p>Miren in zaupanja vreden. Potek obravnave, cenik, pogosta vprašanja.</p>
+        <span class="open">Odpri primer</span></div>
     </button>
 
   </div>
+</div>
 
-  <div class="sec-head">
-    <p class="eyebrow">Po paketih</p>
+<div class="sec">
+  <div class="w">
+    <p class="lbl">Po paketih</p>
     <h2>Kaj dobite pri posameznem paketu</h2>
-    <p class="lead">Iste panoge, različen obseg. Kliknite in primerjajte, kaj vključuje vsak paket.</p>
-  </div>
+    <p>Iste panoge, različen obseg. Kliknite in primerjajte, kaj vključuje vsak paket.</p>
 
-  <div class="packs">
+    <div class="packs rv">
 
-    <button class="pack" data-src="paket-vizitka.html" data-title="Slikopleskarstvo Kos">
-      <div class="ph" style="background:#1d4ed8">
-        <div class="mini">
-          <div class="tb" style="background:#1e40af"><i></i><i></i><i></i></div>
-          <div class="pv" style="background:#1d4ed8;align-items:center">
-            <div class="l" style="width:40%;background:rgba(255,255,255,.75);height:8px;margin:6px auto 4px"></div>
-            <div class="l" style="width:56%;background:rgba(255,255,255,.35);margin:0 auto"></div>
-            <div class="l" style="width:30%;background:#fff;height:9px;margin:6px auto 0;border-radius:5px"></div>
-          </div>
+      <button class="pk" data-src="paket-vizitka.html" data-title="Slikopleskarstvo Kos">
+        <div class="ph" style="background:#1d4ed8">
+          <div class="mini"><div class="tb" style="background:#1e40af"><i style="background:#fff"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
+          <div class="pv" style="background:#1d4ed8;justify-content:center">
+            <div class="l" style="width:38%;background:rgba(255,255,255,.75);height:7px;margin:0 auto 4px"></div>
+            <div class="l" style="width:54%;background:rgba(255,255,255,.3);margin:0 auto"></div>
+            <div class="l" style="width:28%;background:#fff;height:8px;margin:6px auto 0"></div>
+          </div></div>
         </div>
-      </div>
-      <div class="meta">
-        <span class="pname">Vizitka</span>
-        <span class="pprice">100 €</span>
-        <p class="pdesc">Ena stran, na kateri je vse bistveno. Da vas stranke sploh najdejo.</p>
-        <ul class="pfeat"><li>Enostranska predstavitev</li><li>Kontakt in delovni čas</li><li>Gumb za klic</li></ul>
-        <span class="popen">Odpri primer</span>
-      </div>
-    </button>
+        <div class="pm"><span class="nm">Vizitka</span><div class="pr">100 <small>€</small></div>
+          <p class="ds">Ena stran z vsem bistvenim.</p>
+          <ul><li>Enostranska predstavitev</li><li>Kontakt in delovni čas</li><li>Gumb za klic</li></ul>
+          <span class="open">Odpri primer</span></div>
+      </button>
 
-    <button class="pack best" data-src="paket-osnovna.html" data-title="Vrtnarstvo Zelen">
-      <span class="pbadge">NAJPOGOSTEJŠA</span>
-      <div class="ph" style="background:#e8f4e6">
-        <div class="mini">
-          <div class="tb" style="background:#d5ead2"><i style="background:#2f7d32"></i><i style="background:#a8cfa4"></i><i style="background:#a8cfa4"></i></div>
+      <button class="pk on" data-src="paket-osnovna.html" data-title="Vrtnarstvo Zelen">
+        <div class="ph" style="background:#e8f4e6">
+          <div class="mini"><div class="tb" style="background:#d5ead2"><i style="background:#2f7d32"></i><i style="background:#a8cfa4"></i><i style="background:#a8cfa4"></i></div>
           <div class="pv" style="background:#fff">
-            <div class="l" style="width:48%;background:#2f7d32;height:8px"></div>
-            <div class="l" style="width:70%;background:#cfe3cd"></div>
+            <div class="l" style="width:46%;background:#2f7d32;height:8px"></div>
+            <div class="l" style="width:68%;background:#cfe3cd"></div>
             <div class="blocks"><div style="background:#7cb342"></div><div style="background:#8bc34a"></div><div style="background:#4f9c48"></div></div>
-          </div>
+          </div></div>
         </div>
-      </div>
-      <div class="meta">
-        <span class="pname">Osnovna</span>
-        <span class="pprice">250 €</span>
-        <p class="pdesc">Prava stran z več razdelki, galerijo in obrazcem — za večino obrtnikov.</p>
-        <ul class="pfeat"><li>Do 5 podstrani</li><li>Galerija in cenik</li><li>Obrazec in zemljevid</li></ul>
-        <span class="popen">Odpri primer</span>
-      </div>
-    </button>
+        <div class="pm"><span class="nm">Osnovna</span><div class="pr">250 <small>€</small></div>
+          <p class="ds">Za večino obrtnikov in s.p.</p>
+          <ul><li>Do 5 podstrani</li><li>Galerija in cenik</li><li>Obrazec in zemljevid</li></ul>
+          <span class="open">Odpri primer</span></div>
+      </button>
 
-    <button class="pack" data-src="paket-poslovna.html" data-title="Gradbeništvo Merkur">
-      <div class="ph" style="background:#16233a">
-        <div class="mini">
-          <div class="tb" style="background:#1f3050"><i style="background:#f2a13c"></i><i></i><i></i></div>
+      <button class="pk" data-src="paket-poslovna.html" data-title="Gradbeništvo Merkur">
+        <div class="ph" style="background:#16233a">
+          <div class="mini"><div class="tb" style="background:#1f3050"><i style="background:#f2a13c"></i><i style="background:#fff"></i><i style="background:#fff"></i></div>
           <div class="pv" style="background:#16233a">
-            <div class="l" style="width:54%;background:#f2a13c;height:8px"></div>
-            <div class="l" style="width:72%;background:#2b3d5c"></div>
+            <div class="l" style="width:52%;background:#f2a13c;height:8px"></div>
+            <div class="l" style="width:70%;background:#2b3d5c"></div>
             <div class="blocks"><div style="background:#2b3d5c"></div><div style="background:#1f3050"></div><div style="background:#2b3d5c"></div></div>
-          </div>
+          </div></div>
         </div>
-      </div>
-      <div class="meta">
-        <span class="pname">Poslovna</span>
-        <span class="pprice">od 500 €</span>
-        <p class="pdesc">Za podjetja z več storitvami — z referencami, nasveti in mnenji strank.</p>
-        <ul class="pfeat"><li>Do 8 podstrani</li><li>Reference in blog</li><li>Mnenja in števci</li></ul>
-        <span class="popen">Odpri primer</span>
-      </div>
-    </button>
+        <div class="pm"><span class="nm">Poslovna</span><div class="pr">500 <small>€ →</small></div>
+          <p class="ds">Za podjetja z več storitvami.</p>
+          <ul><li>Do 8 podstrani</li><li>Reference in novice</li><li>Mnenja in števci</li></ul>
+          <span class="open">Odpri primer</span></div>
+      </button>
 
-    <button class="pack" data-src="paket-trgovina.html" data-title="Čebelarstvo Medved">
-      <div class="ph" style="background:#fdf3e0">
-        <div class="mini">
-          <div class="tb" style="background:#f7e8cf"><i style="background:#c8860d"></i><i style="background:#e0c89a"></i><i style="background:#e0c89a"></i></div>
+      <button class="pk" data-src="paket-trgovina.html" data-title="Čebelarstvo Medved">
+        <div class="ph" style="background:#fdf3e0">
+          <div class="mini"><div class="tb" style="background:#f7e8cf"><i style="background:#c8860d"></i><i style="background:#e0c89a"></i><i style="background:#e0c89a"></i></div>
           <div class="pv" style="background:#fffaf0">
-            <div class="l" style="width:46%;background:#c8860d;height:8px"></div>
-            <div class="blocks" style="margin-top:6px"><div style="background:#e8a72a"></div><div style="background:#8a5f1a"></div><div style="background:#d9c47a"></div></div>
+            <div class="l" style="width:44%;background:#c8860d;height:8px"></div>
+            <div class="blocks" style="margin-top:5px"><div style="background:#e8a72a"></div><div style="background:#8a5f1a"></div><div style="background:#d9c47a"></div></div>
             <div class="blocks"><div style="background:#f0d9a0"></div><div style="background:#d99f2e"></div><div style="background:#e8d5a8"></div></div>
-          </div>
+          </div></div>
         </div>
-      </div>
-      <div class="meta">
-        <span class="pname">Spletna trgovina</span>
-        <span class="pprice">od 600 €</span>
-        <p class="pdesc">Prodaja prek spleta z delujočo košarico in pregledom naročila.</p>
-        <ul class="pfeat"><li>Katalog izdelkov</li><li>Košarica in dostava</li><li>Filtri in kategorije</li></ul>
-        <span class="popen">Odpri primer</span>
-      </div>
-    </button>
+        <div class="pm"><span class="nm">Trgovina</span><div class="pr">600 <small>€ →</small></div>
+          <p class="ds">Prodaja prek spleta.</p>
+          <ul><li>Katalog izdelkov</li><li>Košarica in dostava</li><li>Filtri po kategorijah</li></ul>
+          <span class="open">Odpri primer</span></div>
+      </button>
 
-  </div>
-
-  <div class="cta-box">
-    <p class="eyebrow">Vaša stran</p>
-    <h2>Takšno stran lahko imate tudi vi</h2>
-    <p class="lead">Povejte, kaj delate, in pripravimo predlog po meri. Posvet je brezplačen.</p>
-    <div class="cta-btns">
-      <a href="https://jakobgabor.github.io/CALLDESK-WEB/ponudba.html" class="btn primary">Izpolni vprašalnik</a>
-      <a href="tel:+38631860377" class="btn">📞 031 860 377</a>
     </div>
   </div>
 </div>
 </main>
 
-<!-- PREGLEDOVALNIK -->
-<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Predogled strani">
+<div class="cta">
+  <div class="w cw">
+    <div class="rv">
+      <p class="lbl" style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:18px">Vaša stran</p>
+      <h2>Takšno stran lahko imate tudi vi</h2>
+      <p>Povejte, kaj delate, in pripravim predlog po meri. Posvet je brezplačen.</p>
+    </div>
+    <div class="cl rv">
+      <a href="https://jakobgabor.github.io/CALLDESK-WEB/ponudba.html">Izpolni vprašalnik <span>nekaj minut</span></a>
+      <a href="tel:+38631860377">031 860 377 <span>telefon</span></a>
+      <a href="mailto:jakob.gabor@gmail.com">jakob.gabor@gmail.com <span>e-pošta</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="viewer" id="vw" role="dialog" aria-modal="true" aria-label="Predogled vzorčne strani">
   <div class="frame">
     <div class="fbar">
       <div class="dots"><i></i><i></i><i></i></div>
-      <div class="url" id="vUrl">primer.si</div>
+      <div class="url" id="vu">primer.si</div>
       <div class="devs">
-        <button class="dev on" id="dDesk" title="Namizni pogled">🖥</button>
-        <button class="dev" id="dMob" title="Mobilni pogled">📱</button>
+        <button class="dev on" id="dd" title="Namizni pogled" aria-label="Namizni pogled">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></button>
+        <button class="dev" id="dm" title="Mobilni pogled" aria-label="Mobilni pogled">
+          <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></button>
       </div>
-      <button class="close" id="vClose" title="Zapri">✕</button>
+      <button class="close" id="vc" title="Zapri" aria-label="Zapri predogled">
+        <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     </div>
-    <div class="stage" id="stage"><iframe id="vFrame" title="Predogled vzorčne strani" loading="lazy"></iframe></div>
+    <div class="stage" id="st"><iframe id="vf" title="Predogled vzorčne strani" loading="lazy"></iframe></div>
   </div>
 </div>
 
 <footer>
-  <div class="wrap foot">
-    <span>© <span id="leto">2026</span> Spletar</span>
+  <div class="w fw">
+    <span>© <span id="yr">2026</span> Spletar · Izdelava spletnih strani</span>
     <nav>
       <a href="index.html">Domov</a>
       <a href="index.html#storitve">Storitve</a>
-      <a href="index.html#paketi">Cenik</a>
+      <a href="index.html#cenik">Cenik</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
   </div>
 </footer>
 
 <script>
-var viewer=document.getElementById('viewer'),frame=document.getElementById('vFrame'),
-    vUrl=document.getElementById('vUrl'),stage=document.getElementById('stage'),
-    dDesk=document.getElementById('dDesk'),dMob=document.getElementById('dMob');
+var b=document.getElementById('bg'),m=document.getElementById('mn');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});
+document.getElementById('yr').textContent=new Date().getFullYear();
 
-function openCase(src,title){
-  frame.src=src;
-  vUrl.textContent='www.'+title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.si';
-  setDesk();
-  viewer.classList.add('show');
-  document.body.style.overflow='hidden';
+var vw=document.getElementById('vw'),vf=document.getElementById('vf'),
+    vu=document.getElementById('vu'),st=document.getElementById('st'),
+    dd=document.getElementById('dd'),dm=document.getElementById('dm');
+function desk(){st.classList.remove('mob');dd.classList.add('on');dm.classList.remove('on')}
+function mob(){st.classList.add('mob');dm.classList.add('on');dd.classList.remove('on')}
+function openC(src,title){
+  vf.src=src;
+  vu.textContent='www.'+title.toLowerCase()
+    .replace(/[čć]/g,'c').replace(/š/g,'s').replace(/ž/g,'z')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.si';
+  desk();vw.classList.add('show');document.body.style.overflow='hidden';
 }
-function closeCase(){
-  viewer.classList.remove('show');
-  frame.src='';
-  document.body.style.overflow='';
-}
-function setDesk(){stage.classList.remove('mob');dDesk.classList.add('on');dMob.classList.remove('on');}
-function setMob(){stage.classList.add('mob');dMob.classList.add('on');dDesk.classList.remove('on');}
+function closeC(){vw.classList.remove('show');vf.src='';document.body.style.overflow=''}
+document.querySelectorAll('.card,.pk').forEach(function(c){
+  c.addEventListener('click',function(){openC(c.dataset.src,c.dataset.title)})});
+document.getElementById('vc').addEventListener('click',closeC);
+vw.addEventListener('click',function(e){if(e.target===vw)closeC()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&vw.classList.contains('show'))closeC()});
+dd.addEventListener('click',desk);dm.addEventListener('click',mob);
 
-document.querySelectorAll('.case,.pack').forEach(function(c){
-  c.addEventListener('click',function(){openCase(c.dataset.src,c.dataset.title);});
-});
-document.getElementById('vClose').addEventListener('click',closeCase);
-viewer.addEventListener('click',function(e){if(e.target===viewer)closeCase();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'&&viewer.classList.contains('show'))closeCase();});
-dDesk.addEventListener('click',setDesk);
-dMob.addEventListener('click',setMob);
-document.getElementById('leto').textContent=new Date().getFullYear();
+var io=new IntersectionObserver(function(es){es.forEach(function(x){
+  if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(el,i){
+  el.style.transitionDelay=(Math.min(i,3)*60)+'ms';io.observe(el)});
 </script>
 </body>
 </html>
