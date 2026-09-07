@@ -126,9 +126,10 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,249,247,.88);
 /* meta trak */
 .meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .mw{display:grid;grid-template-columns:repeat(4,1fr)}
-.mi{padding:28px 0;border-right:1px solid var(--line)}
+.mi{padding:28px 26px;border-right:1px solid var(--line)}
+.mi:first-child{padding-left:0}
 .mi:last-child{border:0}
-.mi b{display:block;font-family:'Instrument Serif',serif;font-size:1.9rem;font-weight:400;line-height:1;margin-bottom:6px}
+.mi b{display:block;font-family:'Instrument Serif',serif;font-size:1.9rem;font-weight:400;line-height:1.15;margin-bottom:8px}
 .mi span{font-size:.85rem;color:var(--mut)}
 
 /* sekcije */
@@ -277,6 +278,8 @@ html[data-t="dark"] .tt .moon{display:block}
   .burger{display:block}
   .mw{grid-template-columns:repeat(2,1fr)}
   .mi:nth-child(2){border-right:0}
+  .mi{padding:24px 20px}
+  .mi:first-child,.mi:nth-child(3){padding-left:0}
   .mi:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .s,.s.wide{grid-column:span 6}
   .s.full{grid-template-columns:1fr;gap:20px}
