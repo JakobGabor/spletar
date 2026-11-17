@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Merit Construction — new builds, remodels and exteriors</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--n:#16233a;--n2:#1f3050;--acc:#f2a13c;--ink:#16233a;--g:#64748b;--l:#f5f7fa}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:#fff;line-height:1.7}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,.lg{font-family:Sora,sans-serif;font-weight:700;line-height:1.14;letter-spacing:-.025em}
+/* top bar */
+.top{background:var(--n);color:rgba(255,255,255,.7);font-size:.82rem;padding:8px 0}
+.tw{display:flex;gap:22px;flex-wrap:wrap}
+.tw .r{margin-left:auto;display:flex;gap:18px}
+header{background:#fff;border-bottom:1px solid #e6ebf1;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;gap:18px;height:74px}
+.lg{font-size:1.26rem;display:flex;align-items:center;gap:10px}
+.lg i{width:34px;height:34px;background:var(--acc);border-radius:8px;display:grid;place-items:center;font-style:normal;font-size:.95rem}
+.nav nav{margin-left:auto;display:flex;gap:6px;font-size:.93rem}
+.nav nav a{padding:9px 14px;border-radius:8px;color:var(--g);transition:.2s}
+.nav nav a:hover,.nav nav a.on{color:var(--n);background:var(--l)}
+.bk{background:var(--n);color:#fff;padding:12px 22px;border-radius:9px;font-weight:600;font-size:.9rem;transition:.24s}
+.bk:hover{background:var(--n2);transform:translateY(-2px)}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--n),var(--n2));color:#fff;padding:78px 0 84px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.09;
+  background:repeating-linear-gradient(45deg,transparent,transparent 26px,#fff 26px,#fff 27px)}
+.hg{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.2rem,5vw,3.3rem);margin-bottom:16px}
+.hero h1 em{color:var(--acc);font-style:normal}
+.hero p{opacity:.8;max-width:440px;margin-bottom:26px}
+.b1{background:var(--acc);color:var(--n);padding:14px 28px;border-radius:9px;font-weight:700;display:inline-flex;gap:9px;align-items:center;transition:.24s}
+.b1:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(242,161,60,.35)}
+.b2{border:1px solid rgba(255,255,255,.3);padding:13px 26px;border-radius:9px;font-weight:500;transition:.24s;display:inline-block}
+.b2:hover{background:rgba(255,255,255,.1)}
+.crane svg{width:100%;height:auto}
+.hook{animation:hook 4.4s ease-in-out infinite}
+@keyframes hook{0%,100%{transform:translateY(0)}50%{transform:translateY(24px)}}
+.blink{animation:bl 2s ease-in-out infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.25}}
+/* števci */
+.kpi{background:var(--l);border-top:1px solid #e6ebf1;border-bottom:1px solid #e6ebf1}
+.kw{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.k{padding:30px 20px;text-align:center;border-right:1px solid #e6ebf1}
+.k:last-child{border:0}
+.k b{font-family:Sora;font-size:2.1rem;color:var(--n);display:block;line-height:1}
+.k span{font-size:.86rem;color:var(--g)}
+section{padding:74px 0}
+.eyb{color:var(--acc);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:11px}
+h2{font-size:clamp(1.8rem,3.8vw,2.5rem);margin-bottom:11px}
+.sub{color:var(--g);max-width:540px;margin-bottom:40px}
+.center{text-align:center}.center .sub{margin:0 auto 40px}
+.lbg{background:var(--l)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c{background:#fff;border:1px solid #e6ebf1;border-radius:14px;padding:26px;transition:.3s;position:relative;overflow:hidden}
+.c:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(22,35,58,.12)}
+.c::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:.3s}
+.c:hover::before{transform:scaleX(1)}
+.c i{font-style:normal;font-size:1.7rem;display:block;margin-bottom:12px}
+.c h3{font-size:1.1rem;margin-bottom:6px}
+.c p{color:var(--g);font-size:.9rem}
+/* reference */
+.ref{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rf{border-radius:14px;overflow:hidden;border:1px solid #e6ebf1;background:#fff;transition:.32s}
+.rf:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(22,35,58,.14)}
+.rf .im{aspect-ratio:16/10;overflow:hidden}
+.rf .im svg{width:100%;height:100%;display:block;transition:.5s}
+.rf:hover .im svg{transform:scale(1.06)}
+.rf .tx{padding:18px 20px}
+.rf .lb{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:6px}
+.rf h3{font-size:1.04rem;margin-bottom:4px}
+.rf p{color:var(--g);font-size:.87rem}
+/* blog */
+.bl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bp{background:#fff;border:1px solid #e6ebf1;border-radius:14px;padding:24px;transition:.28s;display:flex;flex-direction:column}
+.bp:hover{border-color:var(--acc);transform:translateY(-4px)}
+.bp .dt{font-size:.79rem;color:var(--g);margin-bottom:8px}
+.bp h3{font-size:1.05rem;margin-bottom:8px}
+.bp p{color:var(--g);font-size:.89rem;flex:1;margin-bottom:12px}
+.bp .rd{color:var(--acc);font-weight:600;font-size:.87rem}
+/* mnenja */
+.qs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.q{background:#fff;border:1px solid #e6ebf1;border-radius:14px;padding:26px}
+.q .st{color:var(--acc);letter-spacing:2px;margin-bottom:10px}
+.q p{font-size:.94rem;margin-bottom:12px}
+.q .who{display:flex;gap:11px;align-items:center}
+.q .av{width:38px;height:38px;border-radius:50%;background:var(--n);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.q .who b{display:block;font-size:.9rem}
+.q .who span{font-size:.82rem;color:var(--g)}
+.cta{background:var(--n);color:#fff;text-align:center;padding:70px 0}
+.cta h2{margin-bottom:10px}.cta p{opacity:.8;margin-bottom:24px}
+.ba{background:var(--acc);color:var(--n);padding:15px 32px;border-radius:10px;font-weight:700;display:inline-block;transition:.24s}
+.ba:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(242,161,60,.35)}
+footer{background:#0f1a2c;color:#7f8ea3;padding:40px 0 26px;font-size:.87rem}
+.fg{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-bottom:26px}
+.fg h4{color:#fff;font-size:.86rem;margin-bottom:10px;font-family:Sora}
+.fg a{display:block;padding:3px 0;transition:.2s}.fg a:hover{color:var(--acc)}
+.fb{border-top:1px solid #1c2b42;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(20px);transition:.75s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hg,.g3,.ref,.bl,.qs{grid-template-columns:1fr}.kw{grid-template-columns:repeat(2,1fr)}
+  .k{border-bottom:1px solid #e6ebf1}.fg{grid-template-columns:repeat(2,1fr)}.nav nav a:not(.bk){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+
+<div class="top"><div class="w tw">
+<span>📞 (512) 555-0164</span><span>✉ office@meritconstruction.com</span>
+<span class="r"><span>Mon–Fri 7am–4pm</span></span>
+</div></div>
+
+<header><div class="w nav">
+<div class="lg"><i>🏗</i>Merit Construction</div>
+<nav><a href="#s" class="on">Services</a><a href="#r">Projects</a><a href="#b">Insights</a><a href="#m">Reviews</a></nav>
+<a href="#k" class="bk">Request a bid</a>
+</div></header>
+
+<div class="hero"><div class="w hg">
+<div>
+<h1>We build it <em>right</em>, from slab to keys</h1>
+<p>New builds, remodels, exteriors and site work. We run the whole project — one contractor, one schedule, one point of responsibility.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#k" class="b1">Request a bid</a><a href="#r" class="b2">See projects</a>
+</div>
+</div>
+<div class="crane">
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+<!-- žerjav -->
+<rect x="176" y="70" width="16" height="200" fill="#f2a13c"/>
+<path d="M176 90h-118M176 82h-118M58 82v8" stroke="#f2a13c" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M192 90h108M192 82h108M300 82v8" stroke="#f2a13c" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M184 70v-24M184 46l-90 36M184 46l100 36" stroke="#f2a13c" stroke-width="4" fill="none"/>
+<path d="M176 110l16 24M192 110l-16 24M176 150l16 24M192 150l-16 24M176 190l16 24M192 190l-16 24M176 230l16 24M192 230l-16 24"
+  stroke="#f2a13c" stroke-width="3" opacity=".8"/>
+<circle cx="184" cy="42" r="5" fill="#ff5252" class="blink"/>
+<!-- tovor -->
+<g class="hook">
+<path d="M110 90v56" stroke="#cbd5e1" stroke-width="2.5"/>
+<rect x="82" y="146" width="56" height="40" rx="4" fill="#e2b07a"/>
+<path d="M82 158h56M82 172h56M96 146v40M124 146v40" stroke="#c08d54" stroke-width="2"/>
+</g>
+<!-- stavba -->
+<rect x="240" y="176" width="120" height="112" fill="#2b3d5c"/>
+<g fill="#f2a13c" opacity=".55">
+<rect x="256" y="192" width="22" height="22"/><rect x="290" y="192" width="22" height="22"/><rect x="324" y="192" width="22" height="22"/>
+<rect x="256" y="228" width="22" height="22"/><rect x="290" y="228" width="22" height="22"/><rect x="324" y="228" width="22" height="22"/>
+</g>
+<rect x="286" y="262" width="30" height="26" fill="#16233a"/>
+<!-- tla -->
+<rect x="20" y="288" width="360" height="8" rx="4" fill="rgba(255,255,255,.18)"/>
+<rect x="164" y="268" width="40" height="20" fill="#c9822c"/>
+</svg>
+</div>
+</div></div>
+
+<div class="kpi"><div class="w kw">
+<div class="k"><b>28</b><span>years in business</span></div>
+<div class="k"><b>340+</b><span>projects completed</span></div>
+<div class="k"><b>42</b><span>people on staff</span></div>
+<div class="k"><b>10 yrs</b><span>structural warranty</span></div>
+</div></div>
+
+<section id="s"><div class="w center">
+<p class="eyb rv">Services</p><h2 class="rv">What we handle</h2>
+<p class="sub rv">We take the whole project or a single phase — whichever suits you.</p>
+<div class="g3">
+<div class="c rv"><i>🏠</i><h3>New builds</h3><p>From excavation to final walkthrough. Project management, subs, paperwork.</p></div>
+<div class="c rv"><i>🔨</i><h3>Remodels</h3><p>Whole-home and kitchen remodels, demo, framing, rough-ins.</p></div>
+<div class="c rv"><i>🧱</i><h3>Exteriors</h3><p>Insulation, siding and stucco, restoration of older facades.</p></div>
+<div class="c rv"><i>🪟</i><h3>Roofing</h3><p>New roofs, re-roofs, attic insulation.</p></div>
+<div class="c rv"><i>🛣</i><h3>Site work</h3><p>Driveways, retaining walls, paving, drainage.</p></div>
+<div class="c rv"><i>📐</i><h3>Consulting</h3><p>Condition assessment, scope of work and a realistic cost estimate.</p></div>
+</div></div></section>
+
+<section id="r" class="lbg"><div class="w">
+<p class="eyb rv">Projects</p><h2 class="rv">Selected work</h2>
+<p class="sub rv">A few recent completions. Full list on request.</p>
+<div class="ref">
+<div class="rf rv"><div class="im"><svg viewBox="0 0 200 125" preserveAspectRatio="none">
+<rect width="200" height="125" fill="#dce6f0"/><path d="M0 96h200v29H0z" fill="#b9c9d9"/>
+<path d="M46 96V44l54-30 54 30v52z" fill="#2b3d5c"/><path d="M40 46L100 12l60 34" stroke="#f2a13c" stroke-width="6" fill="none"/>
+<rect x="70" y="60" width="22" height="22" fill="#f2a13c" opacity=".6"/><rect x="108" y="60" width="22" height="22" fill="#f2a13c" opacity=".6"/>
+<rect x="88" y="94" width="24" height="24" fill="#16233a"/></svg></div>
+<div class="tx"><div class="lb">New build · 2025</div><h3>Single-family home, Dripping Springs</h3><p>1,950 sq ft, slab to keys in 11 months.</p></div></div>
+
+<div class="rf rv"><div class="im"><svg viewBox="0 0 200 125" preserveAspectRatio="none">
+<rect width="200" height="125" fill="#e8eef4"/>
+<rect x="30" y="24" width="140" height="90" fill="#c7d6e4"/>
+<rect x="30" y="24" width="70" height="90" fill="#f2a13c" opacity=".35"/>
+<g fill="#8fa5bb"><rect x="44" y="40" width="18" height="18"/><rect x="72" y="40" width="18" height="18"/>
+<rect x="112" y="40" width="18" height="18"/><rect x="140" y="40" width="18" height="18"/>
+<rect x="44" y="72" width="18" height="18"/><rect x="72" y="72" width="18" height="18"/>
+<rect x="112" y="72" width="18" height="18"/><rect x="140" y="72" width="18" height="18"/></g></svg></div>
+<div class="tx"><div class="lb">Exterior · 2025</div><h3>Apartment building, North Austin</h3><p>Energy retrofit of 15,000 sq ft of facade.</p></div></div>
+
+<div class="rf rv"><div class="im"><svg viewBox="0 0 200 125" preserveAspectRatio="none">
+<rect width="200" height="125" fill="#dfe8f0"/>
+<path d="M24 100h152v25H24z" fill="#b0c2d3"/>
+<path d="M40 100V52h120v48z" fill="#e6ecf2"/><path d="M30 54l70-32 70 32" stroke="#8a5a3b" stroke-width="10" fill="none"/>
+<rect x="60" y="66" width="26" height="20" fill="#2b3d5c"/><rect x="114" y="66" width="26" height="20" fill="#2b3d5c"/>
+<circle cx="100" cy="40" r="6" fill="#f2a13c"/></svg></div>
+<div class="tx"><div class="lb">Remodel · 2024</div><h3>Condo renovation, Round Rock</h3><p>Full gut and rebuild of 780 sq ft in 8 weeks.</p></div></div>
+</div></div></section>
+
+<section id="b"><div class="w">
+<p class="eyb rv">Insights</p><h2 class="rv">From the job site</h2>
+<p class="sub rv">Short notes on what owners ask us most often.</p>
+<div class="bl">
+<div class="bp rv"><div class="dt">March 12, 2026 · 4 min read</div>
+<h3>What a new home really costs in 2026</h3>
+<p>We break the cost down by phase — from lot to move-in — and show where budgets usually slip.</p>
+<span class="rd">Read more →</span></div>
+<div class="bp rv"><div class="dt">February 28, 2026 · 3 min read</div>
+<h3>When is it time to redo the exterior?</h3>
+<p>The signs that siding is past its job, and how to estimate the saving on heating and cooling.</p>
+<span class="rd">Read more →</span></div>
+<div class="bp rv"><div class="dt">January 15, 2026 · 5 min read</div>
+<h3>Building permits: what you need</h3>
+<p>The documents, the timeline and the mistakes that send applications back.</p>
+<span class="rd">Read more →</span></div>
+</div></div></section>
+
+<section id="m" class="lbg"><div class="w center">
+<p class="eyb rv">Reviews</p><h2 class="rv">What owners say</h2>
+<p class="sub rv">Most of our work comes from referrals.</p>
+<div class="qs" style="text-align:left">
+<div class="q rv"><div class="st">★★★★★</div>
+<p>&ldquo;The house was finished a week ahead of schedule. We got a progress report every Friday — no guessing.&rdquo;</p>
+<div class="who"><div class="av">MT</div><div><b>Mark T.</b><span>New build, Dripping Springs</span></div></div></div>
+<div class="q rv"><div class="st">★★★★★</div>
+<p>&ldquo;The bid was itemized line by line, and the final invoice came in under two percent off it.&rdquo;</p>
+<div class="who"><div class="av">SB</div><div><b>Sandra B.</b><span>Property manager, Austin</span></div></div></div>
+</div></div></section>
+
+<div class="cta" id="k"><div class="w">
+<h2>Planning a build or a remodel?</h2>
+<p>Send us the plans or just a description — we put together a free cost estimate.</p>
+<a href="#" class="ba">📞 (512) 555-0164</a>
+</div></div>
+
+<footer><div class="w">
+<div class="fg">
+<div><h4>Merit Construction</h4><p>4120 Industrial Blvd<br>Austin, TX 78745</p></div>
+<div><h4>Services</h4><a href="#s">New builds</a><a href="#s">Remodels</a><a href="#s">Exteriors</a><a href="#s">Roofing</a></div>
+<div><h4>Company</h4><a href="#r">Projects</a><a href="#b">Insights</a><a href="#m">Reviews</a><a href="#k">Contact</a></div>
+<div><h4>Contact</h4><a href="#">(512) 555-0164</a><a href="#">office@meritconstruction.com</a><p style="margin-top:6px">Mon–Fri 7am–4pm</p></div>
+</div>
+<div class="fb"><span>© 2026 Merit Construction LLC</span>
+<span>Sample page — <b style="color:#f2a13c">Business package</b></span></div>
+</div></footer>
+
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+</script>
+</body></html>
