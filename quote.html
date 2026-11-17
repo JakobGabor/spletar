@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website questionnaire | Spletar</title>
+  <meta name="description" content="Fill in a short questionnaire and get a quote for a website built for your business.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#12120f">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  /* --- Spletar: temni minimalistični slog vprašalnika --- */
+  :root{
+    --bg:#12120f; --bg-2:#191916;
+    --card:#171714; --card-2:#1d1d19;
+    --border:#2a2823; --border-2:#3d3a33;
+    --text:#f0eee9; --muted:#8b857a; --muted-2:#66615a;
+    --accent:#8fb89a; --accent-2:#a3c9ad;
+    --accent-soft:#1c231e; --accent-glow:rgba(143,184,154,.18);
+    --radius:4px; --radius-sm:3px; --radius-lg:6px;
+    --shadow:none; --blur:none;
+  }
+  body{
+    background:var(--bg) !important;
+    font-family:Inter,system-ui,sans-serif;
+    color:var(--text);
+  }
+  h1,h2,h3,.brand{font-family:'Instrument Serif',Georgia,serif !important;font-weight:400 !important;letter-spacing:-.01em}
+  .offer-wrap{max-width:720px;padding:56px 24px 80px}
+  .offer-head{margin-bottom:40px}
+  .offer-head h1{font-size:clamp(2rem,5vw,2.9rem);margin-bottom:14px}
+  .offer-sub{color:var(--muted);font-size:1.02rem}
+  .brand{font-size:1.05rem;gap:10px;margin-bottom:26px}
+  .brand small{color:var(--muted);font-size:.72rem;letter-spacing:.06em}
+  .logo-img{width:26px;height:26px}
+
+  .card,.offer-sec{
+    background:var(--card) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius) !important;box-shadow:none !important;backdrop-filter:none !important;
+  }
+  .offer-sec{padding:32px 30px;margin-bottom:16px}
+  .offer-sec h2{font-size:1.4rem;margin-bottom:18px}
+  .field label{font-weight:500;font-size:.9rem;color:var(--text)}
+  .field .hint{color:var(--muted);font-weight:400}
+  input,select,textarea{
+    background:var(--bg) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius-sm) !important;color:var(--text) !important;font-family:inherit;
+  }
+  input:focus,select:focus,textarea:focus{
+    border-color:var(--accent) !important;background:var(--bg-2) !important;
+    box-shadow:0 0 0 3px var(--accent-glow) !important;
+  }
+  input::placeholder,textarea::placeholder{color:var(--muted-2)}
+  select option{background:#1d1d19;color:var(--text)}
+
+  .seg label{
+    border:1px solid var(--border);background:var(--bg);color:var(--muted);
+    border-radius:99px;padding:9px 18px;font-size:.88rem;transition:.2s;
+  }
+  .seg label:hover{border-color:var(--border-2);color:var(--text)}
+  .seg input:checked + label{
+    background:var(--accent-soft) !important;color:var(--accent) !important;
+    border-color:var(--accent) !important;
+  }
+  .chk-grid label{
+    background:var(--bg) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius-sm) !important;color:var(--text);
+  }
+  .chk-grid label:hover{border-color:var(--accent)}
+  .chk-grid input{accent-color:var(--accent)}
+
+  .plan{
+    background:var(--bg) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius) !important;transition:.24s;
+  }
+  .plan:hover{border-color:var(--border-2) !important;transform:translateY(-3px);box-shadow:none !important}
+  .plan:has(input:checked){
+    background:var(--accent-soft) !important;border-color:var(--accent) !important;box-shadow:none !important;
+  }
+  .plan-name{font-family:Inter;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .plan-price{font-family:'Instrument Serif',serif;color:var(--text);font-size:1.9rem;font-weight:400;margin:8px 0 6px}
+  .plan-desc{color:var(--muted);font-size:.85rem}
+  .plan-badge{background:var(--accent);color:#12120f;font-weight:600}
+
+  .btn.primary,#offerSubmit{
+    background:var(--accent) !important;color:#12120f !important;border:1px solid var(--accent) !important;
+    border-radius:var(--radius-sm) !important;box-shadow:none !important;font-weight:600;
+  }
+  .btn.primary:hover,#offerSubmit:hover{
+    background:var(--accent-2) !important;border-color:var(--accent-2) !important;transform:translateY(-2px);
+  }
+  .form-msg.err{color:#ff8b8b}
+  .hint{color:var(--muted)}
+
+  .modal-scrim{background:rgba(0,0,0,.62) !important;backdrop-filter:blur(3px)}
+  .modal{
+    background:var(--card) !important;border:1px solid var(--border-2) !important;
+    border-radius:var(--radius) !important;box-shadow:0 20px 60px rgba(0,0,0,.5) !important;
+  }
+  .offer-success{border:1px solid var(--accent) !important;background:var(--accent-soft) !important}
+  .toast{background:var(--card);border:1px solid var(--border-2);color:var(--text);box-shadow:none}
+  </style>
+  <link rel="icon" type="image/svg+xml" href="spletar-icon.svg" />
+</head>
+<body data-page="offer">
+  <div class="offer-wrap">
+    <!-- Glava -->
+    <header class="offer-head">
+      <div class="brand" style="justify-content:center; padding:0 0 6px">
+        <img src="spletar-icon.svg" alt="Spletar" class="logo-img" />
+        <span>Spletar<small>Websites for small business</small></span>
+      </div>
+      <h1 id="offerTitle">Website questionnaire</h1>
+      <p class="offer-sub" id="offerSub">Two or three minutes of answers and I will put together a quote for your business.</p>
+    </header>
+
+    <!-- Uspeh (skrito, prikaže se po oddaji) -->
+    <div class="card pad offer-success" id="offerSuccess" style="display:none">
+      <div class="big" style="font-size:2.6rem; text-align:center">✅</div>
+      <h2 style="text-align:center; margin:8px 0">Thank you!</h2>
+      <p style="text-align:center; color:var(--muted)">Your answers came through. I will come back to you with a quote shortly.</p>
+    </div>
+
+    <form id="offerForm" class="stagger">
+      <!-- 1. Osnovni podatki -->
+      <section class="card pad offer-sec">
+        <h2>1. The basics</h2>
+        <div class="grid cols-2">
+          <div class="field"><label>Business name</label><input id="oCompany" placeholder="Acme Plumbing LLC" /></div>
+          <div class="field"><label>Trade / industry</label><input id="oActivity" placeholder="e.g. plumber, hair salon" /></div>
+          <div class="field"><label>Contact person</label><input id="oName" placeholder="First and last name" /></div>
+          <div class="field"><label>Phone</label><input id="oPhone" type="tel" placeholder="(512) 555-0147" /></div>
+          <div class="field"><label>Email</label><input id="oEmail" type="email" placeholder="you@yourbusiness.com" /></div>
+          <div class="field"><label>Address / city</label><input id="oAddress" placeholder="1840 Burnet Rd, Austin, TX" /></div>
+          <div class="field"><label>Business hours</label><input id="oHours" placeholder="Mon–Fri 8–5, Sat 8–12" /></div>
+          <div class="field"><label>Current website <span class="hint">(if you have one)</span></label><input id="oCurrentSite" placeholder="www.example.com or your Facebook page" /></div>
+        </div>
+      </section>
+
+      <!-- 2. Vsebina strani -->
+      <section class="card pad offer-sec">
+        <h2>2. What goes on the site</h2>
+        <p class="hint" style="margin-bottom:14px">This text goes straight onto your site — the more you write, the better it reads.</p>
+        <div class="field">
+          <label>Tagline <span class="hint">(one sentence that describes you)</span></label>
+          <input id="oSlogan" placeholder="e.g. A plumber who actually shows up the same day." />
+        </div>
+        <div class="field">
+          <label>About the business</label>
+          <textarea id="oAbout" placeholder="Who you are, how long you have been at it, why customers should pick you…"></textarea>
+        </div>
+        <div class="field">
+          <label>Services / products <span class="hint">(list them, a short line each)</span></label>
+          <textarea id="oServices" placeholder="e.g.&#10;- Leak repair&#10;- Faucet and valve replacement&#10;- Fixture installation"></textarea>
+        </div>
+        <div class="field">
+          <label>Pricing <span class="hint">(optional — only if you want it public)</span></label>
+          <textarea id="oPrices" placeholder="e.g. Estimate: free · Hourly rate: $95 · After-hours call: +$60"></textarea>
+        </div>
+      </section>
+
+      <!-- 3. Videz in slog -->
+      <section class="card pad offer-sec">
+        <h2>3. Look and feel</h2>
+        <div class="field">
+          <label>Style of the site</label>
+          <div class="seg" id="oStyle">
+            <input type="radio" name="style" id="s1" value="Modern"><label for="s1">Modern</label>
+            <input type="radio" name="style" id="s2" value="Minimal"><label for="s2">Minimal</label>
+            <input type="radio" name="style" id="s3" value="Elegant"><label for="s3">Elegant</label>
+            <input type="radio" name="style" id="s4" value="Classic"><label for="s4">Classic</label>
+            <input type="radio" name="style" id="s5" value="Bold / colorful"><label for="s5">Bold</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Colors you want <span class="hint">(if you have any)</span></label>
+          <input id="oColors" placeholder="e.g. navy and white, or the colors from my logo" />
+        </div>
+        <div class="field">
+          <label>Sites you like <span class="hint">(optional)</span></label>
+          <textarea id="oExamples" placeholder="Paste links to websites you like the look of…"></textarea>
+        </div>
+      </section>
+
+      <!-- 4. Zgradba strani -->
+      <section class="card pad offer-sec">
+        <h2>4. Structure</h2>
+        <div class="field">
+          <label>Type of site</label>
+          <div class="seg" id="oType">
+            <input type="radio" name="type" id="t1" value="Business website"><label for="t1">Business site</label>
+            <input type="radio" name="type" id="t2" value="Online store"><label for="t2">Online store</label>
+            <input type="radio" name="type" id="t3" value="Booking / scheduling"><label for="t3">Booking</label>
+            <input type="radio" name="type" id="t4" value="Something else"><label for="t4">Something else</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Main goal</label>
+          <div class="seg" id="oGoal">
+            <input type="radio" name="goal" id="g1" value="More customers"><label for="g1">More customers</label>
+            <input type="radio" name="goal" id="g2" value="Look more professional"><label for="g2">Look professional</label>
+            <input type="radio" name="goal" id="g3" value="Sell online"><label for="g3">Sell online</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Pages <span class="hint">(pick as many as you need)</span></label>
+          <div class="chk-grid" id="oPages">
+            <label><input type="checkbox" value="About"> About</label>
+            <label><input type="checkbox" value="Services"> Services</label>
+            <label><input type="checkbox" value="Gallery"> Gallery</label>
+            <label><input type="checkbox" value="Pricing"> Pricing</label>
+            <label><input type="checkbox" value="Reviews / past work"> Reviews</label>
+            <label><input type="checkbox" value="Contact"> Contact</label>
+            <label><input type="checkbox" value="Blog / news"> Blog</label>
+            <label><input type="checkbox" value="FAQ"> FAQ</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Extra features <span class="hint">(pick as many as you need)</span></label>
+          <div class="chk-grid" id="oFeatures">
+            <label><input type="checkbox" value="Contact form"> Contact form</label>
+            <label><input type="checkbox" value="Map"> Map</label>
+            <label><input type="checkbox" value="Online booking"> Booking</label>
+            <label><input type="checkbox" value="Online store"> Store</label>
+            <label><input type="checkbox" value="Social media links"> Social links</label>
+            <label><input type="checkbox" value="Tap to call"> Tap to call</label>
+            <label><input type="checkbox" value="Multiple languages"> Languages</label>
+            <label><input type="checkbox" value="Email newsletter"> Newsletter</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Materiali -->
+      <section class="card pad offer-sec">
+        <h2>5. Logo and photos</h2>
+        <div class="grid cols-3">
+          <div class="field"><label>Do you have a logo?</label>
+            <div class="seg"><input type="radio" name="logo" id="l1" value="Yes"><label for="l1">Yes</label>
+            <input type="radio" name="logo" id="l2" value="No"><label for="l2">No</label></div>
+          </div>
+          <div class="field"><label>Do you have photos?</label>
+            <div class="seg"><input type="radio" name="photos" id="p1" value="Yes"><label for="p1">Yes</label>
+            <input type="radio" name="photos" id="p2" value="No"><label for="p2">No</label></div>
+          </div>
+          <div class="field"><label>Do you have the text written?</label>
+            <div class="seg"><input type="radio" name="text" id="x1" value="Yes"><label for="x1">Yes</label>
+            <input type="radio" name="text" id="x2" value="No"><label for="x2">No</label></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Link to photos / logo <span class="hint">(optional)</span></label>
+          <textarea id="oMaterials" placeholder="Send photos and the logo as a link (Google Drive, WeTransfer, Dropbox) — or we can sort it out on the call."></textarea>
+        </div>
+        <div class="field">
+          <label>Social media <span class="hint">(if you use any)</span></label>
+          <input id="oSocial" placeholder="Facebook, Instagram, TikTok…" />
+        </div>
+      </section>
+
+      <!-- 6. Paket / cenik -->
+      <section class="card pad offer-sec">
+        <h2>6. Pick a rough package</h2>
+        <p class="hint" style="margin-bottom:14px">Ballpark prices — the final quote is built around what you actually need.</p>
+        <div class="plans" id="oPlans">
+          <label class="plan">
+            <input type="radio" name="plan" value="Card ($119)">
+            <div class="plan-name">Card</div>
+            <div class="plan-price">$119</div>
+            <div class="plan-desc">One page, contact details, built for phones.</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="Standard ($299)">
+            <div class="plan-badge">Most picked</div>
+            <div class="plan-name">Standard</div>
+            <div class="plan-price">$299</div>
+            <div class="plan-desc">Up to 5 pages, gallery, contact form.</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="Business (from $599)">
+            <div class="plan-name">Business</div>
+            <div class="plan-price">from $599</div>
+            <div class="plan-desc">Up to 8 pages, blog, basic SEO, past work.</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="Store (from $699)">
+            <div class="plan-name">Store</div>
+            <div class="plan-price">from $699</div>
+            <div class="plan-desc">Selling online, cart, payments.</div>
+          </label>
+        </div>
+        <p class="hint" style="margin-top:14px">
+          Add-ons: logo +$59 · photo editing +$89 · domain and hosting about $70/year · maintenance $19/month, optional.
+        </p>
+      </section>
+
+      <!-- 7. Rok in opombe -->
+      <section class="card pad offer-sec">
+        <h2>7. Timing and notes</h2>
+        <div class="field">
+          <label>When do you need it?</label>
+          <select id="oDeadline">
+            <option value="As soon as possible">As soon as possible</option>
+            <option value="Within a month">Within a month</option>
+            <option value="In 2–3 months">In 2–3 months</option>
+            <option value="No rush">No rush</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Anything else I should know</label>
+          <textarea id="oNotes" placeholder="Anything special about your business or the site…"></textarea>
+        </div>
+      </section>
+
+      <button type="submit" class="btn primary" id="offerSubmit" style="width:100%; padding:15px; font-size:1rem">
+        Send it over
+      </button>
+      <div class="form-msg" id="offerMsg" style="text-align:center"></div>
+    </form>
+  </div>
+
+  <!-- Pojavno okno: zahvala po oddaji -->
+  <div class="modal-scrim" id="thankModal">
+    <div class="modal" style="max-width:440px; text-align:center">
+      <div style="font-size:3.2rem; line-height:1">🎉</div>
+      <h2 style="margin:12px 0 6px">Thanks for your time!</h2>
+      <p style="color:var(--muted); font-size:0.95rem">
+        I have your answers and will <b>get back to you shortly</b> with a quote.
+      </p>
+      <div class="modal-foot" style="justify-content:center; margin-top:20px">
+        <button class="btn primary" id="thankClose">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-box" id="toastBox"></div>
+  <script type="module" src="ponudba.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vprašalnik za spletno stran | Spletar</title>
+  <meta name="description" content="Izpolnite kratek vprašalnik in prejmite ponudbo za izdelavo spletne strani po meri.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#12120f">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  /* --- Spletar: temni minimalistični slog vprašalnika --- */
+  :root{
+    --bg:#12120f; --bg-2:#191916;
+    --card:#171714; --card-2:#1d1d19;
+    --border:#2a2823; --border-2:#3d3a33;
+    --text:#f0eee9; --muted:#8b857a; --muted-2:#66615a;
+    --accent:#8fb89a; --accent-2:#a3c9ad;
+    --accent-soft:#1c231e; --accent-glow:rgba(143,184,154,.18);
+    --radius:4px; --radius-sm:3px; --radius-lg:6px;
+    --shadow:none; --blur:none;
+  }
+  body{
+    background:var(--bg) !important;
+    font-family:Inter,system-ui,sans-serif;
+    color:var(--text);
+  }
+  h1,h2,h3,.brand{font-family:'Instrument Serif',Georgia,serif !important;font-weight:400 !important;letter-spacing:-.01em}
+  .offer-wrap{max-width:720px;padding:56px 24px 80px}
+  .offer-head{margin-bottom:40px}
+  .offer-head h1{font-size:clamp(2rem,5vw,2.9rem);margin-bottom:14px}
+  .offer-sub{color:var(--muted);font-size:1.02rem}
+  .brand{font-size:1.05rem;gap:10px;margin-bottom:26px}
+  .brand small{color:var(--muted);font-size:.72rem;letter-spacing:.06em}
+  .logo-img{width:26px;height:26px}
+
+  .card,.offer-sec{
+    background:var(--card) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius) !important;box-shadow:none !important;backdrop-filter:none !important;
+  }
+  .offer-sec{padding:32px 30px;margin-bottom:16px}
+  .offer-sec h2{font-size:1.4rem;margin-bottom:18px}
+  .field label{font-weight:500;font-size:.9rem;color:var(--text)}
+  .field .hint{color:var(--muted);font-weight:400}
+  input,select,textarea{
+    background:var(--bg) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius-sm) !important;color:var(--text) !important;font-family:inherit;
+  }
+  input:focus,select:focus,textarea:focus{
+    border-color:var(--accent) !important;background:var(--bg-2) !important;
+    box-shadow:0 0 0 3px var(--accent-glow) !important;
+  }
+  input::placeholder,textarea::placeholder{color:var(--muted-2)}
+  select option{background:#1d1d19;color:var(--text)}
+
+  .seg label{
+    border:1px solid var(--border);background:var(--bg);color:var(--muted);
+    border-radius:99px;padding:9px 18px;font-size:.88rem;transition:.2s;
+  }
+  .seg label:hover{border-color:var(--border-2);color:var(--text)}
+  .seg input:checked + label{
+    background:var(--accent-soft) !important;color:var(--accent) !important;
+    border-color:var(--accent) !important;
+  }
+  .chk-grid label{
+    background:var(--bg) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius-sm) !important;color:var(--text);
+  }
+  .chk-grid label:hover{border-color:var(--accent)}
+  .chk-grid input{accent-color:var(--accent)}
+
+  .plan{
+    background:var(--bg) !important;border:1px solid var(--border) !important;
+    border-radius:var(--radius) !important;transition:.24s;
+  }
+  .plan:hover{border-color:var(--border-2) !important;transform:translateY(-3px);box-shadow:none !important}
+  .plan:has(input:checked){
+    background:var(--accent-soft) !important;border-color:var(--accent) !important;box-shadow:none !important;
+  }
+  .plan-name{font-family:Inter;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .plan-price{font-family:'Instrument Serif',serif;color:var(--text);font-size:1.9rem;font-weight:400;margin:8px 0 6px}
+  .plan-desc{color:var(--muted);font-size:.85rem}
+  .plan-badge{background:var(--accent);color:#12120f;font-weight:600}
+
+  .btn.primary,#offerSubmit{
+    background:var(--accent) !important;color:#12120f !important;border:1px solid var(--accent) !important;
+    border-radius:var(--radius-sm) !important;box-shadow:none !important;font-weight:600;
+  }
+  .btn.primary:hover,#offerSubmit:hover{
+    background:var(--accent-2) !important;border-color:var(--accent-2) !important;transform:translateY(-2px);
+  }
+  .form-msg.err{color:#ff8b8b}
+  .hint{color:var(--muted)}
+
+  .modal-scrim{background:rgba(0,0,0,.62) !important;backdrop-filter:blur(3px)}
+  .modal{
+    background:var(--card) !important;border:1px solid var(--border-2) !important;
+    border-radius:var(--radius) !important;box-shadow:0 20px 60px rgba(0,0,0,.5) !important;
+  }
+  .offer-success{border:1px solid var(--accent) !important;background:var(--accent-soft) !important}
+  .toast{background:var(--card);border:1px solid var(--border-2);color:var(--text);box-shadow:none}
+  </style>
+  <link rel="icon" type="image/svg+xml" href="spletar-icon.svg" />
+</head>
+<body data-page="offer">
+  <div class="offer-wrap">
+    <!-- Glava -->
+    <header class="offer-head">
+      <div class="brand" style="justify-content:center; padding:0 0 6px">
+        <img src="spletar-icon.svg" alt="Spletar" class="logo-img" />
+        <span>Spletar<small>Izdelava spletnih strani</small></span>
+      </div>
+      <h1 id="offerTitle">Povpraševanje za spletno stran</h1>
+      <p class="offer-sub" id="offerSub">Izpolnite kratek obrazec (2–3 minute) in pripravim vam ponudbo po meri.</p>
+    </header>
+
+    <!-- Uspeh (skrito, prikaže se po oddaji) -->
+    <div class="card pad offer-success" id="offerSuccess" style="display:none">
+      <div class="big" style="font-size:2.6rem; text-align:center">✅</div>
+      <h2 style="text-align:center; margin:8px 0">Hvala za povpraševanje!</h2>
+      <p style="text-align:center; color:var(--muted)">Prejeli smo vaše podatke in se vam bomo kmalu oglasili s ponudbo.</p>
+    </div>
+
+    <form id="offerForm" class="stagger">
+      <!-- 1. Osnovni podatki -->
+      <section class="card pad offer-sec">
+        <h2>1. Osnovni podatki</h2>
+        <div class="grid cols-2">
+          <div class="field"><label>Naziv podjetja / s.p.</label><input id="oCompany" placeholder="Podjetje d.o.o." /></div>
+          <div class="field"><label>Dejavnost / panoga</label><input id="oActivity" placeholder="npr. vodovodar, frizerski salon" /></div>
+          <div class="field"><label>Kontaktna oseba</label><input id="oName" placeholder="Ime in priimek" /></div>
+          <div class="field"><label>Telefon</label><input id="oPhone" type="tel" placeholder="+386 40 123 456" /></div>
+          <div class="field"><label>E-pošta</label><input id="oEmail" type="email" placeholder="ime@podjetje.si" /></div>
+          <div class="field"><label>Naslov / kraj</label><input id="oAddress" placeholder="Ulica 1, 1000 Ljubljana" /></div>
+          <div class="field"><label>Delovni čas</label><input id="oHours" placeholder="Pon–Pet 8–16, Sob 8–12" /></div>
+          <div class="field"><label>Trenutna spletna stran <span class="hint">(če obstaja)</span></label><input id="oCurrentSite" placeholder="www.primer.si ali Facebook" /></div>
+        </div>
+      </section>
+
+      <!-- 2. Vsebina strani -->
+      <section class="card pad offer-sec">
+        <h2>2. Vsebina strani</h2>
+        <p class="hint" style="margin-bottom:14px">To besedilo gre neposredno na vašo stran — več kot napišete, bolje bo videti.</p>
+        <div class="field">
+          <label>Slogan / geslo <span class="hint">(ena poved, ki vas opiše)</span></label>
+          <input id="oSlogan" placeholder="npr. Zanesljiv vodovodar, ki pride še danes." />
+        </div>
+        <div class="field">
+          <label>O nas / predstavitev</label>
+          <textarea id="oAbout" placeholder="Kdo ste, koliko let delujete, zakaj naj stranke izberejo vas…"></textarea>
+        </div>
+        <div class="field">
+          <label>Storitve / izdelki <span class="hint">(naštejte, po možnosti s kratkim opisom)</span></label>
+          <textarea id="oServices" placeholder="npr.&#10;- Popravilo puščanja&#10;- Menjava pip in ventilov&#10;- Montaža sanitarne opreme"></textarea>
+        </div>
+        <div class="field">
+          <label>Cene <span class="hint">(neobvezno — če jih želite objaviti)</span></label>
+          <textarea id="oPrices" placeholder="npr. Ogled: brezplačno · Urna postavka: 30 € · Nujni prihod: +20 €"></textarea>
+        </div>
+      </section>
+
+      <!-- 3. Videz in slog -->
+      <section class="card pad offer-sec">
+        <h2>3. Videz in slog</h2>
+        <div class="field">
+          <label>Slog strani</label>
+          <div class="seg" id="oStyle">
+            <input type="radio" name="style" id="s1" value="Moderno"><label for="s1">Moderno</label>
+            <input type="radio" name="style" id="s2" value="Minimalistično"><label for="s2">Minimalistično</label>
+            <input type="radio" name="style" id="s3" value="Elegantno"><label for="s3">Elegantno</label>
+            <input type="radio" name="style" id="s4" value="Klasično"><label for="s4">Klasično</label>
+            <input type="radio" name="style" id="s5" value="Igrivo / barvito"><label for="s5">Igrivo</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Želene barve <span class="hint">(če imate)</span></label>
+          <input id="oColors" placeholder="npr. modra in bela, ali barve logotipa" />
+        </div>
+        <div class="field">
+          <label>Zgledi strani, ki so vam všeč <span class="hint">(neobvezno)</span></label>
+          <textarea id="oExamples" placeholder="Prilepite povezave do strani, ki vam ugajajo…"></textarea>
+        </div>
+      </section>
+
+      <!-- 4. Zgradba strani -->
+      <section class="card pad offer-sec">
+        <h2>4. Zgradba strani</h2>
+        <div class="field">
+          <label>Vrsta strani</label>
+          <div class="seg" id="oType">
+            <input type="radio" name="type" id="t1" value="Predstavitvena (vizitka)"><label for="t1">Predstavitvena</label>
+            <input type="radio" name="type" id="t2" value="Spletna trgovina"><label for="t2">Spletna trgovina</label>
+            <input type="radio" name="type" id="t3" value="Rezervacije / naročanje"><label for="t3">Rezervacije</label>
+            <input type="radio" name="type" id="t4" value="Drugo"><label for="t4">Drugo</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Glavni cilj strani</label>
+          <div class="seg" id="oGoal">
+            <input type="radio" name="goal" id="g1" value="Več strank"><label for="g1">Več strank</label>
+            <input type="radio" name="goal" id="g2" value="Boljši videz / ugled"><label for="g2">Boljši videz</label>
+            <input type="radio" name="goal" id="g3" value="Spletna prodaja"><label for="g3">Spletna prodaja</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Podstrani <span class="hint">(izberite več)</span></label>
+          <div class="chk-grid" id="oPages">
+            <label><input type="checkbox" value="O nas"> O nas</label>
+            <label><input type="checkbox" value="Storitve"> Storitve</label>
+            <label><input type="checkbox" value="Galerija"> Galerija</label>
+            <label><input type="checkbox" value="Cenik"> Cenik</label>
+            <label><input type="checkbox" value="Reference / mnenja"> Reference</label>
+            <label><input type="checkbox" value="Kontakt"> Kontakt</label>
+            <label><input type="checkbox" value="Blog / novice"> Blog</label>
+            <label><input type="checkbox" value="Pogosta vprašanja"> Vprašanja</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Dodatne funkcije <span class="hint">(izberite več)</span></label>
+          <div class="chk-grid" id="oFeatures">
+            <label><input type="checkbox" value="Kontaktni obrazec"> Obrazec</label>
+            <label><input type="checkbox" value="Zemljevid lokacije"> Zemljevid</label>
+            <label><input type="checkbox" value="Spletno naročanje / rezervacije"> Rezervacije</label>
+            <label><input type="checkbox" value="Spletna trgovina"> Trgovina</label>
+            <label><input type="checkbox" value="Povezave na družbena omrežja"> Družbena omrežja</label>
+            <label><input type="checkbox" value="Klic z enim klikom"> Klic (mobilni)</label>
+            <label><input type="checkbox" value="Večjezičnost"> Več jezikov</label>
+            <label><input type="checkbox" value="Novičnik (e-pošta)"> Novičnik</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Materiali -->
+      <section class="card pad offer-sec">
+        <h2>5. Materiali (logotip in slike)</h2>
+        <div class="grid cols-3">
+          <div class="field"><label>Imate logotip?</label>
+            <div class="seg"><input type="radio" name="logo" id="l1" value="Da"><label for="l1">Da</label>
+            <input type="radio" name="logo" id="l2" value="Ne"><label for="l2">Ne</label></div>
+          </div>
+          <div class="field"><label>Imate fotografije?</label>
+            <div class="seg"><input type="radio" name="photos" id="p1" value="Da"><label for="p1">Da</label>
+            <input type="radio" name="photos" id="p2" value="Ne"><label for="p2">Ne</label></div>
+          </div>
+          <div class="field"><label>Imate besedila?</label>
+            <div class="seg"><input type="radio" name="text" id="x1" value="Da"><label for="x1">Da</label>
+            <input type="radio" name="text" id="x2" value="Ne"><label for="x2">Ne</label></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Povezava do slik / logotipa <span class="hint">(neobvezno)</span></label>
+          <textarea id="oMaterials" placeholder="Slike in logotip pošljite kot povezavo (Google Drive, WeTransfer, Dropbox) ali se dogovorimo po telefonu."></textarea>
+        </div>
+        <div class="field">
+          <label>Družbena omrežja <span class="hint">(če jih imate)</span></label>
+          <input id="oSocial" placeholder="Facebook, Instagram, TikTok…" />
+        </div>
+      </section>
+
+      <!-- 6. Paket / cenik -->
+      <section class="card pad offer-sec">
+        <h2>6. Izberite okviren paket</h2>
+        <p class="hint" style="margin-bottom:14px">Okvirne cene — končna ponudba je prilagojena vašim željam.</p>
+        <div class="plans" id="oPlans">
+          <label class="plan">
+            <input type="radio" name="plan" value="Vizitka (100 €)">
+            <div class="plan-name">Vizitka</div>
+            <div class="plan-price">100 €</div>
+            <div class="plan-desc">Enostranska predstavitev, kontakt, mobilni prikaz.</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="Osnovna (250 €)">
+            <div class="plan-badge">Priljubljeno</div>
+            <div class="plan-name">Osnovna</div>
+            <div class="plan-price">250 €</div>
+            <div class="plan-desc">Do 5 podstrani, galerija, kontaktni obrazec.</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="Poslovna (od 500 €)">
+            <div class="plan-name">Poslovna</div>
+            <div class="plan-price">od 500 €</div>
+            <div class="plan-desc">Do 8 podstrani, blog, osnovni SEO, reference.</div>
+          </label>
+          <label class="plan">
+            <input type="radio" name="plan" value="Spletna trgovina (od 600 €)">
+            <div class="plan-name">Trgovina</div>
+            <div class="plan-price">od 600 €</div>
+            <div class="plan-desc">Spletna prodaja, košarica, plačila.</div>
+          </label>
+        </div>
+        <p class="hint" style="margin-top:14px">
+          Dodatno: logotip +49 € · domena in gostovanje ~60 €/leto · mesečno vzdrževanje 15 €/mesec.
+        </p>
+      </section>
+
+      <!-- 7. Rok in opombe -->
+      <section class="card pad offer-sec">
+        <h2>7. Rok in opombe</h2>
+        <div class="field">
+          <label>Kdaj bi želeli stran?</label>
+          <select id="oDeadline">
+            <option value="Čimprej">Čimprej</option>
+            <option value="V 1 mesecu">V 1 mesecu</option>
+            <option value="V 2–3 mesecih">V 2–3 mesecih</option>
+            <option value="Ni nujno">Ni nujno</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Dodatne opombe / posebne želje</label>
+          <textarea id="oNotes" placeholder="Karkoli, kar naj vemo o vaši strani…"></textarea>
+        </div>
+      </section>
+
+      <button type="submit" class="btn primary" id="offerSubmit" style="width:100%; padding:15px; font-size:1rem">
+        Pošlji povpraševanje
+      </button>
+      <div class="form-msg" id="offerMsg" style="text-align:center"></div>
+    </form>
+  </div>
+
+  <!-- Pojavno okno: zahvala po oddaji -->
+  <div class="modal-scrim" id="thankModal">
+    <div class="modal" style="max-width:440px; text-align:center">
+      <div style="font-size:3.2rem; line-height:1">🎉</div>
+      <h2 style="margin:12px 0 6px">Hvala za vaš čas!</h2>
+      <p style="color:var(--muted); font-size:0.95rem">
+        Prejeli smo vaše povpraševanje in se vam bomo <b>čimprej javili nazaj</b>.
+      </p>
+      <div class="modal-foot" style="justify-content:center; margin-top:20px">
+        <button class="btn primary" id="thankClose">V redu</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-box" id="toastBox"></div>
+  <script type="module" src="ponudba.js"></script>
+</body>
+</html>
